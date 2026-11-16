@@ -42,6 +42,8 @@ _pass1_shots/
 # Duplicate/local backups
 backups/
 **/backups/
+_pass1_backups/
+*.bak
 
 # Large research archives requiring external storage for deployment
 # (kept locally; see REQUIRED_EXTERNAL_DATA.md)
