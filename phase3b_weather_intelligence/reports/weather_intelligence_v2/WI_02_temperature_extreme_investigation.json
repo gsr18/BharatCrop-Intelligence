@@ -1,0 +1,127 @@
+{
+  "thresholds": {
+    "T2M_MAX_above_C": 45.0,
+    "T2M_MIN_below_C": -20.0
+  },
+  "total_observations": {
+    "hot": 53554,
+    "cold": 254599
+  },
+  "annual_counts": {
+    "2013": {
+      "observations_above_45C": 4890,
+      "observations_below_minus_20C": 21833
+    },
+    "2014": {
+      "observations_above_45C": 5575,
+      "observations_below_minus_20C": 21509
+    },
+    "2015": {
+      "observations_above_45C": 3755,
+      "observations_below_minus_20C": 20293
+    },
+    "2016": {
+      "observations_above_45C": 5336,
+      "observations_below_minus_20C": 15830
+    },
+    "2017": {
+      "observations_above_45C": 4223,
+      "observations_below_minus_20C": 18928
+    },
+    "2018": {
+      "observations_above_45C": 4237,
+      "observations_below_minus_20C": 21441
+    },
+    "2019": {
+      "observations_above_45C": 7084,
+      "observations_below_minus_20C": 28209
+    },
+    "2020": {
+      "observations_above_45C": 2338,
+      "observations_below_minus_20C": 26199
+    },
+    "2021": {
+      "observations_above_45C": 1087,
+      "observations_below_minus_20C": 21068
+    },
+    "2022": {
+      "observations_above_45C": 5736,
+      "observations_below_minus_20C": 23596
+    },
+    "2023": {
+      "observations_above_45C": 1038,
+      "observations_below_minus_20C": 15512
+    },
+    "2024": {
+      "observations_above_45C": 8255,
+      "observations_below_minus_20C": 20181
+    }
+  },
+  "monthly_counts": {
+    "3": {
+      "observations_above_45C": 2,
+      "observations_below_minus_20C": 23901
+    },
+    "4": {
+      "observations_above_45C": 3191,
+      "observations_below_minus_20C": 2104
+    },
+    "5": {
+      "observations_above_45C": 26676,
+      "observations_below_minus_20C": 68
+    },
+    "6": {
+      "observations_above_45C": 20728,
+      "observations_below_minus_20C": 0
+    },
+    "7": {
+      "observations_above_45C": 2589,
+      "observations_below_minus_20C": 0
+    },
+    "8": {
+      "observations_above_45C": 169,
+      "observations_below_minus_20C": 0
+    },
+    "9": {
+      "observations_above_45C": 199,
+      "observations_below_minus_20C": 0
+    },
+    "1": {
+      "observations_above_45C": 0,
+      "observations_below_minus_20C": 89604
+    },
+    "2": {
+      "observations_above_45C": 0,
+      "observations_below_minus_20C": 61991
+    },
+    "10": {
+      "observations_above_45C": 0,
+      "observations_below_minus_20C": 524
+    },
+    "11": {
+      "observations_above_45C": 0,
+      "observations_below_minus_20C": 12261
+    },
+    "12": {
+      "observations_above_45C": 0,
+      "observations_below_minus_20C": 64146
+    }
+  },
+  "hot_run_summary": {
+    "total_extreme_runs": 17279,
+    "single_day_runs": 6483,
+    "runs_2_days_or_more": 10796,
+    "runs_3_days_or_more": 7275,
+    "runs_5_days_or_more": 3535,
+    "maximum_run_duration_days": 22
+  },
+  "cold_run_summary": {
+    "total_extreme_runs": 38366,
+    "single_day_runs": 5196,
+    "runs_2_days_or_more": 33170,
+    "runs_3_days_or_more": 22587,
+    "runs_5_days_or_more": 14476,
+    "maximum_run_duration_days": 152
+  },
+  "interpretation_note": "Extreme observations are retained. Spatial and temporal consistency checks use the same archive and are not independent source validation."
+}

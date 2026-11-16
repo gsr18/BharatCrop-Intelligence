@@ -1,0 +1,117 @@
+{
+  "overall_seasonal_summary": {
+    "Winter (Dec-Feb)": {
+      "observation_count": 2729160,
+      "mean_tmax_c": 21.5001,
+      "median_tmax_c": 26.58,
+      "mean_tmin_c": 12.1746,
+      "median_tmin_c": 15.11,
+      "mean_temp_range_c": 9.3255,
+      "median_temp_range_c": 11.49,
+      "p95_tmax_c": 32.76,
+      "p05_tmin_c": -22.3
+    },
+    "Pre-monsoon (Mar-May)": {
+      "observation_count": 2782080,
+      "mean_tmax_c": 28.1494,
+      "median_tmax_c": 29.76,
+      "mean_tmin_c": 19.0454,
+      "median_tmin_c": 24.9,
+      "mean_temp_range_c": 9.104,
+      "median_temp_range_c": 10.98,
+      "p95_tmax_c": 42.54,
+      "p05_tmin_c": -10.99
+    },
+    "Monsoon (Jun-Sep)": {
+      "observation_count": 3689280,
+      "mean_tmax_c": 28.1938,
+      "median_tmax_c": 29.07,
+      "mean_tmin_c": 21.8557,
+      "median_tmin_c": 25.98,
+      "mean_temp_range_c": 6.3381,
+      "median_temp_range_c": 6.12,
+      "p95_tmax_c": 39.5,
+      "p05_tmin_c": -1.33
+    },
+    "Post-monsoon (Oct-Nov)": {
+      "observation_count": 1844640,
+      "mean_tmax_c": 24.6001,
+      "median_tmax_c": 28.33,
+      "mean_tmin_c": 16.9453,
+      "median_tmin_c": 20.99,
+      "mean_temp_range_c": 7.6548,
+      "median_temp_range_c": 8.55,
+      "p95_tmax_c": 34.0,
+      "p05_tmin_c": -13.51
+    }
+  },
+  "geographic_seasonal_summary": {
+    "Winter (Dec-Feb)": {
+      "mean_cell_tmax_c": 21.5001,
+      "std_cell_tmax_c": 12.2852,
+      "min_cell_tmax_c": -15.4408,
+      "max_cell_tmax_c": 34.7264,
+      "mean_cell_tmin_c": 12.1746,
+      "std_cell_tmin_c": 15.6748,
+      "min_cell_tmin_c": -27.8811,
+      "max_cell_tmin_c": 27.5933,
+      "mean_cell_temp_range_c": 9.3255
+    },
+    "Pre-monsoon (Mar-May)": {
+      "mean_cell_tmax_c": 28.1494,
+      "std_cell_tmax_c": 11.6298,
+      "min_cell_tmax_c": -5.6539,
+      "max_cell_tmax_c": 41.1955,
+      "mean_cell_tmin_c": 19.0454,
+      "std_cell_tmin_c": 12.9319,
+      "min_cell_tmin_c": -17.276,
+      "max_cell_tmin_c": 28.7799,
+      "mean_cell_temp_range_c": 9.104
+    },
+    "Monsoon (Jun-Sep)": {
+      "mean_cell_tmax_c": 28.1938,
+      "std_cell_tmax_c": 6.9587,
+      "min_cell_tmax_c": 6.6894,
+      "max_cell_tmax_c": 42.2667,
+      "mean_cell_tmin_c": 21.8557,
+      "std_cell_tmin_c": 9.8053,
+      "min_cell_tmin_c": -5.1531,
+      "max_cell_tmin_c": 30.0013,
+      "mean_cell_temp_range_c": 6.3381
+    },
+    "Post-monsoon (Oct-Nov)": {
+      "mean_cell_tmax_c": 24.6001,
+      "std_cell_tmax_c": 9.9465,
+      "min_cell_tmax_c": -6.0944,
+      "max_cell_tmax_c": 35.676,
+      "mean_cell_tmin_c": 16.9453,
+      "std_cell_tmin_c": 12.9576,
+      "min_cell_tmin_c": -17.38,
+      "max_cell_tmin_c": 28.1989,
+      "mean_cell_temp_range_c": 7.6548
+    }
+  },
+  "season_definitions": {
+    "Winter (Dec-Feb)": [
+      12,
+      1,
+      2
+    ],
+    "Pre-monsoon (Mar-May)": [
+      3,
+      4,
+      5
+    ],
+    "Monsoon (Jun-Sep)": [
+      6,
+      7,
+      8,
+      9
+    ],
+    "Post-monsoon (Oct-Nov)": [
+      10,
+      11
+    ]
+  },
+  "interpretation_note": "Descriptive seasonal grid-cell statistics. Calendar groupings are not crop-season definitions. Temperature extremes require independent validation."
+}

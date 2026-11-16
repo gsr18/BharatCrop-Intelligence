@@ -1,0 +1,18 @@
+{
+  "model": "HistGradientBoosting Regressor",
+  "target": "PRECTOTCORR",
+  "horizon": "T+1",
+  "training_samples": 34930,
+  "validation_samples": 15070,
+  "predictor_count": 53,
+  "max_iter": 100,
+  "learning_rate": 0.1,
+  "max_leaf_nodes": 31,
+  "l2_regularization": 1.0,
+  "MAE": 2.704353718900669,
+  "RMSE": 7.958803050542154,
+  "negative_raw_predictions": 0,
+  "negative_predictions_clipped_for_evaluation": true,
+  "training_scope": "10-batch pilot",
+  "final_holdout_accessed": false
+}

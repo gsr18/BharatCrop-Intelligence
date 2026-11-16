@@ -1,0 +1,316 @@
+{
+  "dataset_version": "weather-features-v1",
+  "feature_count": 53,
+  "target_count": 14,
+  "missing_values_policy": "Structural NaNs retained; complete-feature rows required for model fitting and evaluation",
+  "infinity_values_policy": "Positive and negative infinity prohibited",
+  "feature_completeness_by_split": {
+    "training": {
+      "rows": 6438600,
+      "complete_feature_rows": 6363000,
+      "incomplete_feature_rows": 75600,
+      "missing_feature_values": 1186920,
+      "positive_infinity_values": 0,
+      "negative_infinity_values": 0
+    },
+    "validation": {
+      "rows": 2761920,
+      "complete_feature_rows": 2761920,
+      "incomplete_feature_rows": 0,
+      "missing_feature_values": 0,
+      "positive_infinity_values": 0,
+      "negative_infinity_values": 0
+    },
+    "final_holdout": {
+      "rows": 1842120,
+      "complete_feature_rows": 1842120,
+      "incomplete_feature_rows": 0,
+      "missing_feature_values": 0,
+      "positive_infinity_values": 0,
+      "negative_infinity_values": 0
+    }
+  },
+  "model_ready_samples_by_target_horizon": {
+    "PRECTOTCORR_T_plus_1": {
+      "training": {
+        "rows": 6438600,
+        "model_ready_rows": 6363000,
+        "incomplete_feature_rows": 75600,
+        "missing_target_rows": 0
+      },
+      "validation": {
+        "rows": 2761920,
+        "model_ready_rows": 2761920,
+        "incomplete_feature_rows": 0,
+        "missing_target_rows": 0
+      },
+      "final_holdout": {
+        "rows": 1842120,
+        "model_ready_rows": 1842120,
+        "incomplete_feature_rows": 0,
+        "missing_target_rows": 0
+      }
+    },
+    "PRECTOTCORR_T_plus_2": {
+      "training": {
+        "rows": 6436080,
+        "model_ready_rows": 6360480,
+        "incomplete_feature_rows": 75600,
+        "missing_target_rows": 0
+      },
+      "validation": {
+        "rows": 2761920,
+        "model_ready_rows": 2761920,
+        "incomplete_feature_rows": 0,
+        "missing_target_rows": 0
+      },
+      "final_holdout": {
+        "rows": 1842120,
+        "model_ready_rows": 1842120,
+        "incomplete_feature_rows": 0,
+        "missing_target_rows": 0
+      }
+    },
+    "PRECTOTCORR_T_plus_3": {
+      "training": {
+        "rows": 6433560,
+        "model_ready_rows": 6357960,
+        "incomplete_feature_rows": 75600,
+        "missing_target_rows": 0
+      },
+      "validation": {
+        "rows": 2761920,
+        "model_ready_rows": 2761920,
+        "incomplete_feature_rows": 0,
+        "missing_target_rows": 0
+      },
+      "final_holdout": {
+        "rows": 1842120,
+        "model_ready_rows": 1842120,
+        "incomplete_feature_rows": 0,
+        "missing_target_rows": 0
+      }
+    },
+    "PRECTOTCORR_T_plus_4": {
+      "training": {
+        "rows": 6431040,
+        "model_ready_rows": 6355440,
+        "incomplete_feature_rows": 75600,
+        "missing_target_rows": 0
+      },
+      "validation": {
+        "rows": 2761920,
+        "model_ready_rows": 2761920,
+        "incomplete_feature_rows": 0,
+        "missing_target_rows": 0
+      },
+      "final_holdout": {
+        "rows": 1842120,
+        "model_ready_rows": 1842120,
+        "incomplete_feature_rows": 0,
+        "missing_target_rows": 0
+      }
+    },
+    "PRECTOTCORR_T_plus_5": {
+      "training": {
+        "rows": 6428520,
+        "model_ready_rows": 6352920,
+        "incomplete_feature_rows": 75600,
+        "missing_target_rows": 0
+      },
+      "validation": {
+        "rows": 2761920,
+        "model_ready_rows": 2761920,
+        "incomplete_feature_rows": 0,
+        "missing_target_rows": 0
+      },
+      "final_holdout": {
+        "rows": 1842120,
+        "model_ready_rows": 1842120,
+        "incomplete_feature_rows": 0,
+        "missing_target_rows": 0
+      }
+    },
+    "PRECTOTCORR_T_plus_6": {
+      "training": {
+        "rows": 6426000,
+        "model_ready_rows": 6350400,
+        "incomplete_feature_rows": 75600,
+        "missing_target_rows": 0
+      },
+      "validation": {
+        "rows": 2761920,
+        "model_ready_rows": 2761920,
+        "incomplete_feature_rows": 0,
+        "missing_target_rows": 0
+      },
+      "final_holdout": {
+        "rows": 1842120,
+        "model_ready_rows": 1842120,
+        "incomplete_feature_rows": 0,
+        "missing_target_rows": 0
+      }
+    },
+    "PRECTOTCORR_T_plus_7": {
+      "training": {
+        "rows": 6423480,
+        "model_ready_rows": 6347880,
+        "incomplete_feature_rows": 75600,
+        "missing_target_rows": 0
+      },
+      "validation": {
+        "rows": 2761920,
+        "model_ready_rows": 2761920,
+        "incomplete_feature_rows": 0,
+        "missing_target_rows": 0
+      },
+      "final_holdout": {
+        "rows": 1842120,
+        "model_ready_rows": 1842120,
+        "incomplete_feature_rows": 0,
+        "missing_target_rows": 0
+      }
+    },
+    "T2M_MAX_T_plus_1": {
+      "training": {
+        "rows": 6438600,
+        "model_ready_rows": 6363000,
+        "incomplete_feature_rows": 75600,
+        "missing_target_rows": 0
+      },
+      "validation": {
+        "rows": 2761920,
+        "model_ready_rows": 2761920,
+        "incomplete_feature_rows": 0,
+        "missing_target_rows": 0
+      },
+      "final_holdout": {
+        "rows": 1842120,
+        "model_ready_rows": 1842120,
+        "incomplete_feature_rows": 0,
+        "missing_target_rows": 0
+      }
+    },
+    "T2M_MAX_T_plus_2": {
+      "training": {
+        "rows": 6436080,
+        "model_ready_rows": 6360480,
+        "incomplete_feature_rows": 75600,
+        "missing_target_rows": 0
+      },
+      "validation": {
+        "rows": 2761920,
+        "model_ready_rows": 2761920,
+        "incomplete_feature_rows": 0,
+        "missing_target_rows": 0
+      },
+      "final_holdout": {
+        "rows": 1842120,
+        "model_ready_rows": 1842120,
+        "incomplete_feature_rows": 0,
+        "missing_target_rows": 0
+      }
+    },
+    "T2M_MAX_T_plus_3": {
+      "training": {
+        "rows": 6433560,
+        "model_ready_rows": 6357960,
+        "incomplete_feature_rows": 75600,
+        "missing_target_rows": 0
+      },
+      "validation": {
+        "rows": 2761920,
+        "model_ready_rows": 2761920,
+        "incomplete_feature_rows": 0,
+        "missing_target_rows": 0
+      },
+      "final_holdout": {
+        "rows": 1842120,
+        "model_ready_rows": 1842120,
+        "incomplete_feature_rows": 0,
+        "missing_target_rows": 0
+      }
+    },
+    "T2M_MAX_T_plus_4": {
+      "training": {
+        "rows": 6431040,
+        "model_ready_rows": 6355440,
+        "incomplete_feature_rows": 75600,
+        "missing_target_rows": 0
+      },
+      "validation": {
+        "rows": 2761920,
+        "model_ready_rows": 2761920,
+        "incomplete_feature_rows": 0,
+        "missing_target_rows": 0
+      },
+      "final_holdout": {
+        "rows": 1842120,
+        "model_ready_rows": 1842120,
+        "incomplete_feature_rows": 0,
+        "missing_target_rows": 0
+      }
+    },
+    "T2M_MAX_T_plus_5": {
+      "training": {
+        "rows": 6428520,
+        "model_ready_rows": 6352920,
+        "incomplete_feature_rows": 75600,
+        "missing_target_rows": 0
+      },
+      "validation": {
+        "rows": 2761920,
+        "model_ready_rows": 2761920,
+        "incomplete_feature_rows": 0,
+        "missing_target_rows": 0
+      },
+      "final_holdout": {
+        "rows": 1842120,
+        "model_ready_rows": 1842120,
+        "incomplete_feature_rows": 0,
+        "missing_target_rows": 0
+      }
+    },
+    "T2M_MAX_T_plus_6": {
+      "training": {
+        "rows": 6426000,
+        "model_ready_rows": 6350400,
+        "incomplete_feature_rows": 75600,
+        "missing_target_rows": 0
+      },
+      "validation": {
+        "rows": 2761920,
+        "model_ready_rows": 2761920,
+        "incomplete_feature_rows": 0,
+        "missing_target_rows": 0
+      },
+      "final_holdout": {
+        "rows": 1842120,
+        "model_ready_rows": 1842120,
+        "incomplete_feature_rows": 0,
+        "missing_target_rows": 0
+      }
+    },
+    "T2M_MAX_T_plus_7": {
+      "training": {
+        "rows": 6423480,
+        "model_ready_rows": 6347880,
+        "incomplete_feature_rows": 75600,
+        "missing_target_rows": 0
+      },
+      "validation": {
+        "rows": 2761920,
+        "model_ready_rows": 2761920,
+        "incomplete_feature_rows": 0,
+        "missing_target_rows": 0
+      },
+      "final_holdout": {
+        "rows": 1842120,
+        "model_ready_rows": 1842120,
+        "incomplete_feature_rows": 0,
+        "missing_target_rows": 0
+      }
+    }
+  },
+  "infinity_values_found": false
+}

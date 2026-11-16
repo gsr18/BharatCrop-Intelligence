@@ -1,0 +1,37 @@
+{
+  "dataset_version": "weather-features-v1",
+  "split_method": "chronological_by_target_date",
+  "forecast_origin_convention": "End of day t, after day t weather observations are available",
+  "development": {
+    "start": "2013-01-01",
+    "end": "2022-12-31",
+    "purpose": "Model development and chronological validation"
+  },
+  "final_holdout": {
+    "start": "2023-01-01",
+    "end": "2024-12-31",
+    "purpose": "Final untouched evaluation"
+  },
+  "horizons": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "targets": [
+    "PRECTOTCORR",
+    "T2M_MAX"
+  ],
+  "target_date_rule": "target_date = forecast_origin_date + horizon_days",
+  "row_assignment": "Assign each forecast row independently for each horizon using its target date",
+  "missing_target_policy": "Exclude missing target values from the corresponding horizon-specific training or evaluation dataset",
+  "feature_history_policy": "Historical predictor observations may cross the development and holdout origin-date boundary when available at forecast origin",
+  "holdout_policy": "Do not use final holdout data for feature selection, hyperparameter tuning, or model selection",
+  "random_split_allowed": false,
+  "holdout_used_for_training": false,
+  "validation_period": null,
+  "validation_period_note": "A separate chronological validation period within development must be defined before model selection"
+}

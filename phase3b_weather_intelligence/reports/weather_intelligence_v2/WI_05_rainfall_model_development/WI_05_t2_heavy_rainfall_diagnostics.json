@@ -1,0 +1,18 @@
+{
+  "observations": 18977,
+  "actual_mean_mm": 77.47189545238973,
+  "candidate_mean_mm": 16.446219885444293,
+  "persistence_mean_mm": 22.684412183169098,
+  "candidate_bias_mm": -61.025675566945445,
+  "persistence_bias_mm": -54.78748326922064,
+  "candidate_mae_mm": 61.387887200925654,
+  "persistence_mae_mm": 58.58867734626127,
+  "candidate_rmse_mm": 72.4712992257491,
+  "persistence_rmse_mm": 71.58382345814863,
+  "actual_p95_mm": 142.49800000000005,
+  "candidate_p95_mm": 47.319030732423286,
+  "persistence_p95_mm": 74.78600000000003,
+  "actual_max_mm": 666.37,
+  "candidate_max_mm": 147.51163371837933,
+  "persistence_max_mm": 666.37
+}

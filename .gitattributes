@@ -1,0 +1,2 @@
+# Large required CSV kept in Git LFS (over GitHub's 100 MB file limit).
+data/processed/weather_regional/apy_weather_integrated_exploratory.csv filter=lfs diff=lfs merge=lfs -text

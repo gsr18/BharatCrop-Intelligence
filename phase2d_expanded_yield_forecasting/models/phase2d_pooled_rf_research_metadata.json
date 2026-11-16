@@ -1,0 +1,90 @@
+{
+  "artifact": "phase2d_pooled_rf_research.joblib",
+  "status": "RESEARCH_ONLY \u2014 NOT validated for production; do not wire into the API",
+  "phase": "2D",
+  "production_model_untouched": true,
+  "cohort": "strict (clean: positive Area/Production, Yield<=12000)",
+  "strategy": "pooled_panel",
+  "base_model": "random_forest",
+  "horizons_fit": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "features": [
+    "lag1",
+    "lag2",
+    "lag3",
+    "roll3_mean",
+    "roll5_mean",
+    "hist_std",
+    "hist_median",
+    "hist_mean",
+    "trend_slope",
+    "hist_n",
+    "has_lag2",
+    "has_lag3",
+    "origin_year",
+    "target_year",
+    "horizon"
+  ],
+  "categorical_handling": "one-hot Crop/Season/State + integer District code",
+  "leakage_note": "All features use observations <= origin (target_year - horizon).",
+  "expanding_window_metrics_strict": {
+    "T+1": {
+      "mae": 325.93542732714945,
+      "rmse": 538.1991598521105,
+      "bias": 15.920689956589177,
+      "r2": 0.8676166584595478,
+      "n": 30696,
+      "negatives": 0
+    },
+    "T+2": {
+      "mae": 324.87970822579786,
+      "rmse": 543.8334929149242,
+      "bias": -7.066044322392708,
+      "r2": 0.8638958041955271,
+      "n": 29575,
+      "negatives": 0
+    },
+    "T+3": {
+      "mae": 327.48541109893876,
+      "rmse": 546.3505394413753,
+      "bias": -18.95434701869615,
+      "r2": 0.8620279973600906,
+      "n": 28760,
+      "negatives": 0
+    },
+    "T+4": {
+      "mae": 328.606778919336,
+      "rmse": 542.7919937807328,
+      "bias": -26.67700181157858,
+      "r2": 0.8630110309805743,
+      "n": 28073,
+      "negatives": 0
+    },
+    "T+5": {
+      "mae": 322.82927906092516,
+      "rmse": 520.110430761963,
+      "bias": -21.67392481283535,
+      "r2": 0.8732952521355998,
+      "n": 24016,
+      "negatives": 0
+    },
+    "all": {
+      "mae": 326.0328638162367,
+      "rmse": 538.9503564871438,
+      "bias": -10.876050399280773,
+      "r2": 0.8657380269072279,
+      "n": 141120,
+      "negatives": 0
+    }
+  },
+  "caveats": [
+    "R\u00b2 is interpolation over recurring districts; cold-start generalization is weak.",
+    "Target unit kg/ha is verification_pending (inherited from Phase 2B).",
+    "No validated future-season weather/prices used; gains vs baseline are modest."
+  ]
+}

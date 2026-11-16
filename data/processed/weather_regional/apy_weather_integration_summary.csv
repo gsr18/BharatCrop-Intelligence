@@ -1,0 +1,2 @@
+apy_rows,matched_rows,unmatched_rows,complete_apy_rows,complete_apy_and_weather_rows,weather_alignment_method,full_season_alignment_verified
+376272,320124,56148,281239,242151,STARTING_CALENDAR_YEAR_PROXY,False

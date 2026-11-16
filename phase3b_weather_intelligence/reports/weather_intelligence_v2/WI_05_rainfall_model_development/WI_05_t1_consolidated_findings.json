@@ -1,0 +1,124 @@
+{
+  "work_item": "WI-05",
+  "experiment": "Rainfall Forecasting T+1",
+  "status": "Provisional candidate",
+  "target": "PRECTOTCORR",
+  "unit": "mm/day",
+  "horizon": "T+1",
+  "data_policy": {
+    "training_period": "2013-2019",
+    "validation_period": "2020-2022",
+    "final_holdout_period": "2023-2024",
+    "validation_observations": 2761920,
+    "holdout_accessed": false,
+    "chronological_split": true
+  },
+  "selected_candidate": {
+    "model": "Two-stage HistGradientBoosting",
+    "classifier": "HistGradientBoostingClassifier",
+    "conditional_regressor": "HistGradientBoostingRegressor",
+    "wet_day_threshold_mm": 1.0,
+    "experimental_classification_threshold": 0.4,
+    "mae_mm": 2.914083,
+    "rmse_mm": 7.583502
+  },
+  "baseline_comparison": {
+    "persistence": {
+      "mae_mm": 3.2361,
+      "rmse_mm": 9.2107
+    },
+    "seasonal_naive": {
+      "mae_mm": 4.8002,
+      "rmse_mm": 12.1503
+    },
+    "training_climatology": {
+      "mae_mm": 3.7649,
+      "rmse_mm": 9.062
+    },
+    "improvement_over_persistence": {
+      "mae_pct": 9.95,
+      "rmse_pct": 17.67
+    }
+  },
+  "seasonal_validation": {
+    "Winter": {
+      "observations": 682920,
+      "mae_mm": 1.0056,
+      "rmse_mm": 4.3359,
+      "mae_improvement_over_persistence_pct": 10.3355
+    },
+    "Pre-monsoon": {
+      "observations": 695520,
+      "mae_mm": 1.9257,
+      "rmse_mm": 6.346,
+      "mae_improvement_over_persistence_pct": 10.4204
+    },
+    "Monsoon": {
+      "observations": 922320,
+      "mae_mm": 5.1807,
+      "rmse_mm": 10.0152,
+      "mae_improvement_over_persistence_pct": 9.4755
+    },
+    "Post-monsoon": {
+      "observations": 461160,
+      "mae_mm": 2.6977,
+      "rmse_mm": 7.4324,
+      "mae_improvement_over_persistence_pct": 11.0382
+    }
+  },
+  "intensity_findings": {
+    "below_1mm": {
+      "observations": 1603478,
+      "candidate_mae_mm": 0.7905,
+      "persistence_mae_mm": 0.5803,
+      "finding": "Candidate underperforms persistence"
+    },
+    "1_to_5mm": {
+      "observations": 575375,
+      "candidate_mae_mm": 3.034,
+      "persistence_mae_mm": 3.3185
+    },
+    "5_to_20mm": {
+      "observations": 458822,
+      "candidate_mae_mm": 5.0231,
+      "persistence_mae_mm": 7.2234
+    },
+    "20_to_50mm": {
+      "observations": 105268,
+      "candidate_mae_mm": 16.178,
+      "persistence_mae_mm": 17.5913
+    },
+    "50mm_and_above": {
+      "observations": 18977,
+      "candidate_mae_mm": 54.1414,
+      "persistence_mae_mm": 49.1145,
+      "finding": "Candidate underperforms persistence"
+    }
+  },
+  "classifier_evaluation": {
+    "pr_auc": 0.9147,
+    "best_tested_f1_threshold": 0.4,
+    "precision_at_0_40": 0.8088,
+    "recall_at_0_40": 0.8654,
+    "f1_at_0_40": 0.8361,
+    "brier_score": 0.099175,
+    "calibration_decision": "No probability recalibration applied"
+  },
+  "experimental_tail_weighting": {
+    "status": "Not selected",
+    "original_mae_mm": 2.9141,
+    "weighted_mae_mm": 3.4076,
+    "original_rmse_mm": 7.5835,
+    "weighted_rmse_mm": 8.0989,
+    "finding": "Improved 20mm+ intensity-band MAE but substantially worsened common rainfall categories and overall metrics"
+  },
+  "limitations": [
+    "Heavy rainfall is systematically underpredicted.",
+    "The candidate underperforms persistence below 1mm and at 50mm or above.",
+    "Monsoon has the highest absolute prediction error.",
+    "The 0.40 classifier threshold was selected using validation results and remains provisional.",
+    "Validation performance does not establish final holdout performance.",
+    "Historical weather data ends in 2024 and does not provide live operational forecasts for 2026."
+  ],
+  "final_decision": "Retain the original two-stage HistGradientBoosting model as the provisional T+1 candidate. Do not select the tail-weighted regressor. Final model selection remains pending."
+}

@@ -1,0 +1,17 @@
+{
+  "model": "Random Forest Regressor",
+  "target": "PRECTOTCORR",
+  "horizon": "T+1",
+  "training_samples": 34930,
+  "validation_samples": 15070,
+  "predictor_count": 53,
+  "n_estimators": 100,
+  "max_depth": 15,
+  "min_samples_leaf": 5,
+  "MAE": 2.6736780301168235,
+  "RMSE": 8.013692881910245,
+  "negative_raw_predictions": 0,
+  "negative_predictions_clipped_for_evaluation": true,
+  "training_scope": "10-batch pilot",
+  "final_holdout_accessed": false
+}

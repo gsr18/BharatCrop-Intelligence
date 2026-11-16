@@ -1,0 +1,62 @@
+{
+  "experiment_name": "WI-05 Rainfall Model Development",
+  "target_variable": "PRECTOTCORR",
+  "forecast_horizons": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "wet_day_threshold_mm": 1.0,
+  "training_period": {
+    "start": "2013-01-01",
+    "end": "2019-12-31"
+  },
+  "validation_period": {
+    "start": "2020-01-01",
+    "end": "2022-12-31"
+  },
+  "final_holdout_period": {
+    "start": "2023-01-01",
+    "end": "2024-12-31"
+  },
+  "regression_models": [
+    "Ridge",
+    "RandomForest",
+    "HistGradientBoosting"
+  ],
+  "classification_models": [
+    "LogisticRegression",
+    "RandomForestClassifier",
+    "HistGradientBoostingClassifier"
+  ],
+  "conditional_regression_models": [
+    "Ridge",
+    "RandomForest",
+    "HistGradientBoosting"
+  ],
+  "regression_metrics": [
+    "MAE",
+    "RMSE"
+  ],
+  "classification_metrics": [
+    "Precision",
+    "Recall",
+    "F1-score",
+    "PR-AUC"
+  ],
+  "additional_evaluations": [
+    "Wet-day-only MAE",
+    "Rainfall intensity-band MAE",
+    "Seasonal performance",
+    "Geographic performance",
+    "Forecast-horizon performance"
+  ],
+  "predictor_count": 53,
+  "random_split": false,
+  "final_holdout_accessed": false,
+  "production_approved": false
+}

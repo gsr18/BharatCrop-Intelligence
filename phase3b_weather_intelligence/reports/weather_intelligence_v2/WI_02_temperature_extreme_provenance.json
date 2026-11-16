@@ -1,0 +1,91 @@
+{
+  "thresholds": {
+    "T2M_MAX_above_C": 45.0,
+    "T2M_MIN_below_C": -20.0
+  },
+  "record_counts": {
+    "all_extreme_records": 308153,
+    "hot_records": 53554,
+    "cold_records": 254599
+  },
+  "source_tags": {
+    "hot": {
+      "[\"MERRA2\",\"POWER\"]": 53554
+    },
+    "cold": {
+      "[\"MERRA2\",\"POWER\"]": 254599
+    }
+  },
+  "source_region_ids": {
+    "hot": {
+      "R036": 11684,
+      "R031": 6006,
+      "R037": 5054,
+      "R032": 4934,
+      "R038": 4342,
+      "R043": 3817,
+      "R029": 3352,
+      "R024": 3341,
+      "R030": 2883,
+      "R044": 2333,
+      "R025": 1751,
+      "R023": 1088,
+      "R039": 698,
+      "R017": 565,
+      "R033": 558,
+      "R022": 542,
+      "R050": 342,
+      "R026": 144,
+      "R051": 53,
+      "R018": 32,
+      "R010": 18,
+      "R034": 10,
+      "R016": 3,
+      "R035": 2,
+      "R027": 2
+    },
+    "cold": {
+      "R053": 28833,
+      "R055": 28497,
+      "R052": 27940,
+      "R054": 27179,
+      "R046": 26236,
+      "R039": 19147,
+      "R047": 17311,
+      "R056": 15688,
+      "R045": 15546,
+      "R048": 15376,
+      "R040": 14563,
+      "R051": 6664,
+      "R049": 5085,
+      "R041": 4801,
+      "R038": 1078,
+      "R042": 367,
+      "R044": 256,
+      "R050": 32
+    }
+  },
+  "qc_flag_counts": {
+    "hot": {
+      "qc_pass": 53554,
+      "qc_missing": 0,
+      "qc_sentinel": 0,
+      "qc_non_finite": 0,
+      "qc_negative_precipitation": 0,
+      "qc_tmin_gt_tmax": 0
+    },
+    "cold": {
+      "qc_pass": 254599,
+      "qc_missing": 0,
+      "qc_sentinel": 0,
+      "qc_non_finite": 0,
+      "qc_negative_precipitation": 0,
+      "qc_tmin_gt_tmax": 0
+    }
+  },
+  "qc_pass_rates": {
+    "hot": 1.0,
+    "cold": 1.0
+  },
+  "interpretation_note": "QC pass indicates compliance with the stored dataset QC rules only. It does not establish physical accuracy of extreme temperatures. Source metadata and internal spatial consistency are not independent validation."
+}

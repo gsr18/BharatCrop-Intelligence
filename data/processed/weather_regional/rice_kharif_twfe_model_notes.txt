@@ -1,0 +1,33 @@
+BharatCrop Intelligence — Rice Kharif Exploratory Fixed-Effects Model
+
+Sample
+- Observations: 4416
+- Districts: 368
+- Agricultural years: 12
+- Panel: balanced district-year panel
+- Crop and season: Rice, Kharif
+- Yield screening: provisional strict screening applied
+
+Specification
+- Outcome: Yield
+- Predictors: mean minimum temperature, mean maximum temperature,
+  total precipitation, maximum daily precipitation
+- District fixed effects: included
+- Year fixed effects: included
+- Standard errors: district-clustered sandwich estimator
+- Inference: approximate; finite-sample correction and degrees-of-freedom
+  conventions may affect reported uncertainty
+
+Critical limitations
+- Weather uses the starting-calendar-year proxy.
+- Full agricultural-year and Kharif-season weather alignment is unverified.
+- Coefficients are conditional associations, not causal effects.
+- Remaining time-varying confounding and measurement error are possible.
+- Geographic weather-location confidence remains a concern for some records.
+- This model is exploratory and should not be presented as validated
+  evidence that weather causes changes in rice yield.
+
+Interpretation
+- Retain coefficient estimates and uncertainty together.
+- Do not interpret statistical significance as proof of causation.
+- Revisit the model after temporal alignment and source definitions are verified.

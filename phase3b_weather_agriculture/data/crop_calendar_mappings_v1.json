@@ -1,0 +1,44 @@
+{
+  "version": "1.0.0",
+  "mappings": [
+    {
+      "mapping_id": "PAU-Punjab-Rice-Kharif-2025-v1",
+      "classification": "normal_calendar_proxy",
+      "state": "Punjab",
+      "crop": "Rice",
+      "season": "Kharif",
+      "source": "Punjab Agricultural University, Package of Practices for Crops of Punjab, Kharif 2025, Rice chapter",
+      "source_url": "https://pau.edu/content/ccil/pf/pp_kharif.pdf",
+      "source_publication_year": 2025,
+      "recommended_nursery_sowing_window": "May 20-June 20",
+      "recommended_transplanting_window": "June 20-July 10",
+      "crop_duration_after_transplant_days": {
+        "minimum": 93,
+        "maximum": 117
+      },
+      "weather_window_start": "05-20",
+      "weather_window_end_rule": {
+        "anchor": "latest_recommended_transplanting_date",
+        "duration_days_after_transplant": 117,
+        "inclusive_end_date": true
+      },
+      "sourced_weather_thresholds": {
+        "rainy_day_mm": null,
+        "dry_spell_definition": null,
+        "extreme_temperature_c": null
+      },
+      "assumptions": [
+        "APY agricultural-year start year is used as the proxy calendar year for this documented Kharif calendar; APY does not provide actual sowing or transplanting dates.",
+        "The daily weather window begins at the earliest PAU-recommended nursery sowing date and ends 117 days after the latest PAU-recommended transplanting date.",
+        "The 2025 PAU normal calendar is applied retrospectively to 2013-2024 solely as a normal-calendar proxy; year-specific historical practice and rice variety are unavailable.",
+        "The envelope is broader than any one crop's actual exposure and is not a crop-growth-stage reconstruction."
+      ],
+      "geographic_applicability": "Punjab state-level normal guidance; not a district-specific or variety-specific calendar.",
+      "limitations": [
+        "Do not interpret the proxy as the actual planting date for an APY observation.",
+        "Punjab has local and management variation, and the APY crop label does not distinguish rice varieties or nursery/direct-seeding systems.",
+        "No rainy-day, dry-spell, or extreme-temperature count is reported because no threshold has been sourced for the APY-unspecified variety and growth stage."
+      ]
+    }
+  ]
+}

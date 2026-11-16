@@ -1,0 +1,125 @@
+{
+  "experiment": "WI-04 Baseline Weather Forecasting",
+  "validation_period": "2020-01-01 to 2022-12-31",
+  "training_period": "2013-01-01 to 2019-12-31",
+  "final_holdout_period": "2023-01-01 to 2024-12-31",
+  "targets": [
+    "PRECTOTCORR",
+    "T2M_MAX"
+  ],
+  "forecast_horizons": [
+    "T+1",
+    "T+2",
+    "T+3",
+    "T+4",
+    "T+5",
+    "T+6",
+    "T+7"
+  ],
+  "baselines": [
+    "persistence",
+    "seasonal_naive",
+    "climatology"
+  ],
+  "mae_win_counts": {
+    "climatology": 9,
+    "persistence": 5
+  },
+  "horizon_winners": [
+    {
+      "target": "PRECTOTCORR",
+      "horizon": "T+1",
+      "best_baseline_by_MAE": "persistence",
+      "best_MAE": 3.236136441316187
+    },
+    {
+      "target": "PRECTOTCORR",
+      "horizon": "T+2",
+      "best_baseline_by_MAE": "climatology",
+      "best_MAE": 3.7649209830221615
+    },
+    {
+      "target": "PRECTOTCORR",
+      "horizon": "T+3",
+      "best_baseline_by_MAE": "climatology",
+      "best_MAE": 3.7649209830221615
+    },
+    {
+      "target": "PRECTOTCORR",
+      "horizon": "T+4",
+      "best_baseline_by_MAE": "climatology",
+      "best_MAE": 3.7649209830221615
+    },
+    {
+      "target": "PRECTOTCORR",
+      "horizon": "T+5",
+      "best_baseline_by_MAE": "climatology",
+      "best_MAE": 3.7649209830221615
+    },
+    {
+      "target": "PRECTOTCORR",
+      "horizon": "T+6",
+      "best_baseline_by_MAE": "climatology",
+      "best_MAE": 3.7649209830221615
+    },
+    {
+      "target": "PRECTOTCORR",
+      "horizon": "T+7",
+      "best_baseline_by_MAE": "climatology",
+      "best_MAE": 3.7649209830221615
+    },
+    {
+      "target": "T2M_MAX",
+      "horizon": "T+1",
+      "best_baseline_by_MAE": "persistence",
+      "best_MAE": 0.8809505452728542
+    },
+    {
+      "target": "T2M_MAX",
+      "horizon": "T+2",
+      "best_baseline_by_MAE": "persistence",
+      "best_MAE": 1.1746800414204617
+    },
+    {
+      "target": "T2M_MAX",
+      "horizon": "T+3",
+      "best_baseline_by_MAE": "persistence",
+      "best_MAE": 1.3379515807843825
+    },
+    {
+      "target": "T2M_MAX",
+      "horizon": "T+4",
+      "best_baseline_by_MAE": "persistence",
+      "best_MAE": 1.4370769681960374
+    },
+    {
+      "target": "T2M_MAX",
+      "horizon": "T+5",
+      "best_baseline_by_MAE": "climatology",
+      "best_MAE": 1.4997173798351455
+    },
+    {
+      "target": "T2M_MAX",
+      "horizon": "T+6",
+      "best_baseline_by_MAE": "climatology",
+      "best_MAE": 1.4997173798351455
+    },
+    {
+      "target": "T2M_MAX",
+      "horizon": "T+7",
+      "best_baseline_by_MAE": "climatology",
+      "best_MAE": 1.4997173798351455
+    }
+  ],
+  "findings": [
+    "Climatology wins rainfall MAE from T+2 through T+7.",
+    "Persistence wins rainfall MAE at T+1.",
+    "Persistence wins T2M_MAX MAE from T+1 through T+4.",
+    "Climatology wins T2M_MAX MAE from T+5 through T+7.",
+    "Seasonal naive does not win any MAE comparison.",
+    "Climatology is a seasonal expectation benchmark, not an event forecast."
+  ],
+  "holdout_accessed": false,
+  "model_training_performed": false,
+  "production_approval": false
+}

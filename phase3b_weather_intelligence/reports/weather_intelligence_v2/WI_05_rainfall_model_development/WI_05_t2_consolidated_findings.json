@@ -1,0 +1,124 @@
+{
+  "work_item": "WI-05",
+  "experiment": "Rainfall Forecasting T+2",
+  "status": "Provisional candidate",
+  "target": "PRECTOTCORR",
+  "unit": "mm/day",
+  "horizon": "T+2",
+  "data_policy": {
+    "training_period": "2013-2019",
+    "validation_period": "2020-2022",
+    "final_holdout_period": "2023-2024",
+    "training_sample_observations": 352800,
+    "validation_observations": 2761920,
+    "holdout_accessed": false,
+    "chronological_split": true
+  },
+  "selected_candidate": {
+    "model": "Two-stage HistGradientBoosting",
+    "classifier": "HistGradientBoostingClassifier",
+    "conditional_regressor": "HistGradientBoostingRegressor",
+    "wet_day_threshold_mm": 1.0,
+    "mae_mm": 3.4180116856321,
+    "rmse_mm": 8.31310724526423
+  },
+  "baseline_comparison": {
+    "persistence": {
+      "mae_mm": 4.0844,
+      "rmse_mm": 10.843
+    },
+    "seasonal_naive": {
+      "mae_mm": 4.7911,
+      "rmse_mm": 12.1318
+    },
+    "training_climatology": {
+      "mae_mm": 3.7649,
+      "rmse_mm": 9.062
+    },
+    "improvement_over_persistence_mae_pct": 16.32,
+    "improvement_over_climatology_mae_pct": 9.21
+  },
+  "seasonal_validation": {
+    "Winter": {
+      "observations": 682920,
+      "candidate_mae_mm": 1.2432700401774641,
+      "candidate_rmse_mm": 4.692428029981346,
+      "mae_improvement_over_persistence_pct": 15.04099923384723,
+      "rmse_improvement_over_persistence_pct": 25.5560108142817
+    },
+    "Pre-monsoon": {
+      "observations": 695520,
+      "candidate_mae_mm": 2.2426522835113416,
+      "candidate_rmse_mm": 6.863202982513095,
+      "mae_improvement_over_persistence_pct": 15.942544982208856,
+      "rmse_improvement_over_persistence_pct": 23.617359826734024
+    },
+    "Monsoon": {
+      "observations": 922320,
+      "candidate_mae_mm": 6.004885463376627,
+      "candidate_rmse_mm": 11.03355311301889,
+      "mae_improvement_over_persistence_pct": 16.163530082205423,
+      "rmse_improvement_over_persistence_pct": 22.364573576516833
+    },
+    "Post-monsoon": {
+      "observations": 461160,
+      "candidate_mae_mm": 3.2374563755175623,
+      "candidate_rmse_mm": 8.170925607341232,
+      "mae_improvement_over_persistence_pct": 17.948543234188865,
+      "rmse_improvement_over_persistence_pct": 25.275786012454727
+    }
+  },
+  "intensity_findings": {
+    "Below 1 mm": {
+      "observations": 1603478,
+      "candidate_mae_mm": 1.2528110485411512,
+      "persistence_mae_mm": 1.0875532062179838,
+      "mae_improvement_pct": -15.195379994130048
+    },
+    "1\u20135 mm": {
+      "observations": 575375,
+      "candidate_mae_mm": 3.3880933654914034,
+      "persistence_mae_mm": 4.3577751031935685,
+      "mae_improvement_pct": 22.251761844973135
+    },
+    "5\u201320 mm": {
+      "observations": 458822,
+      "candidate_mae_mm": 5.02185078609572,
+      "persistence_mae_mm": 8.174328192632437,
+      "mae_improvement_pct": 38.56558401188322
+    },
+    "20\u201350 mm": {
+      "observations": 105268,
+      "candidate_mae_mm": 19.121690383865467,
+      "persistence_mae_mm": 20.587374130789986,
+      "mae_improvement_pct": 7.119333129194351
+    },
+    "50+ mm": {
+      "observations": 18977,
+      "candidate_mae_mm": 61.387887200925654,
+      "persistence_mae_mm": 58.58867734626127,
+      "mae_improvement_pct": -4.777731775921392
+    }
+  },
+  "heavy_rainfall_diagnostics": {
+    "observations": 18977,
+    "actual_mean_mm": 77.47189545238973,
+    "candidate_mean_mm": 16.446219885444293,
+    "candidate_bias_mm": -61.025675566945445,
+    "candidate_mae_mm": 61.387887200925654,
+    "persistence_mae_mm": 58.58867734626127,
+    "candidate_p95_mm": 47.319030732423286,
+    "actual_p95_mm": 142.49800000000005,
+    "candidate_max_mm": 147.51163371837933,
+    "actual_max_mm": 666.37
+  },
+  "limitations": [
+    "The candidate underperforms persistence below 1 mm and at 50 mm or above.",
+    "Heavy rainfall is systematically underpredicted.",
+    "Monsoon has the highest absolute prediction error.",
+    "The candidate's maximum prediction is substantially below the observed maximum.",
+    "Validation performance does not establish final holdout performance.",
+    "Historical weather data ends in 2024 and does not provide live operational forecasts for 2026."
+  ],
+  "final_decision": "Retain the original two-stage HistGradientBoosting model as the provisional T+2 candidate. Final model selection remains pending."
+}

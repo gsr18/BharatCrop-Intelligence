@@ -1,0 +1,16 @@
+{
+  "work_item": "WI-05",
+  "horizon": "T+3",
+  "target": "PRECTOTCORR_target_t_plus_3",
+  "validation_period": "2020-2022",
+  "observations": 2761920,
+  "candidate_model": "Two-stage HistGradientBoosting",
+  "candidate_mae_mm": 3.5790399582930537,
+  "candidate_rmse_mm": 8.55195686567408,
+  "persistence_mae_mm": 4.391842363283512,
+  "persistence_rmse_mm": 11.348874927375965,
+  "mae_improvement_over_persistence_pct": 18.50709423875533,
+  "rmse_improvement_over_persistence_pct": 24.64489281624831,
+  "holdout_accessed": false,
+  "status": "Provisional candidate"
+}

@@ -1,0 +1,18 @@
+{
+  "source_file": "DISTRICT_BOUNDARY.shp",
+  "feature_count": 810,
+  "state_label_count": 36,
+  "unique_district_label_count": 780,
+  "missing_or_unavailable_identifiers": {
+    "STATE_UT": 28,
+    "STATE_LGD": 28,
+    "DISTRICT": 28,
+    "DIST_LGD": 31
+  },
+  "missing_geometry_count": 0,
+  "empty_geometry_count": 0,
+  "crs": "PROJCS[\"LCC_WGS84\",GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0],UNIT[\"Degree\",0.0174532925199433]],PROJECTION[\"Lambert_Conformal_Conic_2SP\"],PARAMETER[\"latitude_of_origin\",24],PARAMETER[\"central_meridian\",80],PARAMETER[\"standard_parallel_1\",12.472944],PARAMETER[\"standard_parallel_2\",35.172806],PARAMETER[\"false_easting\",4000000],PARAMETER[\"false_northing\",4000000],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+  "unresolved_record_count": 31,
+  "matching_status": "NOT_STARTED",
+  "created_at_utc": "2026-10-30T22:11:44.474669+00:00"
+}

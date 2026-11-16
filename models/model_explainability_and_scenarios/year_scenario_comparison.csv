@@ -1,0 +1,7 @@
+Crop,Season,Crop_Category,State,District,FE_YearStart,Predicted_Yield,Change_vs_Baseline,Change_vs_Baseline_pct
+Moong,Rabi,Individual Crop Candidate,West Bengal,North 24 Parganas,2019,683.7470115678233,-265.5829069552309,-27.975828189257822
+Moong,Rabi,Individual Crop Candidate,West Bengal,North 24 Parganas,2020,734.6188823964309,-214.7110361266233,-22.61711465500485
+Moong,Rabi,Individual Crop Candidate,West Bengal,North 24 Parganas,2021,734.6188823964309,-214.7110361266233,-22.61711465500485
+Moong,Rabi,Individual Crop Candidate,West Bengal,North 24 Parganas,2022,949.3299185230542,0.0,0.0
+Moong,Rabi,Individual Crop Candidate,West Bengal,North 24 Parganas,2023,949.3299185230542,0.0,0.0
+Moong,Rabi,Individual Crop Candidate,West Bengal,North 24 Parganas,2024,949.3299185230542,0.0,0.0

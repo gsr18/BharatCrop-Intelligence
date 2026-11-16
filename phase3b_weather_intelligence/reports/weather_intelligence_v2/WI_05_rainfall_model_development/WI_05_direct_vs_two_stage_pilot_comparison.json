@@ -1,0 +1,32 @@
+[
+  {
+    "model": "Ridge",
+    "approach": "Direct regression",
+    "mae_mm": 2.7722429620026516,
+    "rmse_mm": 7.946185728456718
+  },
+  {
+    "model": "Random Forest",
+    "approach": "Direct regression",
+    "mae_mm": 2.6736780301168235,
+    "rmse_mm": 8.013692881910245
+  },
+  {
+    "model": "HistGradientBoosting",
+    "approach": "Direct regression",
+    "mae_mm": 2.704353718900669,
+    "rmse_mm": 7.958803050542154
+  },
+  {
+    "model": "HistGradientBoosting",
+    "approach": "Two-stage expected amount",
+    "mae_mm": 2.5949678044554165,
+    "rmse_mm": 7.974327184681835
+  },
+  {
+    "model": "HistGradientBoosting",
+    "approach": "Two-stage hard threshold",
+    "mae_mm": 2.77738709474947,
+    "rmse_mm": 8.050275273388747
+  }
+]

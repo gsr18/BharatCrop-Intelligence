@@ -1,0 +1,19 @@
+{
+  "dataset": "India district boundary shapefile",
+  "local_path": "data/raw/india_district_boundaries/91/",
+  "candidate_source": "Survey of India Online Maps Portal",
+  "candidate_source_url": "https://onlinemaps.surveyofindia.gov.in/",
+  "candidate_product_name": "Administrative Boundary Database for Entire Country up to District Level with HQ",
+  "candidate_product_code": "OVSF/1M/7",
+  "source_identity_verified": false,
+  "original_download_archive_available": false,
+  "original_boundary_vintage_verified": false,
+  "known_issues": [
+    "28 disputed boundary features have unavailable identifiers",
+    "31 features have unavailable district LGD identifiers",
+    "Some district names contain suspicious characters",
+    "District name matches do not establish historical boundary equivalence"
+  ],
+  "decision": "PROVISIONAL_ONLY_NOT_APPROVED_FOR_FINAL_CROSSWALK",
+  "recorded_at_utc": "2026-10-30T22:25:25.205647+00:00"
+}

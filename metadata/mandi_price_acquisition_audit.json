@@ -1,0 +1,43 @@
+{
+    "dataset_name": "AGMARKNET Mandi Prices",
+    "source_provider": "Government of India Open Government Data Platform",
+    "source_urls": [
+        "https://data.gov.in/resource/current-daily-price-various-commodities-various-markets-mandi",
+        "https://data.gov.in/resource/variety-wise-daily-market-prices-data-commodity"
+    ],
+    "raw_file": "data\\raw\\mandi_prices\\mandi_prices_2026-10-31.csv",
+    "sha256": "e7f4ce006164ca30ce77506ef8247f9516f9f4b30eb48f209ba029dd249700c8",
+    "file_size_bytes": 1274389,
+    "row_count": 12556,
+    "column_count": 10,
+    "columns": [
+        "State",
+        "District",
+        "Market",
+        "Commodity",
+        "Variety",
+        "Grade",
+        "Arrival_Date",
+        "Min_x0020_Price",
+        "Max_x0020_Price",
+        "Modal_x0020_Price"
+    ],
+    "date_column": "Arrival_Date",
+    "valid_date_count": 12556,
+    "invalid_date_count": 0,
+    "earliest_arrival_date": "2026-10-31",
+    "latest_arrival_date": "2026-10-31",
+    "unique_arrival_dates": 1,
+    "unique_states": 26,
+    "unique_districts": 396,
+    "unique_markets": 1240,
+    "unique_commodities": 221,
+    "price_fields": [
+        "Min_x0020_Price",
+        "Max_x0020_Price",
+        "Modal_x0020_Price"
+    ],
+    "historical_coverage_assessment": "Single-day snapshot; insufficient for historical price trends or time-series forecasting.",
+    "phase_2_status": "Downloaded and structurally inspected; historical coverage limitation identified",
+    "data_modified": false
+}

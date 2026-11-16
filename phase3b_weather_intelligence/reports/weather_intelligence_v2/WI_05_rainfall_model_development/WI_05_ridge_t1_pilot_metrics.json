@@ -1,0 +1,15 @@
+{
+  "model": "Ridge Regression",
+  "target": "PRECTOTCORR",
+  "horizon": "T+1",
+  "training_samples": 34930,
+  "validation_samples": 15070,
+  "predictor_count": 53,
+  "alpha": 1.0,
+  "MAE": 2.7722429620026516,
+  "RMSE": 7.946185728456718,
+  "negative_raw_predictions": 2170,
+  "negative_predictions_clipped_for_evaluation": true,
+  "training_scope": "10-batch pilot",
+  "final_holdout_accessed": false
+}

@@ -1,0 +1,256 @@
+{
+  "project": "BharatCrop Intelligence",
+  "analysis": "Model Explainability and Scenario Analysis",
+  "model_name": "HistGradientBoostingRegressor",
+  "target": "Yield",
+  "features": [
+    "Crop",
+    "Season",
+    "Crop_Category",
+    "State",
+    "District",
+    "FE_YearStart"
+  ],
+  "evaluation": {
+    "evaluation_rows": 3000,
+    "MAE": 424.0298394365251,
+    "RMSE": 601.163823307602,
+    "R2": 0.7775387321082939,
+    "actual_mean": 1680.1343333333334,
+    "predicted_mean": 1821.3451527416983,
+    "actual_median": 1262.0,
+    "predicted_median": 1519.444921087874,
+    "negative_predictions": 0,
+    "non_finite_predictions": 0
+  },
+  "evaluation_period": {
+    "year_start": 2021,
+    "year_end": 2022,
+    "evaluation_rows": 3000,
+    "sampling_limit": 3000,
+    "random_state": 42
+  },
+  "permutation_importance": [
+    {
+      "feature": "Crop",
+      "importance_mean_mae_increase": 751.1379512186281,
+      "importance_std": 16.014298695060624
+    },
+    {
+      "feature": "State",
+      "importance_mean_mae_increase": 260.35383469033457,
+      "importance_std": 3.5118377868046005
+    },
+    {
+      "feature": "Season",
+      "importance_mean_mae_increase": 47.55641989236202,
+      "importance_std": 4.577722724914634
+    },
+    {
+      "feature": "District",
+      "importance_mean_mae_increase": 36.50610815016563,
+      "importance_std": 0.953567527195288
+    },
+    {
+      "feature": "FE_YearStart",
+      "importance_mean_mae_increase": 4.598068484517228,
+      "importance_std": 1.1437105447119884
+    },
+    {
+      "feature": "Crop_Category",
+      "importance_mean_mae_increase": 0.0,
+      "importance_std": 0.0
+    }
+  ],
+  "highest_mae_groups": [
+    {
+      "Crop": "Barley",
+      "Season": "Kharif",
+      "observations": 2,
+      "MAE": 2347.432914570672,
+      "RMSE": 2347.432914570672
+    },
+    {
+      "Crop": "Maize",
+      "Season": "Rabi",
+      "observations": 69,
+      "MAE": 926.8227593584074,
+      "RMSE": 1306.4059701021486
+    },
+    {
+      "Crop": "Bajra",
+      "Season": "Total",
+      "observations": 90,
+      "MAE": 734.1234405523221,
+      "RMSE": 885.5733542239539
+    },
+    {
+      "Crop": "Maize",
+      "Season": "Total",
+      "observations": 123,
+      "MAE": 715.2611624658874,
+      "RMSE": 939.1146914588651
+    },
+    {
+      "Crop": "Ragi",
+      "Season": "Summer",
+      "observations": 7,
+      "MAE": 713.9190240183142,
+      "RMSE": 791.141686185789
+    },
+    {
+      "Crop": "Maize",
+      "Season": "Summer",
+      "observations": 47,
+      "MAE": 633.5640764025637,
+      "RMSE": 963.9810577805174
+    },
+    {
+      "Crop": "Bajra",
+      "Season": "Summer",
+      "observations": 12,
+      "MAE": 593.9663786977382,
+      "RMSE": 686.0859558780702
+    },
+    {
+      "Crop": "Jowar",
+      "Season": "Total",
+      "observations": 75,
+      "MAE": 583.5044347323485,
+      "RMSE": 902.0068493529075
+    },
+    {
+      "Crop": "Bajra",
+      "Season": "Rabi",
+      "observations": 15,
+      "MAE": 570.3341264099272,
+      "RMSE": 722.3943038385313
+    },
+    {
+      "Crop": "Jowar",
+      "Season": "Rabi",
+      "observations": 37,
+      "MAE": 566.8974884976346,
+      "RMSE": 977.2570549295251
+    }
+  ],
+  "strongest_overprediction_groups": [
+    {
+      "Crop": "Tur",
+      "Season": "Total",
+      "observations": 123,
+      "mean_signed_error": 426.9196850690373,
+      "mean_bias_pct_of_actual": 44.587101572098284
+    },
+    {
+      "Crop": "Bajra",
+      "Season": "Total",
+      "observations": 90,
+      "mean_signed_error": 362.0981101427607,
+      "mean_bias_pct_of_actual": 20.718814117049586
+    },
+    {
+      "Crop": "Maize",
+      "Season": "Total",
+      "observations": 123,
+      "mean_signed_error": 314.75029164789044,
+      "mean_bias_pct_of_actual": 10.339580873409716
+    },
+    {
+      "Crop": "Ragi",
+      "Season": "Total",
+      "observations": 50,
+      "mean_signed_error": 298.8403510399731,
+      "mean_bias_pct_of_actual": 19.117951753520035
+    },
+    {
+      "Crop": "Barley",
+      "Season": "Total",
+      "observations": 58,
+      "mean_signed_error": 237.17513081300845,
+      "mean_bias_pct_of_actual": 9.818883494639142
+    },
+    {
+      "Crop": "Small Millets",
+      "Season": "Total",
+      "observations": 58,
+      "mean_signed_error": 232.27723339712588,
+      "mean_bias_pct_of_actual": 25.041040031660412
+    },
+    {
+      "Crop": "Ragi",
+      "Season": "Rabi",
+      "observations": 20,
+      "mean_signed_error": 223.12104541171692,
+      "mean_bias_pct_of_actual": 12.058641593888392
+    },
+    {
+      "Crop": "Wheat",
+      "Season": "Total",
+      "observations": 99,
+      "mean_signed_error": 217.88464574359787,
+      "mean_bias_pct_of_actual": 8.60256192665733
+    },
+    {
+      "Crop": "Barley",
+      "Season": "Rabi",
+      "observations": 51,
+      "mean_signed_error": 216.87017234759472,
+      "mean_bias_pct_of_actual": 8.924410403704657
+    },
+    {
+      "Crop": "Rice",
+      "Season": "Total",
+      "observations": 138,
+      "mean_signed_error": 206.46250654677243,
+      "mean_bias_pct_of_actual": 7.943389455806636
+    }
+  ],
+  "strongest_underprediction_groups": [
+    {
+      "Crop": "Rice",
+      "Season": "Summer",
+      "observations": 66,
+      "mean_signed_error": -91.63191750325095,
+      "mean_bias_pct_of_actual": -2.848647229742
+    },
+    {
+      "Crop": "Jowar",
+      "Season": "Rabi",
+      "observations": 37,
+      "mean_signed_error": -77.98949588435269,
+      "mean_bias_pct_of_actual": -4.761106368335946
+    },
+    {
+      "Crop": "Rice",
+      "Season": "Rabi",
+      "observations": 60,
+      "mean_signed_error": -15.546569642883401,
+      "mean_bias_pct_of_actual": -0.5530258186487328
+    }
+  ],
+  "scenario_analysis": {
+    "baseline_features": {
+      "Crop": "Moong",
+      "Season": "Rabi",
+      "Crop_Category": "Individual Crop Candidate",
+      "State": "West Bengal",
+      "District": "North 24 Parganas",
+      "FE_YearStart": 2022
+    },
+    "baseline_prediction": 949.3299185230542,
+    "year_scenario_file": "year_scenario_comparison.csv",
+    "caution": "Years beyond 2022 are outside the model's documented training period and must not be treated as validated forecasts."
+  },
+  "limitations": [
+    "Permutation importance measures predictive reliance, not causation.",
+    "Evaluation used a sample of up to 3000 observations from 2021\u20132022.",
+    "The final holdout was repeatedly inspected during prior diagnostics.",
+    "Crop-season group metrics can be unstable for small groups.",
+    "The Total season label has not been established as directly comparable to individual seasons.",
+    "The scenario baseline combination appeared only twice in the evaluation sample.",
+    "Flat predictions for years beyond learned split thresholds do not imply constant real-world yield.",
+    "Model performance does not establish production readiness."
+  ],
+  "generated_at_utc": "2026-11-01T15:04:15.658484+00:00"
+}

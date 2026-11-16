@@ -1,0 +1,69 @@
+{
+  "project": "BharatCrop Intelligence",
+  "registry_entry_count": 4,
+  "policy_rule_count": 8,
+  "all_registry_entries_have_artifact": false,
+  "all_registry_entries_have_metadata": true,
+  "production_approval": "NOT ESTABLISHED",
+  "components": [
+    {
+      "registry_id": "yield_prediction_individual_crop_hgb",
+      "component_type": "trained_model",
+      "artifact_exists": true,
+      "metadata_exists": true,
+      "recorded_status": "CONDITIONALLY READY FOR INTEGRATION",
+      "registry_disposition": "CONDITIONAL \u2014 further validation required",
+      "evidence_status": "Metadata and readiness report available",
+      "production_approval": "NOT ESTABLISHED",
+      "restrictions": "Not production-approved; validate required inputs, unseen-category reliability, and operational behavior."
+    },
+    {
+      "registry_id": "weather_low_yield_classifier",
+      "component_type": "experimental_model_evaluation",
+      "artifact_exists": false,
+      "metadata_exists": true,
+      "recorded_status": "NOT READY",
+      "registry_disposition": "NOT READY",
+      "evidence_status": "Evaluation report available; model artifact not verified",
+      "production_approval": "NOT ESTABLISHED",
+      "restrictions": "Do not deploy or use as an operational low-yield warning without inspecting the evaluation evidence and confirming the corresponding model artifact."
+    },
+    {
+      "registry_id": "agricultural_risk_indicators",
+      "component_type": "analytical_output",
+      "artifact_exists": true,
+      "metadata_exists": true,
+      "recorded_status": "EXPLORATORY \u2014 NOT VALIDATED FOR FARMER-FACING RISK WARNINGS",
+      "registry_disposition": "EXPLORATORY \u2014 NOT VALIDATED",
+      "evidence_status": "Analytical output and metadata available",
+      "production_approval": "NOT ESTABLISHED",
+      "restrictions": "Not validated for farmer-facing risk warnings; do not present as calibrated future risk."
+    },
+    {
+      "registry_id": "crop_recommendation",
+      "component_type": "derived_ranking_component",
+      "artifact_exists": true,
+      "metadata_exists": true,
+      "recorded_status": "EVALUATED RETROSPECTIVELY \u2014 NOT PRODUCTION-APPROVED",
+      "registry_disposition": "RESEARCH / HISTORICAL RANKING ONLY",
+      "evidence_status": "Metadata and evaluation report available; ranking uses the existing yield regression artifact.",
+      "production_approval": "NOT ESTABLISHED",
+      "restrictions": "Not a separate trained model. Rankings do not establish profitability or agronomic suitability. The 2025 configured prediction year is beyond the 2013\u20132022 training period. Do not approve for production without further validation."
+    }
+  ],
+  "crop_recommendation_evaluation": {
+    "registry_id": "crop_recommendation",
+    "evaluation_period": [
+      2023,
+      2024
+    ],
+    "eligible_prediction_rows": 8433,
+    "evaluated_groups": 2365,
+    "top1_hit_rate": 0.7919661733615222,
+    "top3_hit_rate": 0.99830866807611,
+    "mean_spearman_correlation": 0.7919884758726925,
+    "interpretation": "Retrospective ranking evaluation against observed yield among eligible historical crop candidates; not a measure of agronomic suitability or profitability.",
+    "production_approval": "NOT ESTABLISHED"
+  },
+  "governance_note": "This report records artifact availability and documented evidence. It does not independently validate model performance or authorize production deployment."
+}

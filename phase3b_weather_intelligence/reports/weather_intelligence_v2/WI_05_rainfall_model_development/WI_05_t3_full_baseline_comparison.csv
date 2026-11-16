@@ -1,0 +1,5 @@
+model,mae_mm,rmse_mm,mae_rank,rmse_rank
+Two-stage HistGradientBoosting,3.5790399582930537,8.55195686567408,1,1
+Persistence,4.3918,11.3489,3,3
+Seasonal naive,4.8055,12.1839,4,4
+Training climatology,3.7649,9.062,2,2

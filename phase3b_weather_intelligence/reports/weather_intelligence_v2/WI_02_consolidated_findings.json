@@ -1,0 +1,1085 @@
+{
+  "handoff_summary": {
+    "notebook": "WI-02",
+    "title": "Exploratory Weather Intelligence",
+    "status": "completed_with_documented_limitations",
+    "dataset": {
+      "version": "weather-daily-v1",
+      "start_date": "2013-01-01",
+      "end_date": "2024-12-31",
+      "grid_cells": 2520,
+      "observations": 11045160,
+      "years": 12,
+      "variables": [
+        "PRECTOTCORR",
+        "T2M_MAX",
+        "T2M_MIN"
+      ]
+    },
+    "analysis_completed": [
+      "Rainfall distribution and wet/dry frequency",
+      "Annual and monthly rainfall variability",
+      "Calendar-season rainfall patterns",
+      "Spatial rainfall distribution by grid cell",
+      "Seasonal geographic rainfall variation",
+      "Temperature distributions and extremes",
+      "Seasonal temperature variability",
+      "Weather variable correlations",
+      "Wet-day and dry-day temperature comparisons",
+      "Grid-cell/month climatology anomaly relationships",
+      "Annual weather variability",
+      "Exploratory grid-cell trend slopes"
+    ],
+    "important_limitations": [
+      "Weather data is a gridded archive, not district-level observations.",
+      "Extreme values pass stored QC but have not all been independently validated.",
+      "Correlations are descriptive and do not establish causality.",
+      "Full-period climatology anomalies are exploratory, not leakage-safe forecasting features.",
+      "Twelve years of data are insufficient for strong long-term climate-trend claims.",
+      "Historical archive ends in 2024 and does not provide live weather forecasts.",
+      "No forecasting models were trained in WI-02."
+    ],
+    "final_holdout_policy": {
+      "training_exploration_period": "2013-2022",
+      "final_holdout_period": "2023-2024",
+      "note": "WI-02 is descriptive exploration. Final holdout must remain untouched during subsequent model selection and tuning."
+    },
+    "missing_artifacts": [],
+    "artifact_validation": [
+      {
+        "artifact": "WI_01_dataset_profile.json",
+        "exists": true,
+        "size_bytes": 2263
+      },
+      {
+        "artifact": "WI_02_seasonality_findings.json",
+        "exists": true,
+        "size_bytes": 5148
+      },
+      {
+        "artifact": "WI_02_spatial_rainfall_by_cell.csv",
+        "exists": true,
+        "size_bytes": 227600
+      },
+      {
+        "artifact": "WI_02_seasonal_spatial_rainfall_by_cell.csv",
+        "exists": true,
+        "size_bytes": 1051228
+      },
+      {
+        "artifact": "WI_02_temperature_distribution_findings.json",
+        "exists": true,
+        "size_bytes": 2674
+      },
+      {
+        "artifact": "WI_02_weather_variable_relationships.json",
+        "exists": true,
+        "size_bytes": 5626
+      },
+      {
+        "artifact": "WI_02_deconfounded_weather_relationships.json",
+        "exists": true,
+        "size_bytes": 8004
+      },
+      {
+        "artifact": "WI_02_annual_weather_summary.csv",
+        "exists": true,
+        "size_bytes": 855
+      },
+      {
+        "artifact": "WI_02_annual_weather_by_cell.csv",
+        "exists": true,
+        "size_bytes": 3863832
+      },
+      {
+        "artifact": "WI_02_interannual_trend_findings.json",
+        "exists": true,
+        "size_bytes": 6382
+      }
+    ],
+    "next_notebook": "WI-03: Leakage-safe Feature Engineering",
+    "generated_at_utc": "2026-11-12T18:33:14.129568+00:00"
+  },
+  "detailed_findings": {
+    "WI_02_seasonality_findings.json": {
+      "year_month_wet_day_frequency_percent": {
+        "1": {
+          "2013": 24.3126,
+          "2014": 30.0384,
+          "2015": 40.882,
+          "2016": 33.7673,
+          "2017": 37.2517,
+          "2018": 28.6252,
+          "2019": 34.6787,
+          "2020": 45.3277,
+          "2021": 36.9995,
+          "2022": 50.2791,
+          "2023": 33.158,
+          "2024": 35.544
+        },
+        "2": {
+          "2013": 40.8603,
+          "2014": 34.4884,
+          "2015": 35.7511,
+          "2016": 34.3555,
+          "2017": 26.8509,
+          "2018": 33.0626,
+          "2019": 42.646,
+          "2020": 35.0753,
+          "2021": 31.2316,
+          "2022": 44.3197,
+          "2023": 26.8495,
+          "2024": 36.2753
+        },
+        "3": {
+          "2013": 37.3502,
+          "2014": 37.6203,
+          "2015": 51.3338,
+          "2016": 46.4401,
+          "2017": 50.0038,
+          "2018": 45.1754,
+          "2019": 44.9795,
+          "2020": 57.5973,
+          "2021": 46.732,
+          "2022": 39.8131,
+          "2023": 64.5661,
+          "2024": 39.9872
+        },
+        "4": {
+          "2013": 58.7275,
+          "2014": 58.0,
+          "2015": 73.1481,
+          "2016": 54.9405,
+          "2017": 61.1931,
+          "2018": 71.5992,
+          "2019": 63.8889,
+          "2020": 72.6653,
+          "2021": 66.1164,
+          "2022": 64.9061,
+          "2023": 62.8545,
+          "2024": 56.9339
+        },
+        "5": {
+          "2013": 71.5271,
+          "2014": 77.2389,
+          "2015": 75.3815,
+          "2016": 79.8131,
+          "2017": 82.3976,
+          "2018": 78.4665,
+          "2019": 72.0571,
+          "2020": 79.9501,
+          "2021": 88.798,
+          "2022": 81.2826,
+          "2023": 81.339,
+          "2024": 75.8141
+        },
+        "6": {
+          "2013": 90.9775,
+          "2014": 82.1124,
+          "2015": 90.7778,
+          "2016": 91.0661,
+          "2017": 92.5873,
+          "2018": 89.9365,
+          "2019": 86.8452,
+          "2020": 94.1733,
+          "2021": 92.836,
+          "2022": 86.9735,
+          "2023": 88.8386,
+          "2024": 90.7116
+        },
+        "7": {
+          "2013": 96.2826,
+          "2014": 94.0131,
+          "2015": 91.4286,
+          "2016": 96.2942,
+          "2017": 96.4299,
+          "2018": 94.7849,
+          "2019": 95.1165,
+          "2020": 97.1685,
+          "2021": 95.5914,
+          "2022": 96.6257,
+          "2023": 97.9544,
+          "2024": 97.7739
+        },
+        "8": {
+          "2013": 93.3423,
+          "2014": 93.1541,
+          "2015": 92.8507,
+          "2016": 95.2266,
+          "2017": 94.7081,
+          "2018": 95.1485,
+          "2019": 95.69,
+          "2020": 95.9229,
+          "2021": 93.9209,
+          "2022": 96.659,
+          "2023": 90.8717,
+          "2024": 97.523
+        },
+        "9": {
+          "2013": 88.1058,
+          "2014": 86.3254,
+          "2015": 79.8849,
+          "2016": 87.877,
+          "2017": 86.3452,
+          "2018": 84.4616,
+          "2019": 93.7328,
+          "2020": 87.5688,
+          "2021": 94.7989,
+          "2022": 91.9802,
+          "2023": 89.873,
+          "2024": 90.7421
+        },
+        "10": {
+          "2013": 75.7527,
+          "2014": 66.5911,
+          "2015": 62.9941,
+          "2016": 60.1434,
+          "2017": 65.7847,
+          "2018": 57.8047,
+          "2019": 75.8231,
+          "2020": 66.6859,
+          "2021": 72.2005,
+          "2022": 69.52,
+          "2023": 62.9864,
+          "2024": 72.8495
+        },
+        "11": {
+          "2013": 42.6627,
+          "2014": 39.4974,
+          "2015": 48.1786,
+          "2016": 35.0767,
+          "2017": 44.7394,
+          "2018": 42.2646,
+          "2019": 55.1111,
+          "2020": 49.2474,
+          "2021": 51.3942,
+          "2022": 44.2156,
+          "2023": 50.9312,
+          "2024": 44.7606
+        },
+        "12": {
+          "2013": 31.4785,
+          "2014": 39.7299,
+          "2015": 39.5801,
+          "2016": 32.5858,
+          "2017": 38.3961,
+          "2018": 39.4483,
+          "2019": 44.1065,
+          "2020": 39.4457,
+          "2021": 45.9434,
+          "2022": 38.8543,
+          "2023": 44.447,
+          "2024": 44.7427
+        }
+      },
+      "seasonal_summary": {
+        "Winter (Dec-Feb)": {
+          "mean_wet_day_percentage": 37.0379,
+          "std_wet_day_percentage": 3.6849,
+          "min_wet_day_percentage": 31.929,
+          "max_wet_day_percentage": 44.4899,
+          "mean_rainfall_mm_day": 0.9459
+        },
+        "Pre-monsoon (Mar-May)": {
+          "mean_wet_day_percentage": 63.0659,
+          "std_wet_day_percentage": 4.8192,
+          "min_wet_day_percentage": 55.8372,
+          "max_wet_day_percentage": 70.0427,
+          "mean_rainfall_mm_day": 2.0008
+        },
+        "Monsoon (Jun-Sep)": {
+          "mean_wet_day_percentage": 92.2164,
+          "std_wet_day_percentage": 1.805,
+          "min_wet_day_percentage": 88.7913,
+          "max_wet_day_percentage": 94.2945,
+          "mean_rainfall_mm_day": 7.3354
+        },
+        "Post-monsoon (Oct-Nov)": {
+          "mean_wet_day_percentage": 56.729,
+          "std_wet_day_percentage": 4.8533,
+          "min_wet_day_percentage": 47.8155,
+          "max_wet_day_percentage": 65.6369,
+          "mean_rainfall_mm_day": 3.006
+        }
+      },
+      "season_definitions": {
+        "Winter (Dec-Feb)": [
+          12,
+          1,
+          2
+        ],
+        "Pre-monsoon (Mar-May)": [
+          3,
+          4,
+          5
+        ],
+        "Monsoon (Jun-Sep)": [
+          6,
+          7,
+          8,
+          9
+        ],
+        "Post-monsoon (Oct-Nov)": [
+          10,
+          11
+        ]
+      },
+      "interpretation_scope": "Pooled grid-cell-day descriptive statistics; not district-level or crop-season measurements."
+    },
+    "WI_02_temperature_distribution_findings.json": {
+      "summary_statistics": {
+        "T2M_MAX": {
+          "count": 11045160.0,
+          "mean": 25.9285,
+          "std": 10.9511,
+          "min": -24.19,
+          "1%": -9.39,
+          "5%": -0.36,
+          "25%": 25.59,
+          "50%": 28.57,
+          "75%": 30.76,
+          "95%": 39.75,
+          "99%": 43.87,
+          "99.9%": 46.85,
+          "max": 51.51
+        },
+        "T2M_MIN": {
+          "count": 11045160.0,
+          "mean": 17.9356,
+          "std": 13.5425,
+          "min": -42.81,
+          "1%": -23.51,
+          "5%": -13.77,
+          "25%": 12.93,
+          "50%": 23.97,
+          "75%": 27.51,
+          "95%": 29.06,
+          "99%": 30.12,
+          "99.9%": 32.66,
+          "max": 37.98
+        },
+        "TEMP_RANGE": {
+          "count": 11045160.0,
+          "mean": 7.9928,
+          "std": 6.4173,
+          "min": 0.04,
+          "1%": 0.23,
+          "5%": 0.36,
+          "25%": 0.82,
+          "50%": 8.24,
+          "75%": 13.74,
+          "95%": 17.85,
+          "99%": 19.8,
+          "99.9%": 21.74,
+          "max": 30.2
+        }
+      },
+      "quantiles": {
+        "T2M_MAX": {
+          "0.1_percentile": -15.27,
+          "1_percentile": -9.39,
+          "5_percentile": -0.36,
+          "median": 28.57,
+          "95_percentile": 39.75,
+          "99_percentile": 43.87,
+          "99.9_percentile": 46.85
+        },
+        "T2M_MIN": {
+          "0.1_percentile": -30.15,
+          "1_percentile": -23.51,
+          "5_percentile": -13.77,
+          "median": 23.97,
+          "95_percentile": 29.06,
+          "99_percentile": 30.12,
+          "99.9_percentile": 32.66
+        },
+        "TEMP_RANGE": {
+          "0.1_percentile": 0.15,
+          "1_percentile": 0.23,
+          "5_percentile": 0.36,
+          "median": 8.24,
+          "95_percentile": 17.85,
+          "99_percentile": 19.8,
+          "99.9_percentile": 21.74
+        }
+      },
+      "threshold_counts": {
+        "T2M_MAX_above_35C": 1352170,
+        "T2M_MAX_above_40C": 517548,
+        "T2M_MAX_above_45C": 53554,
+        "T2M_MAX_above_50C": 66,
+        "T2M_MIN_below_0C": 1441321,
+        "T2M_MIN_below_minus_5C": 1034443,
+        "T2M_MIN_below_minus_10C": 704558,
+        "T2M_MIN_below_minus_20C": 254599
+      },
+      "correlation_matrix": {
+        "T2M_MAX": {
+          "T2M_MAX": 1.0,
+          "T2M_MIN": 0.8838,
+          "TEMP_RANGE": -0.1586
+        },
+        "T2M_MIN": {
+          "T2M_MAX": 0.8838,
+          "T2M_MIN": 1.0,
+          "TEMP_RANGE": -0.6021
+        },
+        "TEMP_RANGE": {
+          "T2M_MAX": -0.1586,
+          "T2M_MIN": -0.6021,
+          "TEMP_RANGE": 1.0
+        }
+      },
+      "extreme_values": {
+        "maximum_T2M_MAX_C": 51.51,
+        "minimum_T2M_MIN_C": -42.81,
+        "maximum_temperature_range_C": 30.200000000000003
+      },
+      "interpretation_note": "Descriptive gridded weather statistics. Threshold counts do not independently establish heatwave, frost, or agricultural-risk events."
+    },
+    "WI_02_weather_variable_relationships.json": {
+      "pearson_correlation": {
+        "PRECTOTCORR": {
+          "PRECTOTCORR": 1.0,
+          "T2M_MAX": 0.0715,
+          "T2M_MIN": 0.1753,
+          "TEMP_RANGE": -0.248
+        },
+        "T2M_MAX": {
+          "PRECTOTCORR": 0.0715,
+          "T2M_MAX": 1.0,
+          "T2M_MIN": 0.8838,
+          "TEMP_RANGE": -0.1586
+        },
+        "T2M_MIN": {
+          "PRECTOTCORR": 0.1753,
+          "T2M_MAX": 0.8838,
+          "T2M_MIN": 1.0,
+          "TEMP_RANGE": -0.6021
+        },
+        "TEMP_RANGE": {
+          "PRECTOTCORR": -0.248,
+          "T2M_MAX": -0.1586,
+          "T2M_MIN": -0.6021,
+          "TEMP_RANGE": 1.0
+        }
+      },
+      "spearman_correlation": {
+        "PRECTOTCORR": {
+          "PRECTOTCORR": 1.0,
+          "T2M_MAX": 0.096,
+          "T2M_MIN": 0.4097,
+          "TEMP_RANGE": -0.4927
+        },
+        "T2M_MAX": {
+          "PRECTOTCORR": 0.096,
+          "T2M_MAX": 1.0,
+          "T2M_MIN": 0.5396,
+          "TEMP_RANGE": 0.0302
+        },
+        "T2M_MIN": {
+          "PRECTOTCORR": 0.4097,
+          "T2M_MAX": 0.5396,
+          "T2M_MIN": 1.0,
+          "TEMP_RANGE": -0.7358
+        },
+        "TEMP_RANGE": {
+          "PRECTOTCORR": -0.4927,
+          "T2M_MAX": 0.0302,
+          "T2M_MIN": -0.7358,
+          "TEMP_RANGE": 1.0
+        }
+      },
+      "wet_dry_temperature_summary": {
+        "Dry": {
+          "observation_count": 3831188,
+          "mean_tmax_c": 24.1192,
+          "median_tmax_c": 27.49,
+          "mean_tmin_c": 11.8636,
+          "median_tmin_c": 15.71,
+          "mean_temp_range_c": 12.2556,
+          "median_temp_range_c": 13.94
+        },
+        "Wet": {
+          "observation_count": 7213972,
+          "mean_tmax_c": 26.8893,
+          "median_tmax_c": 28.76,
+          "mean_tmin_c": 21.1604,
+          "median_tmin_c": 26.37,
+          "mean_temp_range_c": 5.729,
+          "median_temp_range_c": 4.44
+        }
+      },
+      "seasonal_wet_dry_summary": [
+        {
+          "calendar_season": "Monsoon (Jun-Sep)",
+          "rainfall_category": "Dry",
+          "observation_count": 287157,
+          "mean_tmax_c": 30.5877,
+          "mean_tmin_c": 17.3337,
+          "mean_temp_range_c": 13.254,
+          "mean_rainfall_mm_day": 0.0
+        },
+        {
+          "calendar_season": "Monsoon (Jun-Sep)",
+          "rainfall_category": "Wet",
+          "observation_count": 3402123,
+          "mean_tmax_c": 27.9917,
+          "mean_tmin_c": 22.2374,
+          "mean_temp_range_c": 5.7543,
+          "mean_rainfall_mm_day": 7.9545
+        },
+        {
+          "calendar_season": "Post-monsoon (Oct-Nov)",
+          "rainfall_category": "Dry",
+          "observation_count": 798195,
+          "mean_tmax_c": 22.2416,
+          "mean_tmin_c": 10.1014,
+          "mean_temp_range_c": 12.1402,
+          "mean_rainfall_mm_day": 0.0
+        },
+        {
+          "calendar_season": "Post-monsoon (Oct-Nov)",
+          "rainfall_category": "Wet",
+          "observation_count": 1046445,
+          "mean_tmax_c": 26.3991,
+          "mean_tmin_c": 22.1657,
+          "mean_temp_range_c": 4.2334,
+          "mean_rainfall_mm_day": 5.2989
+        },
+        {
+          "calendar_season": "Pre-monsoon (Mar-May)",
+          "rainfall_category": "Dry",
+          "observation_count": 1027535,
+          "mean_tmax_c": 29.5399,
+          "mean_tmin_c": 16.7587,
+          "mean_temp_range_c": 12.7812,
+          "mean_rainfall_mm_day": 0.0
+        },
+        {
+          "calendar_season": "Pre-monsoon (Mar-May)",
+          "rainfall_category": "Wet",
+          "observation_count": 1754545,
+          "mean_tmax_c": 27.335,
+          "mean_tmin_c": 20.3846,
+          "mean_temp_range_c": 6.9504,
+          "mean_rainfall_mm_day": 3.1725
+        },
+        {
+          "calendar_season": "Winter (Dec-Feb)",
+          "rainfall_category": "Dry",
+          "observation_count": 1718301,
+          "mean_tmax_c": 20.6688,
+          "mean_tmin_c": 8.8408,
+          "mean_temp_range_c": 11.828,
+          "mean_rainfall_mm_day": 0.0
+        },
+        {
+          "calendar_season": "Winter (Dec-Feb)",
+          "rainfall_category": "Wet",
+          "observation_count": 1010859,
+          "mean_tmax_c": 22.9131,
+          "mean_tmin_c": 17.8414,
+          "mean_temp_range_c": 5.0717,
+          "mean_rainfall_mm_day": 2.5531
+        }
+      ],
+      "rainfall_intensity_summary": {
+        "Dry (0 mm)": {
+          "observation_count": 3831188,
+          "mean_tmax_c": 24.1192,
+          "mean_tmin_c": 11.8636,
+          "mean_temp_range_c": 12.2556,
+          "mean_rainfall_mm_day": 0.0,
+          "percentage_of_observations": 34.6866
+        },
+        "Light (>0–2.5 mm)": {
+          "observation_count": 4004556,
+          "mean_tmax_c": 26.2105,
+          "mean_tmin_c": 19.4075,
+          "mean_temp_range_c": 6.803,
+          "mean_rainfall_mm_day": 0.6835,
+          "percentage_of_observations": 36.2562
+        },
+        "Moderate (>2.5–7.5 mm)": {
+          "observation_count": 1629754,
+          "mean_tmax_c": 27.4024,
+          "mean_tmin_c": 22.4532,
+          "mean_temp_range_c": 4.9493,
+          "mean_rainfall_mm_day": 4.5636,
+          "percentage_of_observations": 14.7554
+        },
+        "Heavy (>7.5–35 mm)": {
+          "observation_count": 1422187,
+          "mean_tmax_c": 28.056,
+          "mean_tmin_c": 24.1384,
+          "mean_temp_range_c": 3.9176,
+          "mean_rainfall_mm_day": 14.9978,
+          "percentage_of_observations": 12.8761
+        },
+        "Very heavy (>35 mm)": {
+          "observation_count": 157475,
+          "mean_tmax_c": 28.3051,
+          "mean_tmin_c": 25.462,
+          "mean_temp_range_c": 2.8431,
+          "mean_rainfall_mm_day": 58.7388,
+          "percentage_of_observations": 1.4257
+        }
+      },
+      "rainfall_intensity_thresholds_mm_day": {
+        "dry": "0",
+        "light": ">0 to 2.5",
+        "moderate": ">2.5 to 7.5",
+        "heavy": ">7.5 to 35",
+        "very_heavy": ">35"
+      },
+      "interpretation_note": "Descriptive associations only. Pooled correlations may be confounded by season, geography and temporal structure. Rainfall categories are analytical bins, not agricultural hazard classifications."
+    },
+    "WI_02_deconfounded_weather_relationships.json": {
+      "reference_method": "Grid-cell-specific calendar-month historical mean over the full 2013–2024 archive",
+      "pearson_anomaly_correlations": {
+        "PRECTOTCORR_ANOMALY": {
+          "PRECTOTCORR_ANOMALY": 1.0,
+          "T2M_MAX_ANOMALY": -0.1357,
+          "T2M_MIN_ANOMALY": -0.0021,
+          "TEMP_RANGE_ANOMALY": -0.1616
+        },
+        "T2M_MAX_ANOMALY": {
+          "PRECTOTCORR_ANOMALY": -0.1357,
+          "T2M_MAX_ANOMALY": 1.0,
+          "T2M_MIN_ANOMALY": 0.6112,
+          "TEMP_RANGE_ANOMALY": 0.5751
+        },
+        "T2M_MIN_ANOMALY": {
+          "PRECTOTCORR_ANOMALY": -0.0021,
+          "T2M_MAX_ANOMALY": 0.6112,
+          "T2M_MIN_ANOMALY": 1.0,
+          "TEMP_RANGE_ANOMALY": -0.296
+        },
+        "TEMP_RANGE_ANOMALY": {
+          "PRECTOTCORR_ANOMALY": -0.1616,
+          "T2M_MAX_ANOMALY": 0.5751,
+          "T2M_MIN_ANOMALY": -0.296,
+          "TEMP_RANGE_ANOMALY": 1.0
+        }
+      },
+      "spearman_anomaly_correlations": {
+        "PRECTOTCORR_ANOMALY": {
+          "PRECTOTCORR_ANOMALY": 1.0,
+          "T2M_MAX_ANOMALY": -0.1637,
+          "T2M_MIN_ANOMALY": 0.0047,
+          "TEMP_RANGE_ANOMALY": -0.1858
+        },
+        "T2M_MAX_ANOMALY": {
+          "PRECTOTCORR_ANOMALY": -0.1637,
+          "T2M_MAX_ANOMALY": 1.0,
+          "T2M_MIN_ANOMALY": 0.5794,
+          "TEMP_RANGE_ANOMALY": 0.4957
+        },
+        "T2M_MIN_ANOMALY": {
+          "PRECTOTCORR_ANOMALY": 0.0047,
+          "T2M_MAX_ANOMALY": 0.5794,
+          "T2M_MIN_ANOMALY": 1.0,
+          "TEMP_RANGE_ANOMALY": -0.2661
+        },
+        "TEMP_RANGE_ANOMALY": {
+          "PRECTOTCORR_ANOMALY": -0.1858,
+          "T2M_MAX_ANOMALY": 0.4957,
+          "T2M_MIN_ANOMALY": -0.2661,
+          "TEMP_RANGE_ANOMALY": 1.0
+        }
+      },
+      "wet_dry_anomaly_summary": {
+        "Dry": {
+          "observation_count": 3831188,
+          "mean_rainfall_anomaly": -0.8662,
+          "mean_tmax_anomaly": 0.3616,
+          "mean_tmin_anomaly": -0.23,
+          "mean_temp_range_anomaly": 0.5916
+        },
+        "Wet": {
+          "observation_count": 7213972,
+          "mean_rainfall_anomaly": 0.46,
+          "mean_tmax_anomaly": -0.1921,
+          "mean_tmin_anomaly": 0.1222,
+          "mean_temp_range_anomaly": -0.3142
+        }
+      },
+      "seasonal_wet_dry_anomaly_summary": [
+        {
+          "calendar_season": "Monsoon (Jun-Sep)",
+          "rainfall_day_type": "Dry",
+          "observation_count": 287157,
+          "mean_rainfall_anomaly": -3.1588,
+          "mean_tmax_anomaly": 1.1919,
+          "mean_tmin_anomaly": -0.2953,
+          "mean_temp_range_anomaly": 1.4873
+        },
+        {
+          "calendar_season": "Monsoon (Jun-Sep)",
+          "rainfall_day_type": "Wet",
+          "observation_count": 3402123,
+          "mean_rainfall_anomaly": 0.2666,
+          "mean_tmax_anomaly": -0.1006,
+          "mean_tmin_anomaly": 0.0249,
+          "mean_temp_range_anomaly": -0.1255
+        },
+        {
+          "calendar_season": "Post-monsoon (Oct-Nov)",
+          "rainfall_day_type": "Dry",
+          "observation_count": 798195,
+          "mean_rainfall_anomaly": -0.9676,
+          "mean_tmax_anomaly": 0.1469,
+          "mean_tmin_anomaly": -0.4601,
+          "mean_temp_range_anomaly": 0.607
+        },
+        {
+          "calendar_season": "Post-monsoon (Oct-Nov)",
+          "rainfall_day_type": "Wet",
+          "observation_count": 1046445,
+          "mean_rainfall_anomaly": 0.7381,
+          "mean_tmax_anomaly": -0.112,
+          "mean_tmin_anomaly": 0.351,
+          "mean_temp_range_anomaly": -0.463
+        },
+        {
+          "calendar_season": "Pre-monsoon (Mar-May)",
+          "rainfall_day_type": "Dry",
+          "observation_count": 1027535,
+          "mean_rainfall_anomaly": -0.8273,
+          "mean_tmax_anomaly": 0.574,
+          "mean_tmin_anomaly": -0.0836,
+          "mean_temp_range_anomaly": 0.6576
+        },
+        {
+          "calendar_season": "Pre-monsoon (Mar-May)",
+          "rainfall_day_type": "Wet",
+          "observation_count": 1754545,
+          "mean_rainfall_anomaly": 0.4845,
+          "mean_tmax_anomaly": -0.3361,
+          "mean_tmin_anomaly": 0.049,
+          "mean_temp_range_anomaly": -0.3851
+        },
+        {
+          "calendar_season": "Winter (Dec-Feb)",
+          "rainfall_day_type": "Dry",
+          "observation_count": 1718301,
+          "mean_rainfall_anomaly": -0.4592,
+          "mean_tmax_anomaly": 0.1957,
+          "mean_tmin_anomaly": -0.1998,
+          "mean_temp_range_anomaly": 0.3954
+        },
+        {
+          "calendar_season": "Winter (Dec-Feb)",
+          "rainfall_day_type": "Wet",
+          "observation_count": 1010859,
+          "mean_rainfall_anomaly": 0.7806,
+          "mean_tmax_anomaly": -0.3326,
+          "mean_tmin_anomaly": 0.3396,
+          "mean_temp_range_anomaly": -0.6722
+        }
+      ],
+      "seasonal_spearman_anomaly_correlations": {
+        "Winter (Dec-Feb)": {
+          "PRECTOTCORR_ANOMALY": {
+            "PRECTOTCORR_ANOMALY": 1.0,
+            "T2M_MAX_ANOMALY": -0.0434,
+            "T2M_MIN_ANOMALY": 0.0884,
+            "TEMP_RANGE_ANOMALY": -0.1311
+          },
+          "T2M_MAX_ANOMALY": {
+            "PRECTOTCORR_ANOMALY": -0.0434,
+            "T2M_MAX_ANOMALY": 1.0,
+            "T2M_MIN_ANOMALY": 0.613,
+            "TEMP_RANGE_ANOMALY": 0.3557
+          },
+          "T2M_MIN_ANOMALY": {
+            "PRECTOTCORR_ANOMALY": 0.0884,
+            "T2M_MAX_ANOMALY": 0.613,
+            "T2M_MIN_ANOMALY": 1.0,
+            "TEMP_RANGE_ANOMALY": -0.3734
+          },
+          "TEMP_RANGE_ANOMALY": {
+            "PRECTOTCORR_ANOMALY": -0.1311,
+            "T2M_MAX_ANOMALY": 0.3557,
+            "T2M_MIN_ANOMALY": -0.3734,
+            "TEMP_RANGE_ANOMALY": 1.0
+          }
+        },
+        "Pre-monsoon (Mar-May)": {
+          "PRECTOTCORR_ANOMALY": {
+            "PRECTOTCORR_ANOMALY": 1.0,
+            "T2M_MAX_ANOMALY": -0.1728,
+            "T2M_MIN_ANOMALY": -0.0273,
+            "TEMP_RANGE_ANOMALY": -0.1917
+          },
+          "T2M_MAX_ANOMALY": {
+            "PRECTOTCORR_ANOMALY": -0.1728,
+            "T2M_MAX_ANOMALY": 1.0,
+            "T2M_MIN_ANOMALY": 0.6392,
+            "TEMP_RANGE_ANOMALY": 0.5209
+          },
+          "T2M_MIN_ANOMALY": {
+            "PRECTOTCORR_ANOMALY": -0.0273,
+            "T2M_MAX_ANOMALY": 0.6392,
+            "T2M_MIN_ANOMALY": 1.0,
+            "TEMP_RANGE_ANOMALY": -0.1718
+          },
+          "TEMP_RANGE_ANOMALY": {
+            "PRECTOTCORR_ANOMALY": -0.1917,
+            "T2M_MAX_ANOMALY": 0.5209,
+            "T2M_MIN_ANOMALY": -0.1718,
+            "TEMP_RANGE_ANOMALY": 1.0
+          }
+        },
+        "Monsoon (Jun-Sep)": {
+          "PRECTOTCORR_ANOMALY": {
+            "PRECTOTCORR_ANOMALY": 1.0,
+            "T2M_MAX_ANOMALY": -0.2567,
+            "T2M_MIN_ANOMALY": -0.0518,
+            "TEMP_RANGE_ANOMALY": -0.2504
+          },
+          "T2M_MAX_ANOMALY": {
+            "PRECTOTCORR_ANOMALY": -0.2567,
+            "T2M_MAX_ANOMALY": 1.0,
+            "T2M_MIN_ANOMALY": 0.5115,
+            "TEMP_RANGE_ANOMALY": 0.6744
+          },
+          "T2M_MIN_ANOMALY": {
+            "PRECTOTCORR_ANOMALY": -0.0518,
+            "T2M_MAX_ANOMALY": 0.5115,
+            "T2M_MIN_ANOMALY": 1.0,
+            "TEMP_RANGE_ANOMALY": -0.1423
+          },
+          "TEMP_RANGE_ANOMALY": {
+            "PRECTOTCORR_ANOMALY": -0.2504,
+            "T2M_MAX_ANOMALY": 0.6744,
+            "T2M_MIN_ANOMALY": -0.1423,
+            "TEMP_RANGE_ANOMALY": 1.0
+          }
+        },
+        "Post-monsoon (Oct-Nov)": {
+          "PRECTOTCORR_ANOMALY": {
+            "PRECTOTCORR_ANOMALY": 1.0,
+            "T2M_MAX_ANOMALY": -0.1057,
+            "T2M_MIN_ANOMALY": 0.0744,
+            "TEMP_RANGE_ANOMALY": -0.156
+          },
+          "T2M_MAX_ANOMALY": {
+            "PRECTOTCORR_ANOMALY": -0.1057,
+            "T2M_MAX_ANOMALY": 1.0,
+            "T2M_MIN_ANOMALY": 0.553,
+            "TEMP_RANGE_ANOMALY": 0.3507
+          },
+          "T2M_MIN_ANOMALY": {
+            "PRECTOTCORR_ANOMALY": 0.0744,
+            "T2M_MAX_ANOMALY": 0.553,
+            "T2M_MIN_ANOMALY": 1.0,
+            "TEMP_RANGE_ANOMALY": -0.4476
+          },
+          "TEMP_RANGE_ANOMALY": {
+            "PRECTOTCORR_ANOMALY": -0.156,
+            "T2M_MAX_ANOMALY": 0.3507,
+            "T2M_MIN_ANOMALY": -0.4476,
+            "TEMP_RANGE_ANOMALY": 1.0
+          }
+        }
+      },
+      "limitations": [
+        "Anomalies control grid-cell and calendar-month means, but do not establish causality.",
+        "The full archive is used to calculate reference climatology; these anomalies are exploratory, not forecasting features.",
+        "Serial dependence and year-specific effects remain.",
+        "Rainfall is zero-heavy and strongly skewed."
+      ]
+    },
+    "WI_02_interannual_trend_findings.json": {
+      "analysis_period": {
+        "start_year": 2013,
+        "end_year": 2024,
+        "number_of_years": 12
+      },
+      "annual_weather_summary": [
+        {
+          "year": 2013,
+          "mean_rainfall_mm_day": 3.9634,
+          "median_cell_mean_rainfall_mm_day": 3.6569,
+          "mean_wet_day_percentage": 62.7116,
+          "mean_tmax_c": 25.6677,
+          "mean_tmin_c": 17.6879,
+          "mean_temp_range_c": 7.9798,
+          "mean_cell_p95_rainfall_mm_day": 17.3811
+        },
+        {
+          "year": 2014,
+          "mean_rainfall_mm_day": 3.2042,
+          "median_cell_mean_rainfall_mm_day": 2.8917,
+          "mean_wet_day_percentage": 61.7361,
+          "mean_tmax_c": 25.9156,
+          "mean_tmin_c": 17.7885,
+          "mean_temp_range_c": 8.1271,
+          "mean_cell_p95_rainfall_mm_day": 14.6968
+        },
+        {
+          "year": 2015,
+          "mean_rainfall_mm_day": 3.4336,
+          "median_cell_mean_rainfall_mm_day": 3.2002,
+          "mean_wet_day_percentage": 65.3389,
+          "mean_tmax_c": 26.0114,
+          "mean_tmin_c": 17.8997,
+          "mean_temp_range_c": 8.1117,
+          "mean_cell_p95_rainfall_mm_day": 15.813
+        },
+        {
+          "year": 2016,
+          "mean_rainfall_mm_day": 3.522,
+          "median_cell_mean_rainfall_mm_day": 2.8723,
+          "mean_wet_day_percentage": 62.3975,
+          "mean_tmax_c": 26.3914,
+          "mean_tmin_c": 18.2532,
+          "mean_temp_range_c": 8.1382,
+          "mean_cell_p95_rainfall_mm_day": 16.3437
+        },
+        {
+          "year": 2017,
+          "mean_rainfall_mm_day": 3.8053,
+          "median_cell_mean_rainfall_mm_day": 3.1346,
+          "mean_wet_day_percentage": 64.9641,
+          "mean_tmax_c": 26.105,
+          "mean_tmin_c": 18.018,
+          "mean_temp_range_c": 8.0869,
+          "mean_cell_p95_rainfall_mm_day": 16.9634
+        },
+        {
+          "year": 2018,
+          "mean_rainfall_mm_day": 3.4763,
+          "median_cell_mean_rainfall_mm_day": 2.8924,
+          "mean_wet_day_percentage": 63.5525,
+          "mean_tmax_c": 26.0225,
+          "mean_tmin_c": 17.8454,
+          "mean_temp_range_c": 8.1771,
+          "mean_cell_p95_rainfall_mm_day": 15.9106
+        },
+        {
+          "year": 2019,
+          "mean_rainfall_mm_day": 3.7727,
+          "median_cell_mean_rainfall_mm_day": 3.3115,
+          "mean_wet_day_percentage": 67.171,
+          "mean_tmax_c": 25.7434,
+          "mean_tmin_c": 17.8154,
+          "mean_temp_range_c": 7.928,
+          "mean_cell_p95_rainfall_mm_day": 17.9418
+        },
+        {
+          "year": 2020,
+          "mean_rainfall_mm_day": 4.0575,
+          "median_cell_mean_rainfall_mm_day": 3.8662,
+          "mean_wet_day_percentage": 68.5024,
+          "mean_tmax_c": 25.4505,
+          "mean_tmin_c": 17.6293,
+          "mean_temp_range_c": 7.8212,
+          "mean_cell_p95_rainfall_mm_day": 18.161
+        },
+        {
+          "year": 2021,
+          "mean_rainfall_mm_day": 3.9042,
+          "median_cell_mean_rainfall_mm_day": 3.6061,
+          "mean_wet_day_percentage": 68.2592,
+          "mean_tmax_c": 25.8282,
+          "mean_tmin_c": 17.9688,
+          "mean_temp_range_c": 7.8594,
+          "mean_cell_p95_rainfall_mm_day": 17.373
+        },
+        {
+          "year": 2022,
+          "mean_rainfall_mm_day": 3.8362,
+          "median_cell_mean_rainfall_mm_day": 3.5295,
+          "mean_wet_day_percentage": 67.2528,
+          "mean_tmax_c": 25.7907,
+          "mean_tmin_c": 17.8613,
+          "mean_temp_range_c": 7.9294,
+          "mean_cell_p95_rainfall_mm_day": 17.5403
+        },
+        {
+          "year": 2023,
+          "mean_rainfall_mm_day": 3.4213,
+          "median_cell_mean_rainfall_mm_day": 3.2055,
+          "mean_wet_day_percentage": 66.4704,
+          "mean_tmax_c": 26.0003,
+          "mean_tmin_c": 18.0759,
+          "mean_temp_range_c": 7.9244,
+          "mean_cell_p95_rainfall_mm_day": 16.0296
+        },
+        {
+          "year": 2024,
+          "mean_rainfall_mm_day": 3.8796,
+          "median_cell_mean_rainfall_mm_day": 3.5842,
+          "mean_wet_day_percentage": 65.4035,
+          "mean_tmax_c": 26.214,
+          "mean_tmin_c": 18.3829,
+          "mean_temp_range_c": 7.8311,
+          "mean_cell_p95_rainfall_mm_day": 18.0923
+        }
+      ],
+      "grid_cell_linear_trend_slopes": {
+        "mean_rainfall_mm_day": {
+          "grid_cells_with_estimated_slope": 2520,
+          "mean_slope_per_year": 0.023827254363103692,
+          "median_slope_per_year": 0.02238770855613228,
+          "p05_slope_per_year": -0.11414678007074497,
+          "p95_slope_per_year": 0.17245897743434996,
+          "negative_slope_cells": 854,
+          "positive_slope_cells": 1666,
+          "near_zero_slope_cells": 0
+        },
+        "wet_day_percentage": {
+          "grid_cells_with_estimated_slope": 2520,
+          "mean_slope_per_year": 0.451605262350807,
+          "median_slope_per_year": 0.4281077108384465,
+          "p05_slope_per_year": -0.09626469047086605,
+          "p95_slope_per_year": 1.0934452926367844,
+          "negative_slope_cells": 249,
+          "positive_slope_cells": 2271,
+          "near_zero_slope_cells": 0
+        },
+        "mean_tmax_c": {
+          "grid_cells_with_estimated_slope": 2520,
+          "mean_slope_per_year": 0.0005872214835336569,
+          "median_slope_per_year": 0.021821172259136386,
+          "p05_slope_per_year": -0.0900644810444386,
+          "p95_slope_per_year": 0.05174367410043396,
+          "negative_slope_cells": 987,
+          "positive_slope_cells": 1533,
+          "near_zero_slope_cells": 0
+        },
+        "mean_tmin_c": {
+          "grid_cells_with_estimated_slope": 2520,
+          "mean_slope_per_year": 0.02567934726816566,
+          "median_slope_per_year": 0.029457004968234776,
+          "p05_slope_per_year": -0.030339038125206927,
+          "p95_slope_per_year": 0.07100872448160148,
+          "negative_slope_cells": 344,
+          "positive_slope_cells": 2176,
+          "near_zero_slope_cells": 0
+        },
+        "mean_temp_range_c": {
+          "grid_cells_with_estimated_slope": 2520,
+          "mean_slope_per_year": -0.025092125784631998,
+          "median_slope_per_year": -0.010210595041607711,
+          "p05_slope_per_year": -0.10315091137060706,
+          "p95_slope_per_year": 0.03446991453602069,
+          "negative_slope_cells": 1403,
+          "positive_slope_cells": 1117,
+          "near_zero_slope_cells": 0
+        }
+      },
+      "interpretation_limitations": [
+        "Trend slopes are descriptive linear estimates.",
+        "Twelve annual observations are insufficient for strong long-term climate-trend conclusions.",
+        "No statistical significance testing is performed.",
+        "Spatial dependence between neighbouring grid cells is not accounted for.",
+        "Extreme rainfall observations are retained.",
+        "These estimates are not forecasting model features."
+      ]
+    }
+  }
+}

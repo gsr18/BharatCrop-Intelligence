@@ -1,0 +1,42 @@
+{
+  "report_name": "yield_model_deployment_readiness",
+  "generated_at_utc": "2026-11-01T11:20:21.378052+00:00",
+  "model_path": "C:\\Users\\gsr58\\Desktop\\Projects\\BharatCrop-Intelligence\\models\\yield_prediction\\individual_crop_hgb_location.joblib",
+  "metadata_path": "C:\\Users\\gsr58\\Desktop\\Projects\\BharatCrop-Intelligence\\models\\yield_prediction\\individual_crop_hgb_location_metadata.json",
+  "model_name": "HistGradientBoostingRegressor",
+  "features": [
+    "Crop",
+    "Season",
+    "Crop_Category",
+    "State",
+    "District",
+    "FE_YearStart"
+  ],
+  "target": "Yield",
+  "checks": {
+    "model_artifact_loaded": true,
+    "metadata_loaded": true,
+    "metadata_contract_matches_pipeline": true,
+    "valid_sample_predictions_succeeded": true,
+    "unseen_categories_accepted": true,
+    "missing_crop_rejected": false,
+    "missing_year_rejected": false,
+    "malformed_year_rejected": true,
+    "repeat_predictions_deterministic": true,
+    "predictions_numeric_and_finite": true,
+    "sample_predictions_nonnegative": true,
+    "unseen_category_reliability_verified": false
+  },
+  "known_gaps": [
+    "Missing Crop and FE_YearStart values currently produce predictions; the serving layer should reject incomplete requests.",
+    "Unseen crop, state, and district values are accepted, but prediction reliability for unseen categories is not established.",
+    "Only two synthetic input rows were used for this smoke test.",
+    "No evidence-based agronomic output bounds have been established.",
+    "The initial latency measurement is not a representative benchmark.",
+    "API behavior, authentication, monitoring, logging, load testing, deployment security, rollback, and service-level objectives remain outside this notebook's tested scope.",
+    "Notebook 16 records that the final holdout was repeatedly inspected; its metrics should not be presented as an untouched final test.",
+    "Unseen-category acceptance is a technical behavior, not evidence of reliable predictions for unseen categories."
+  ],
+  "verdict": "CONDITIONALLY READY FOR INTEGRATION",
+  "interpretation": "The saved model passes basic artifact and inference smoke tests. Integration must include required-field validation and explicit handling of unseen categories. Production readiness has not been established."
+}

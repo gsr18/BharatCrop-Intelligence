@@ -1,0 +1,5 @@
+model,mae,rmse,mae_rank,rmse_rank
+Two-stage HGB candidate,3.5790399582930537,8.55195686567408,1,1
+Corrected persistence,4.391842363283512,11.348874927375965,3,3
+Seasonal naive,4.8055,12.1839,4,4
+Grid-cell calendar-day climatology,3.7649,9.062,2,2

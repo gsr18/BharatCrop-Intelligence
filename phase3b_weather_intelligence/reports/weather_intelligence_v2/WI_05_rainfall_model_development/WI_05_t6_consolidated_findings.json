@@ -1,0 +1,153 @@
+{
+    "work_item": "WI-05",
+    "target": "PRECTOTCORR",
+    "horizon": "T+6",
+    "model": "Two-stage HistGradientBoosting",
+    "status": "provisional_candidate",
+    "validation_observations": 2761920,
+    "validation_mae_mm": 3.650388649513166,
+    "validation_rmse_mm": 8.619009620568633,
+    "baseline_comparison": [
+        {
+            "model": "Two-stage HistGradientBoosting",
+            "mae_mm": 3.650388649513166,
+            "rmse_mm": 8.619009620568633,
+            "mae_rank": 1,
+            "rmse_rank": 1
+        },
+        {
+            "model": "Persistence",
+            "mae_mm": 4.649531181207276,
+            "rmse_mm": 11.679941472295278,
+            "mae_rank": 3,
+            "rmse_rank": 3
+        },
+        {
+            "model": "Seasonal naive",
+            "mae_mm": 4.8695,
+            "rmse_mm": 12.3261,
+            "mae_rank": 4,
+            "rmse_rank": 4
+        },
+        {
+            "model": "Training climatology",
+            "mae_mm": 3.7649,
+            "rmse_mm": 9.062,
+            "mae_rank": 2,
+            "rmse_rank": 2
+        }
+    ],
+    "seasonal_comparison": [
+        {
+            "season": "Monsoon",
+            "observations": 922320,
+            "actual_mean": 7.463173323792176,
+            "prediction_mean": 7.407866361728429,
+            "candidate_mae": 6.3869397307640785,
+            "candidate_rmse": 11.533298362367807,
+            "persistence_mae": 8.040966421632406,
+            "persistence_rmse": 15.294611044624626,
+            "mae_improvement_pct": 20.56999873073144,
+            "rmse_improvement_pct": 24.592404941077284
+        },
+        {
+            "season": "Post-monsoon",
+            "observations": 461160,
+            "actual_mean": 3.493829039812646,
+            "prediction_mean": 3.1831518377968484,
+            "candidate_mae": 3.4493311852014923,
+            "candidate_rmse": 8.34132609596578,
+            "persistence_mae": 4.6181449171654085,
+            "persistence_rmse": 11.732659244759418,
+            "mae_improvement_pct": 25.309160992750478,
+            "rmse_improvement_pct": 28.905068135413824
+        },
+        {
+            "season": "Pre-monsoon",
+            "observations": 695520,
+            "actual_mean": 2.3631782119852773,
+            "prediction_mean": 2.045755514036945,
+            "candidate_mae": 2.414663234822511,
+            "candidate_rmse": 7.059565575341933,
+            "persistence_mae": 3.011169326547044,
+            "persistence_rmse": 9.650789876688338,
+            "mae_improvement_pct": 19.809782414612854,
+            "rmse_improvement_pct": 26.84986756996497
+        },
+        {
+            "season": "Winter",
+            "observations": 682920,
+            "actual_mean": 1.0597287676448193,
+            "prediction_mean": 0.9074901259952304,
+            "candidate_mae": 1.3488242018593746,
+            "candidate_rmse": 4.801151149849079,
+            "persistence_mae": 1.7590007760791895,
+            "persistence_rmse": 6.927116395661372,
+            "mae_improvement_pct": 23.318726165323135,
+            "rmse_improvement_pct": 30.690479622138856
+        }
+    ],
+    "intensity_comparison": [
+        {
+            "intensity_band": "Below 1 mm",
+            "observations": 1603478,
+            "observation_pct": 58.05664175645927,
+            "candidate_mae": 1.5091864243482678,
+            "persistence_mae": 1.6426289727704402,
+            "mae_improvement_pct": 8.12371817581603
+        },
+        {
+            "intensity_band": "1-5 mm",
+            "observations": 575375,
+            "observation_pct": 20.832428165913566,
+            "candidate_mae": 3.383236244693809,
+            "persistence_mae": 4.75208375407343,
+            "mae_improvement_pct": 28.80520588902208
+        },
+        {
+            "intensity_band": "5-20 mm",
+            "observations": 458822,
+            "observation_pct": 16.61242903487429,
+            "candidate_mae": 5.194569031632191,
+            "persistence_mae": 8.562558181604196,
+            "mae_improvement_pct": 39.33391258243121
+        },
+        {
+            "intensity_band": "20-50 mm",
+            "observations": 105268,
+            "observation_pct": 3.8114065577569223,
+            "candidate_mae": 20.144049233597347,
+            "persistence_mae": 22.183023900900558,
+            "mae_improvement_pct": 9.191599289673203
+        },
+        {
+            "intensity_band": "50+ mm",
+            "observations": 18977,
+            "observation_pct": 0.6870944849959448,
+            "candidate_mae": 63.84561881634183,
+            "persistence_mae": 63.741946566896765,
+            "mae_improvement_pct": -0.16264368289453657
+        }
+    ],
+    "heavy_rainfall_diagnostics": {
+        "observations": 18977,
+        "actual_mean": 77.47189545238973,
+        "candidate_mean": 13.828536425618191,
+        "persistence_mean": 16.162990989092055,
+        "candidate_bias": -63.64335902677154,
+        "persistence_bias": -61.30890446329768,
+        "candidate_mae": 63.84561881634183,
+        "persistence_mae": 63.741946566896765,
+        "candidate_rmse": 74.42228495108758,
+        "persistence_rmse": 75.40552040550493,
+        "actual_p95": 142.49800000000005,
+        "candidate_p95": 38.3718211380644,
+        "persistence_p95": 59.244000000000014,
+        "actual_max": 666.37,
+        "candidate_max": 118.19877407005599,
+        "persistence_max": 383.4
+    },
+    "persistence_feature": "PRECTOTCORR_current",
+    "final_holdout_accessed": false,
+    "final_model_selected": false
+}

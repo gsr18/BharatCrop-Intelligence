@@ -1,0 +1,14 @@
+{
+  "artifact": "cell_feature_coverage_v1",
+  "generated_at_utc": "2026-11-15T21:49:51.369680+00:00",
+  "feature_dataset": "phase3b_weather_intelligence/data/processed/weather_features_v1/weather-features-v1",
+  "feature_specification": "phase3b_weather_intelligence/reports/weather_intelligence_v2/WI_05_rainfall_model_development/WI_05_feature_specification.json",
+  "checked_feature_date": "2024-12-31",
+  "grid_cell_count": 2520,
+  "complete_cell_count": 2520,
+  "forecast_origin_date": "2024-12-31",
+  "predictor_count": 53,
+  "limitations": [
+    "Coverage verifies finite WI-05 predictors at the checked archive feature date only."
+  ]
+}

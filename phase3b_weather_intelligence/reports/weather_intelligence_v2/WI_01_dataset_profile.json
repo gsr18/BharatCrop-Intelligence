@@ -1,0 +1,67 @@
+{
+    "project": "BharatCrop Intelligence",
+    "module": "Weather Intelligence 2.0",
+    "notebook": "WI-01",
+    "dataset_name": "weather_daily_v1",
+    "dataset_version": "1.0.0",
+    "source": "NASA POWER / MERRA-2",
+    "start_date": "2013-01-01",
+    "end_date": "2024-12-31",
+    "date_semantics": "UTC calendar date",
+    "total_observations": 11045160,
+    "total_partitions": 12,
+    "total_grid_cells": 2520,
+    "latitude_range": [
+        7.0,
+        34.5
+    ],
+    "longitude_range": [
+        69.375,
+        96.875
+    ],
+    "weather_variables": {
+        "PRECTOTCORR": {
+            "description": "Daily precipitation",
+            "unit": "mm/day"
+        },
+        "T2M_MAX": {
+            "description": "Daily maximum temperature",
+            "unit": "C"
+        },
+        "T2M_MIN": {
+            "description": "Daily minimum temperature",
+            "unit": "C"
+        }
+    },
+    "integrity_validation": {
+        "schemas_consistent": true,
+        "date_range_valid": true,
+        "unique_cells": 2520,
+        "unique_coordinate_pairs": 2520,
+        "duplicate_cell_date_records": 0,
+        "missing_weather_values": 0,
+        "non_finite_weather_values": 0,
+        "negative_precipitation_records": 0,
+        "tmin_greater_than_tmax_records": 0,
+        "qc_pass_percentage": 100.0
+    },
+    "extreme_value_investigation": {
+        "rainfall_above_200_mm_on_top_20_event_dates": 143,
+        "extreme_rainfall_requires_further_validation": true,
+        "automatic_outlier_removal": false
+    },
+    "limitations": [
+        "Grid cells are not administrative districts.",
+        "District-level aggregation requires validated spatial mapping.",
+        "Historical data ends on 2024-12-31.",
+        "Historical data alone cannot provide live 2026 forecasts.",
+        "Extreme rainfall observations require further investigation."
+    ],
+    "forecasting_constraints": [
+        "Weather-only forecasting; no APY dependency.",
+        "Forecast horizons: 1 to 7 days.",
+        "Use chronological evaluation, not random splitting.",
+        "Prevent future information leakage.",
+        "Compare ML models against forecasting baselines."
+    ]
+}

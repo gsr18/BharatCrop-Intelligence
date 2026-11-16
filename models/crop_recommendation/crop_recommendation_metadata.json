@@ -1,0 +1,31 @@
+{
+  "project": "BharatCrop Intelligence",
+  "model_name": "HistGradientBoostingRegressor",
+  "model_artifact": "models\\yield_prediction\\individual_crop_hgb_location.joblib",
+  "target": "Yield",
+  "recommendation_method": "Rank eligible historical crop candidates by predicted yield within State-District-Season-Year groups.",
+  "prediction_year_configured": 2025,
+  "evaluation_years": [
+    2023,
+    2024
+  ],
+  "features": [
+    "Crop",
+    "Season",
+    "Crop_Category",
+    "State",
+    "District",
+    "FE_YearStart"
+  ],
+  "limitations": [
+    "The saved ranking CSV contains retrospective rankings for 2023\u20132024.",
+    "Only historically observed and eligible crop candidates are included.",
+    "Predicted yield does not establish profitability or agronomic suitability.",
+    "Soil pH, NPK, soil moisture, and irrigation features are unavailable.",
+    "Weather mapping and full-season alignment are not verified.",
+    "The selected model excludes weather features.",
+    "2025 predictions are extrapolations beyond the 2013\u20132022 training period.",
+    "Historical ranking performance does not establish causal effects or production readiness."
+  ],
+  "generated_at_utc": "2026-11-01T13:27:29.184300+00:00"
+}

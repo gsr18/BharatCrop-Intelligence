@@ -1,0 +1,14 @@
+{
+    "dataset_name": "AGMARKNET Mandi Prices",
+    "provider": "Government of India - Open Government Data Platform",
+    "source_urls": [
+        "https://data.gov.in/resource/current-daily-price-various-commodities-various-markets-mandi",
+        "https://data.gov.in/resource/variety-wise-daily-market-prices-data-commodity"
+    ],
+    "data_type": "Daily agricultural wholesale market prices",
+    "raw_directory": "C:\\Users\\gsr58\\Desktop\\Projects\\BharatCrop-Intelligence\\data\\raw\\mandi_prices",
+    "acquisition_date_utc": "2026-10-31T11:43:05.610309+00:00",
+    "preserve_original": true,
+    "phase": "Phase 2 - Data Acquisition",
+    "status": "Source registered; local file verification pending"
+}

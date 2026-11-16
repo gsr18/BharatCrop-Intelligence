@@ -1,0 +1,65 @@
+{
+  "evaluation_period": [
+    2023,
+    2024
+  ],
+  "eligible_prediction_rows": 8433,
+  "evaluated_groups": 2365,
+  "top1_hit_rate": 0.7919661733615222,
+  "top3_hit_rate": 0.99830866807611,
+  "mean_spearman_correlation": 0.7919884758726925,
+  "by_year": [
+    {
+      "year": 2023,
+      "groups": 1175,
+      "top1_hit_rate": 0.788936170212766,
+      "top3_hit_rate": 0.9982978723404256,
+      "mean_spearman": 0.7820929849596775
+    },
+    {
+      "year": 2024,
+      "groups": 1190,
+      "top1_hit_rate": 0.7949579831932773,
+      "top3_hit_rate": 0.9983193277310924,
+      "mean_spearman": 0.8017674513334093
+    }
+  ],
+  "by_candidate_count": [
+    {
+      "Candidate_Bucket": "2 crops",
+      "groups": 887,
+      "top1_hit_rate": 0.8658399098083427,
+      "top3_hit_rate": 1.0,
+      "mean_spearman": 0.7313769751693002
+    },
+    {
+      "Candidate_Bucket": "3 crops",
+      "groups": 716,
+      "top1_hit_rate": 0.7849162011173184,
+      "top3_hit_rate": 1.0,
+      "mean_spearman": 0.821927374301676
+    },
+    {
+      "Candidate_Bucket": "4\u20135 crops",
+      "groups": 629,
+      "top1_hit_rate": 0.7265500794912559,
+      "top3_hit_rate": 0.9968203497615262,
+      "mean_spearman": 0.8359630602501159
+    },
+    {
+      "Candidate_Bucket": "6\u20139 crops",
+      "groups": 133,
+      "top1_hit_rate": 0.6466165413533834,
+      "top3_hit_rate": 0.9849624060150376,
+      "mean_spearman": 0.8266164816971583
+    },
+    {
+      "Candidate_Bucket": "10+ crops",
+      "groups": 0,
+      "top1_hit_rate": null,
+      "top3_hit_rate": null,
+      "mean_spearman": null
+    }
+  ],
+  "interpretation": "Retrospective ranking evaluation against observed yield among eligible historical crop candidates; not a measure of agronomic suitability or profitability."
+}

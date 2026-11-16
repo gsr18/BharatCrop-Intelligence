@@ -1,0 +1,53 @@
+{
+  "model_task": "Experimental low-yield classification",
+  "target_definition": "Current yield below 80% of the median of the previous 2-3 available positive-yield observations for the same state, district, crop, and named season.",
+  "train_years": [
+    2015,
+    2022
+  ],
+  "test_years": [
+    2023,
+    2024
+  ],
+  "train_rows": 47309,
+  "test_rows": 12692,
+  "train_event_rate": 0.1447081950580228,
+  "test_event_rate": 0.12976678222502364,
+  "metrics": {
+    "constant_baseline": {
+      "roc_auc": 0.5,
+      "pr_auc": 0.12976678222502364,
+      "brier_score": 0.11315061027343302
+    },
+    "logistic_baseline": {
+      "roc_auc": 0.5951995795749738,
+      "pr_auc": 0.16496054739428467,
+      "brier_score": 0.17600610239747125
+    },
+    "logistic_with_weather": {
+      "roc_auc": 0.5943153567002353,
+      "pr_auc": 0.16486340586112927,
+      "brier_score": 0.18448961117754695
+    },
+    "random_forest_baseline": {
+      "roc_auc": 0.6173787313202077,
+      "pr_auc": 0.1803029812489284,
+      "brier_score": 0.20233536322615456
+    },
+    "random_forest_with_weather": {
+      "roc_auc": 0.6091944611421565,
+      "pr_auc": 0.17288309533277174,
+      "brier_score": 0.20520755415762082
+    }
+  },
+  "weather_added_predictive_value": false,
+  "deployment_status": "NOT READY",
+  "limitations": [
+    "Annual district weather is aligned using a starting-calendar-year proxy.",
+    "Full crop-season weather alignment is unverified.",
+    "Weather did not improve held-out classification metrics.",
+    "Trained-model Brier scores were worse than the constant baseline.",
+    "Predicted probabilities must not be presented as validated farmer risk estimates."
+  ],
+  "evaluated_at_utc": "2026-11-01T14:26:37.925278+00:00"
+}

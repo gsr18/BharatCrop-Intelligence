@@ -1,0 +1,9 @@
+category,required_information,intended_use,priority
+Crop statistics,"Crop area, production, yield",Historical analysis and yield prediction,P0
+Weather,"Rainfall, temperature, weather extremes",Weather features and agricultural risk analysis,P0
+Geography,"State and district identifiers, boundaries",Geographic standardization and mapping,P0
+Market prices,"Commodity, market, date, prices",Price trends and market analysis,P1
+Soil and soil moisture,Soil properties and moisture observations,Crop suitability and water-stress analysis,P1
+Satellite observations,Vegetation and crop-condition indicators,Agricultural monitoring and model features,P1
+Cultivation economics,Cultivation costs and related estimates,Profitability comparisons,P2
+Supply and trade,"Procurement, stocks, imports and exports",Supply scenarios and market intelligence,P2

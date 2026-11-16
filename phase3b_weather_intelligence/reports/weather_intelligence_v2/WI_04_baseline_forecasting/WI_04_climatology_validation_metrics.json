@@ -1,0 +1,114 @@
+[
+  {
+    "target": "PRECTOTCORR",
+    "horizon": "T+1",
+    "validation_rows": 2761920,
+    "missing_climatology_predictions": 0,
+    "MAE": 3.7649209830221624,
+    "RMSE": 9.061961226052857
+  },
+  {
+    "target": "PRECTOTCORR",
+    "horizon": "T+2",
+    "validation_rows": 2761920,
+    "missing_climatology_predictions": 0,
+    "MAE": 3.7649209830221624,
+    "RMSE": 9.061961226052857
+  },
+  {
+    "target": "PRECTOTCORR",
+    "horizon": "T+3",
+    "validation_rows": 2761920,
+    "missing_climatology_predictions": 0,
+    "MAE": 3.7649209830221624,
+    "RMSE": 9.061961226052857
+  },
+  {
+    "target": "PRECTOTCORR",
+    "horizon": "T+4",
+    "validation_rows": 2761920,
+    "missing_climatology_predictions": 0,
+    "MAE": 3.7649209830221624,
+    "RMSE": 9.061961226052857
+  },
+  {
+    "target": "PRECTOTCORR",
+    "horizon": "T+5",
+    "validation_rows": 2761920,
+    "missing_climatology_predictions": 0,
+    "MAE": 3.7649209830221624,
+    "RMSE": 9.061961226052857
+  },
+  {
+    "target": "PRECTOTCORR",
+    "horizon": "T+6",
+    "validation_rows": 2761920,
+    "missing_climatology_predictions": 0,
+    "MAE": 3.7649209830221624,
+    "RMSE": 9.061961226052857
+  },
+  {
+    "target": "PRECTOTCORR",
+    "horizon": "T+7",
+    "validation_rows": 2761920,
+    "missing_climatology_predictions": 0,
+    "MAE": 3.7649209830221624,
+    "RMSE": 9.061961226052857
+  },
+  {
+    "target": "T2M_MAX",
+    "horizon": "T+1",
+    "validation_rows": 2761920,
+    "missing_climatology_predictions": 0,
+    "MAE": 1.4997173798351457,
+    "RMSE": 2.228283090441233
+  },
+  {
+    "target": "T2M_MAX",
+    "horizon": "T+2",
+    "validation_rows": 2761920,
+    "missing_climatology_predictions": 0,
+    "MAE": 1.4997173798351457,
+    "RMSE": 2.228283090441233
+  },
+  {
+    "target": "T2M_MAX",
+    "horizon": "T+3",
+    "validation_rows": 2761920,
+    "missing_climatology_predictions": 0,
+    "MAE": 1.4997173798351457,
+    "RMSE": 2.228283090441233
+  },
+  {
+    "target": "T2M_MAX",
+    "horizon": "T+4",
+    "validation_rows": 2761920,
+    "missing_climatology_predictions": 0,
+    "MAE": 1.4997173798351457,
+    "RMSE": 2.228283090441233
+  },
+  {
+    "target": "T2M_MAX",
+    "horizon": "T+5",
+    "validation_rows": 2761920,
+    "missing_climatology_predictions": 0,
+    "MAE": 1.4997173798351457,
+    "RMSE": 2.228283090441233
+  },
+  {
+    "target": "T2M_MAX",
+    "horizon": "T+6",
+    "validation_rows": 2761920,
+    "missing_climatology_predictions": 0,
+    "MAE": 1.4997173798351457,
+    "RMSE": 2.228283090441233
+  },
+  {
+    "target": "T2M_MAX",
+    "horizon": "T+7",
+    "validation_rows": 2761920,
+    "missing_climatology_predictions": 0,
+    "MAE": 1.4997173798351457,
+    "RMSE": 2.228283090441233
+  }
+]

@@ -1,0 +1,8 @@
+check,requirement,status
+Official source,Source is hosted or documented by IMD,PENDING
+Temporal coverage,Availability for 2013 through 2024 confirmed,PENDING
+Spatial coverage,Grid coverage and coordinate bounds documented,PENDING
+File format,Downloadable NetCDF files and readable schema,PENDING
+Units and missing values,Rainfall units and missing-value encoding documented,PENDING
+Terms of use,Applicable usage and citation requirements reviewed,PENDING
+File integrity,Downloaded files can be opened and inspected,PENDING

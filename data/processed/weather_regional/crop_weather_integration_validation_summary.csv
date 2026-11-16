@@ -1,0 +1,8 @@
+check,result,observed_value,limitation
+APY row preservation,PASS,376272 integrated / 376272 original rows,Row preservation does not validate source correctness
+Analytical key uniqueness,PASS,District-crop-year-season key,Uniqueness does not establish measurement validity
+Weather merge consistency,PASS,320124 matched; 56148 unmatched,Unmatched records have no weather coverage
+Matched weather completeness,PASS,320124 matched rows,Completeness does not guarantee measurement accuracy
+Starting-year proxy mapping,PASS,Matched rows use the APY starting calendar year,Full-season alignment is unverified
+Full-season weather alignment,UNVERIFIED,0 matched rows marked as verified,Crop-season-specific weather periods have not been established
+Official source verification,OPEN,APY and IMD registry records remain DISCOVERED,"Schema, download, coverage, and integration verification remain open in the registry"

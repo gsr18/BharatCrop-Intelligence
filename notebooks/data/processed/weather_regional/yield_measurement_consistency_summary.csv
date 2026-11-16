@@ -1,0 +1,6 @@
+metric,value,interpretation
+records_tested,186587,"Positive finite Area, Production, and Yield"
+within_1_percent,82755,Reported Yield versus proposed implied yield
+within_5_percent,125862,Reported Yield versus proposed implied yield
+within_10_percent,144849,Reported Yield versus proposed implied yield
+more_than_25_percent_deviation,18218,Requires investigation; not automatically invalid

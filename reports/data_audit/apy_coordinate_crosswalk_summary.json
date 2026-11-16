@@ -1,0 +1,9 @@
+{
+  "rows": 751,
+  "unique_geography_ids": 751,
+  "real_boundary_points": 640,
+  "synthetic_placeholders": 108,
+  "still_missing_coordinates": 3,
+  "note": "Boundary points are provisional matches. Synthetic placeholders must not be used as district-specific geographic observations.",
+  "output_path": "C:\\Users\\gsr58\\Desktop\\Projects\\BharatCrop-Intelligence\\metadata\\apy_district_coordinate_crosswalk.csv"
+}

@@ -1,0 +1,76 @@
+{
+  "notebook": "WI-03",
+  "dataset_version": "weather-daily-v1",
+  "forecast_targets": {
+    "PRECTOTCORR": "Daily precipitation (mm/day)",
+    "T2M_MAX": "Daily maximum temperature (C)"
+  },
+  "input_variables": [
+    "PRECTOTCORR",
+    "T2M_MAX",
+    "T2M_MIN"
+  ],
+  "forecast_horizons_days": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "lag_days": [
+    1,
+    2,
+    3,
+    7,
+    14,
+    30
+  ],
+  "rolling_windows_days": [
+    3,
+    7,
+    14,
+    30
+  ],
+  "rolling_policy": "Shift each input series by one day before calculating rolling statistics. Features at date t must not include weather observed after t.",
+  "calendar_features": [
+    "day_of_year",
+    "month",
+    "day_of_week",
+    "day_of_year_sin",
+    "day_of_year_cos",
+    "day_of_week_sin",
+    "day_of_week_cos"
+  ],
+  "spatial_features": [
+    "cell_id",
+    "latitude",
+    "longitude"
+  ],
+  "development_period": {
+    "start": "2013-01-01",
+    "end": "2022-12-31"
+  },
+  "final_holdout_period": {
+    "start": "2023-01-01",
+    "end": "2024-12-31"
+  },
+  "split_policy": "Assign samples by target date, not feature-origin date. Historical inputs before a target date may cross the development/holdout boundary.",
+  "prohibited_inputs": [
+    "APY variables",
+    "Crop and yield variables",
+    "Future weather observations",
+    "Full-period climatology",
+    "Full-period anomaly values"
+  ],
+  "model_training_performed": false,
+  "forecast_origin_convention": {
+    "forecast_origin": "End of day t, after day t weather observations are available",
+    "current_features": "Weather observations on day t, explicitly named with _current",
+    "lag_features": "lag_1 means day t-1; lag_k means day t-k",
+    "rolling_features": "Rolling windows end on day t and include the observation on day t",
+    "targets": "T_plus_h means the target observation on day t+h",
+    "availability_rule": "Every predictor must be available at the forecast origin"
+  }
+}

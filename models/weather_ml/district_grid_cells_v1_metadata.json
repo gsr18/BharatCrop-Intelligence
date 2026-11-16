@@ -1,0 +1,18 @@
+{
+  "artifact": "district_grid_cells_v1",
+  "generated_at_utc": "2026-11-15T21:48:35.571441+00:00",
+  "source_crosswalk": "metadata/apy_district_coordinate_crosswalk.csv",
+  "source_boundaries": "data/raw/india_district_boundaries/91/DISTRICT_BOUNDARY.shp",
+  "grid_definition": "POWER/MERRA-2 point coordinates treated as 0.5-degree latitude by 0.625-degree longitude rectangular cells centered on each coordinate.",
+  "area_method": "intersection area measured in an India Albers equal-area projection after geographic intersection.",
+  "matched_district_count": 640,
+  "districts_with_cells": 640,
+  "intersection_rows": 3365,
+  "min_cells_per_district": 1,
+  "max_cells_per_district": 22,
+  "limitations": [
+    "Boundary matches are provisional and do not establish historical district equivalence.",
+    "Grid-cell rectangles are a documented spatial approximation of POWER point coverage.",
+    "District estimates aggregate grid-cell model outputs and can hide local variation."
+  ]
+}

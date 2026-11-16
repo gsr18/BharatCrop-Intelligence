@@ -1,0 +1,6 @@
+model,approach,mae_mm,rmse_mm
+HistGradientBoosting,Two-stage expected amount,2.5949678044554165,7.974327184681835
+Random Forest,Direct regression,2.6736780301168235,8.013692881910245
+HistGradientBoosting,Direct regression,2.704353718900669,7.958803050542154
+Ridge,Direct regression,2.7722429620026516,7.946185728456718
+HistGradientBoosting,Two-stage hard threshold,2.77738709474947,8.050275273388747

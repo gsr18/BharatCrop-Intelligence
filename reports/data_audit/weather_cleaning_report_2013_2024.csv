@@ -1,0 +1,9 @@
+Check,Count,Outcome
+Input records,7680,All source records loaded
+Output records,7680,No records removed
+Missing values,0,No imputation performed
+Exact duplicate rows,0,None detected
+Duplicate district-year keys,0,None detected
+Records with measurement flags,532,Retained for review
+Records with spatial flag,3396,Retained; mapping limitation
+Records with any review flag,3718,Retained; flags are not automatic error labels

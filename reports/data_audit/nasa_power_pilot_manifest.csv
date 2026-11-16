@@ -1,0 +1,21 @@
+apy_geography_id,State,District,status,file_path,rows,error
+APY-GEO-0005,Andhra Pradesh,Anakapalli,FAILED,C:\Users\gsr58\Desktop\Projects\BharatCrop-Intelligence\data\raw\weather_pilot_2013_2024\APY-GEO-0005_weather_2013_2024.csv,0,"Error tokenizing data. C error: Expected 1 fields in line 23, saw 5
+"
+APY-GEO-0006,Andhra Pradesh,Ananthapuramu,FAILED,C:\Users\gsr58\Desktop\Projects\BharatCrop-Intelligence\data\raw\weather_pilot_2013_2024\APY-GEO-0006_weather_2013_2024.csv,0,"Error tokenizing data. C error: Expected 1 fields in line 23, saw 5
+"
+APY-GEO-0055,Assam,Baksa,FAILED,C:\Users\gsr58\Desktop\Projects\BharatCrop-Intelligence\data\raw\weather_pilot_2013_2024\APY-GEO-0055_weather_2013_2024.csv,0,"Error tokenizing data. C error: Expected 1 fields in line 23, saw 5
+"
+APY-GEO-0056,Assam,Barpeta,FAILED,C:\Users\gsr58\Desktop\Projects\BharatCrop-Intelligence\data\raw\weather_pilot_2013_2024\APY-GEO-0056_weather_2013_2024.csv,0,"Error tokenizing data. C error: Expected 1 fields in line 23, saw 5
+"
+APY-GEO-0320,Madhya Pradesh,Agar-Malwa,FAILED,C:\Users\gsr58\Desktop\Projects\BharatCrop-Intelligence\data\raw\weather_pilot_2013_2024\APY-GEO-0320_weather_2013_2024.csv,0,"Error tokenizing data. C error: Expected 1 fields in line 23, saw 5
+"
+APY-GEO-0321,Madhya Pradesh,Alirajpur,FAILED,C:\Users\gsr58\Desktop\Projects\BharatCrop-Intelligence\data\raw\weather_pilot_2013_2024\APY-GEO-0321_weather_2013_2024.csv,0,"Error tokenizing data. C error: Expected 1 fields in line 23, saw 5
+"
+APY-GEO-0491,Punjab,Amritsar,FAILED,C:\Users\gsr58\Desktop\Projects\BharatCrop-Intelligence\data\raw\weather_pilot_2013_2024\APY-GEO-0491_weather_2013_2024.csv,0,"Error tokenizing data. C error: Expected 1 fields in line 23, saw 5
+"
+APY-GEO-0492,Punjab,Barnala,FAILED,C:\Users\gsr58\Desktop\Projects\BharatCrop-Intelligence\data\raw\weather_pilot_2013_2024\APY-GEO-0492_weather_2013_2024.csv,0,"Error tokenizing data. C error: Expected 1 fields in line 23, saw 5
+"
+APY-GEO-0561,Tamil Nadu,Ariyalur,FAILED,C:\Users\gsr58\Desktop\Projects\BharatCrop-Intelligence\data\raw\weather_pilot_2013_2024\APY-GEO-0561_weather_2013_2024.csv,0,"Error tokenizing data. C error: Expected 1 fields in line 23, saw 5
+"
+APY-GEO-0562,Tamil Nadu,Chengalpattu,FAILED,C:\Users\gsr58\Desktop\Projects\BharatCrop-Intelligence\data\raw\weather_pilot_2013_2024\APY-GEO-0562_weather_2013_2024.csv,0,"Error tokenizing data. C error: Expected 1 fields in line 23, saw 5
+"

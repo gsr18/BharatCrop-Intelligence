@@ -1,0 +1,17 @@
+{
+  "model": "HistGradientBoosting Regressor",
+  "model_type": "Conditional wet-day rainfall regression",
+  "target": "PRECTOTCORR",
+  "horizon": "T+1",
+  "wet_day_threshold_mm": 1.0,
+  "training_samples": 13334,
+  "validation_samples": 6003,
+  "mae_mm": 5.601596673081039,
+  "rmse_mm": 12.376814738526976,
+  "actual_wet_day_mean_mm": 8.310771281026154,
+  "predicted_wet_day_mean_mm": 8.236044017503866,
+  "predicted_wet_day_median_mm": 5.946013217972807,
+  "training_scope": "10-batch pilot",
+  "evaluation_scope": "Actual wet validation days only",
+  "final_holdout_accessed": false
+}

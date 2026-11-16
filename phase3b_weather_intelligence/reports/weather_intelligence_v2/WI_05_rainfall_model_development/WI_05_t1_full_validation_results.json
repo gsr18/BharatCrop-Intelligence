@@ -1,0 +1,50 @@
+{
+  "experiment": "WI-05 T+1 full validation",
+  "model": "Two-stage HistGradientBoosting",
+  "validation_period": "2020-01-01 to 2022-12-31",
+  "validation_rows": 2761920,
+  "predictor_count": 53,
+  "wet_day_threshold_mm": 1.0,
+  "classification_threshold": 0.4,
+  "candidate": {
+    "mae_mm": 2.9140828455242485,
+    "rmse_mm": 7.583502208951568,
+    "wet_day_precision": 0.8087620731829315,
+    "wet_day_recall": 0.8653691768772196,
+    "wet_day_f1": 0.8361086020402291,
+    "wet_day_pr_auc": 0.9146643123970705,
+    "conditional_wet_day_mae_mm": 6.001480230306608
+  },
+  "persistence_baseline": {
+    "mae_mm": 3.2361364413161864,
+    "rmse_mm": 9.210749135115991
+  },
+  "intensity_band_results": {
+    "Below 1 mm": {
+      "rows": 1606293,
+      "candidate_mae": 0.7930571157046183,
+      "persistence_mae": 0.5827248640192044
+    },
+    "1\u20135 mm": {
+      "rows": 573417,
+      "candidate_mae": 3.039050289025002,
+      "persistence_mae": 3.3273938686854416
+    },
+    "5\u201320 mm": {
+      "rows": 458067,
+      "candidate_mae": 5.026293518513313,
+      "persistence_mae": 7.229209111330875
+    },
+    "20\u201350 mm": {
+      "rows": 105174,
+      "candidate_mae": 16.185366439431057,
+      "persistence_mae": 17.595858387053834
+    },
+    "50+ mm": {
+      "rows": 18969,
+      "candidate_mae": 54.15570544184743,
+      "persistence_mae": 49.12488481206178
+    }
+  },
+  "holdout_accessed": false
+}

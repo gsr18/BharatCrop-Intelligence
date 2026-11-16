@@ -1,0 +1,57 @@
+{
+  "experiment": "WI-05 T+1 rainfall training sample",
+  "target": "PRECTOTCORR_target_t_plus_1",
+  "horizon": 1,
+  "sampling_method": "Random sampling within each grid-cell and target-year group",
+  "full_training_rows": 6438600,
+  "sample_rows": 352800,
+  "sample_grid_cells": 2520,
+  "full_max_rainfall_mm": 1038.34,
+  "sample_max_rainfall_mm": 488.99,
+  "intensity_distribution_percentage": {
+    "Below 1 mm": {
+      "full_population": 61.6338,
+      "sample": 61.642
+    },
+    "1\u20135 mm": {
+      "full_population": 19.0116,
+      "sample": 18.8946
+    },
+    "5\u201320 mm": {
+      "full_population": 15.3614,
+      "sample": 15.4785
+    },
+    "20\u201350 mm": {
+      "full_population": 3.3832,
+      "sample": 3.3747
+    },
+    "50+ mm": {
+      "full_population": 0.61,
+      "sample": 0.6103
+    }
+  },
+  "seasonal_distribution_percentage": {
+    "Winter": {
+      "full_population": 24.6575,
+      "sample": 24.7018
+    },
+    "Pre-monsoon": {
+      "full_population": 25.2055,
+      "sample": 25.1888
+    },
+    "Monsoon": {
+      "full_population": 33.4247,
+      "sample": 33.46
+    },
+    "Post-monsoon": {
+      "full_population": 16.7123,
+      "sample": 16.6494
+    }
+  },
+  "holdout_accessed": false,
+  "limitations": [
+    "The random sample does not contain the maximum observed rainfall event.",
+    "Matching aggregate distributions does not guarantee representation of every extreme event.",
+    "The sample is intended for model fitting; validation must use the complete validation population."
+  ]
+}

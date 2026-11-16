@@ -1,0 +1,14 @@
+{
+  "registry_id": "crop_recommendation",
+  "evaluation_period": [
+    2023,
+    2024
+  ],
+  "eligible_prediction_rows": 8433,
+  "evaluated_groups": 2365,
+  "top1_hit_rate": 0.7919661733615222,
+  "top3_hit_rate": 0.99830866807611,
+  "mean_spearman_correlation": 0.7919884758726925,
+  "interpretation": "Retrospective ranking evaluation against observed yield among eligible historical crop candidates; not a measure of agronomic suitability or profitability.",
+  "production_approval": "NOT ESTABLISHED"
+}

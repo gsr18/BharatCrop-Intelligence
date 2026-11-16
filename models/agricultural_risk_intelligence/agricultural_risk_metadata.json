@@ -1,0 +1,29 @@
+{
+  "module": "Agricultural Risk Intelligence",
+  "source_dataset": "C:\\Users\\gsr58\\Desktop\\Projects\\BharatCrop-Intelligence\\data\\processed\\weather_regional\\apy_weather_integrated_exploratory.csv",
+  "analysis_period": [
+    2013,
+    2024
+  ],
+  "prepared_observations": 90893,
+  "observations_with_historical_baseline": 69693,
+  "district_crop_season_groups": 9236,
+  "risk_definition": {
+    "high_concern": "Current yield < 70% of previous-three-observation median",
+    "moderate_concern": "Current yield >= 70% and < 85% of historical median",
+    "within_historical_range": "Current yield >= 85% and <= 115% of historical median",
+    "above_historical_range": "Current yield > 115% and <= 5 times historical median",
+    "extreme_deviation_review": "Yield ratio < 0.1 or > 5"
+  },
+  "persistence_definition": "Count of distinct years classified as High Concern",
+  "limitations": [
+    "Exploratory historical indicators, not calibrated future-risk probabilities.",
+    "Thresholds are heuristic and not validated agronomic thresholds.",
+    "Extreme yield deviations require source-data and unit review.",
+    "Weather associations are descriptive, not causal.",
+    "Weather uses an unverified starting-calendar-year proxy.",
+    "No full crop-season weather alignment has been verified.",
+    "Missing weather data is unavailable, not evidence of low risk."
+  ],
+  "deployment_status": "EXPLORATORY \u2014 NOT VALIDATED FOR FARMER-FACING RISK WARNINGS"
+}

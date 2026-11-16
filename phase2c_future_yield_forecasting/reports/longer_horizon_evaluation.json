@@ -1,0 +1,86 @@
+{
+  "h3": {
+    "h": 3,
+    "n_eval_years": 8,
+    "n_rows": 28760,
+    "ridge": {
+      "mae": 390.95452569005437,
+      "rmse": 609.7365293557664,
+      "r2": 0.8281566840334609,
+      "negatives": 0
+    },
+    "random_forest": {
+      "mae": 371.2188482604625,
+      "rmse": 606.4664100576622,
+      "r2": 0.8299949902714026,
+      "negatives": 0
+    },
+    "hgb": {
+      "mae": 367.85961027214466,
+      "rmse": 595.8272188703941,
+      "r2": 0.8359074388227048,
+      "negatives": 0
+    },
+    "best_baseline_mae": 416.54944367176637,
+    "baseline_median_mae": 416.54944367176637,
+    "ridge_skill_vs_best_baseline_pct": 6.144508982199085,
+    "random_forest_skill_vs_best_baseline_pct": 10.882404502026796,
+    "hgb_skill_vs_best_baseline_pct": 11.688848500296746
+  },
+  "h4": {
+    "h": 4,
+    "n_eval_years": 7,
+    "n_rows": 24623,
+    "ridge": {
+      "mae": 404.7093756777888,
+      "rmse": 623.8044392300026,
+      "r2": 0.8182729824554873,
+      "negatives": 0
+    },
+    "random_forest": {
+      "mae": 376.8561440398963,
+      "rmse": 594.3912972992714,
+      "r2": 0.8350062621720157,
+      "negatives": 0
+    },
+    "hgb": {
+      "mae": 369.13411244061956,
+      "rmse": 579.9882865809357,
+      "r2": 0.8429054847922988,
+      "negatives": 0
+    },
+    "best_baseline_mae": 439.12811192787234,
+    "baseline_median_mae": 439.12811192787234,
+    "ridge_skill_vs_best_baseline_pct": 7.837971497424173,
+    "random_forest_skill_vs_best_baseline_pct": 14.18082017445613,
+    "hgb_skill_vs_best_baseline_pct": 15.939311919695415
+  },
+  "h5": {
+    "h": 5,
+    "n_eval_years": 6,
+    "n_rows": 20682,
+    "ridge": {
+      "mae": 421.6913988316105,
+      "rmse": 644.7735368787297,
+      "r2": 0.8057963409468352,
+      "negatives": 0
+    },
+    "random_forest": {
+      "mae": 381.8683828720011,
+      "rmse": 608.9958094282152,
+      "r2": 0.8267506525523037,
+      "negatives": 0
+    },
+    "hgb": {
+      "mae": 371.71752974329655,
+      "rmse": 581.8953592481768,
+      "r2": 0.8418268417500884,
+      "negatives": 0
+    },
+    "best_baseline_mae": 466.4097040905135,
+    "baseline_median_mae": 466.4097040905135,
+    "ridge_skill_vs_best_baseline_pct": 9.587773338915087,
+    "random_forest_skill_vs_best_baseline_pct": 18.125978185502316,
+    "hgb_skill_vs_best_baseline_pct": 20.302359388483175
+  }
+}

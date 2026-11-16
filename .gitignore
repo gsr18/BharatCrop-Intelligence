@@ -1,0 +1,53 @@
+# Secrets and local environment
+.env
+.env.*
+!.env.example
+!.env.*.example
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+
+# Node / Next.js
+node_modules/
+.next/
+dist/
+build/
+coverage/
+*.tsbuildinfo
+
+# Logs and temp
+*.log
+*.tmp
+*.temp
+.DS_Store
+Thumbs.db
+
+# Local editor / agent state
+.idea/
+.vscode/
+.devin/
+.claude/
+.cursor/
+
+# Generated screenshots / local captures
+_pass1_shots/
+
+# Duplicate/local backups
+backups/
+**/backups/
+
+# Large research archives requiring external storage for deployment
+# (kept locally; see REQUIRED_EXTERNAL_DATA.md)
+phase3b_weather_intelligence/data/processed/weather_features_v1/
+phase3b_weather_intelligence/reports/weather_intelligence_v2/WI_06_temperature_model_development/
+data/raw/india_district_boundaries/
+data/raw/weather_regional/
+phase2d_expanded_yield_forecasting/artifacts/
+phase2c_future_yield_forecasting/artifacts/

@@ -1,0 +1,2 @@
+geography_id_1,geography_id_2,distance_km,identical_precipitation,identical_tmax,identical_tmin,same_reported_merra2_elevation_m,status,interpretation,action
+APY-GEO-0055,APY-GEO-0056,41.1,True,True,True,61.12,FLAGGED_UNRESOLVED,"All three daily variables are identical across 4383 dates. A shared underlying grid-cell assignment is plausible, but exact grid-cell identity has not been verified.",Retain both records; investigate grid mapping before nationwide expansion. Do not alter measurements.

@@ -1,0 +1,189 @@
+{
+  "analysis_period": {
+    "start_year": 2013,
+    "end_year": 2024,
+    "number_of_years": 12
+  },
+  "annual_weather_summary": [
+    {
+      "year": 2013,
+      "mean_rainfall_mm_day": 3.9634,
+      "median_cell_mean_rainfall_mm_day": 3.6569,
+      "mean_wet_day_percentage": 62.7116,
+      "mean_tmax_c": 25.6677,
+      "mean_tmin_c": 17.6879,
+      "mean_temp_range_c": 7.9798,
+      "mean_cell_p95_rainfall_mm_day": 17.3811
+    },
+    {
+      "year": 2014,
+      "mean_rainfall_mm_day": 3.2042,
+      "median_cell_mean_rainfall_mm_day": 2.8917,
+      "mean_wet_day_percentage": 61.7361,
+      "mean_tmax_c": 25.9156,
+      "mean_tmin_c": 17.7885,
+      "mean_temp_range_c": 8.1271,
+      "mean_cell_p95_rainfall_mm_day": 14.6968
+    },
+    {
+      "year": 2015,
+      "mean_rainfall_mm_day": 3.4336,
+      "median_cell_mean_rainfall_mm_day": 3.2002,
+      "mean_wet_day_percentage": 65.3389,
+      "mean_tmax_c": 26.0114,
+      "mean_tmin_c": 17.8997,
+      "mean_temp_range_c": 8.1117,
+      "mean_cell_p95_rainfall_mm_day": 15.813
+    },
+    {
+      "year": 2016,
+      "mean_rainfall_mm_day": 3.522,
+      "median_cell_mean_rainfall_mm_day": 2.8723,
+      "mean_wet_day_percentage": 62.3975,
+      "mean_tmax_c": 26.3914,
+      "mean_tmin_c": 18.2532,
+      "mean_temp_range_c": 8.1382,
+      "mean_cell_p95_rainfall_mm_day": 16.3437
+    },
+    {
+      "year": 2017,
+      "mean_rainfall_mm_day": 3.8053,
+      "median_cell_mean_rainfall_mm_day": 3.1346,
+      "mean_wet_day_percentage": 64.9641,
+      "mean_tmax_c": 26.105,
+      "mean_tmin_c": 18.018,
+      "mean_temp_range_c": 8.0869,
+      "mean_cell_p95_rainfall_mm_day": 16.9634
+    },
+    {
+      "year": 2018,
+      "mean_rainfall_mm_day": 3.4763,
+      "median_cell_mean_rainfall_mm_day": 2.8924,
+      "mean_wet_day_percentage": 63.5525,
+      "mean_tmax_c": 26.0225,
+      "mean_tmin_c": 17.8454,
+      "mean_temp_range_c": 8.1771,
+      "mean_cell_p95_rainfall_mm_day": 15.9106
+    },
+    {
+      "year": 2019,
+      "mean_rainfall_mm_day": 3.7727,
+      "median_cell_mean_rainfall_mm_day": 3.3115,
+      "mean_wet_day_percentage": 67.171,
+      "mean_tmax_c": 25.7434,
+      "mean_tmin_c": 17.8154,
+      "mean_temp_range_c": 7.928,
+      "mean_cell_p95_rainfall_mm_day": 17.9418
+    },
+    {
+      "year": 2020,
+      "mean_rainfall_mm_day": 4.0575,
+      "median_cell_mean_rainfall_mm_day": 3.8662,
+      "mean_wet_day_percentage": 68.5024,
+      "mean_tmax_c": 25.4505,
+      "mean_tmin_c": 17.6293,
+      "mean_temp_range_c": 7.8212,
+      "mean_cell_p95_rainfall_mm_day": 18.161
+    },
+    {
+      "year": 2021,
+      "mean_rainfall_mm_day": 3.9042,
+      "median_cell_mean_rainfall_mm_day": 3.6061,
+      "mean_wet_day_percentage": 68.2592,
+      "mean_tmax_c": 25.8282,
+      "mean_tmin_c": 17.9688,
+      "mean_temp_range_c": 7.8594,
+      "mean_cell_p95_rainfall_mm_day": 17.373
+    },
+    {
+      "year": 2022,
+      "mean_rainfall_mm_day": 3.8362,
+      "median_cell_mean_rainfall_mm_day": 3.5295,
+      "mean_wet_day_percentage": 67.2528,
+      "mean_tmax_c": 25.7907,
+      "mean_tmin_c": 17.8613,
+      "mean_temp_range_c": 7.9294,
+      "mean_cell_p95_rainfall_mm_day": 17.5403
+    },
+    {
+      "year": 2023,
+      "mean_rainfall_mm_day": 3.4213,
+      "median_cell_mean_rainfall_mm_day": 3.2055,
+      "mean_wet_day_percentage": 66.4704,
+      "mean_tmax_c": 26.0003,
+      "mean_tmin_c": 18.0759,
+      "mean_temp_range_c": 7.9244,
+      "mean_cell_p95_rainfall_mm_day": 16.0296
+    },
+    {
+      "year": 2024,
+      "mean_rainfall_mm_day": 3.8796,
+      "median_cell_mean_rainfall_mm_day": 3.5842,
+      "mean_wet_day_percentage": 65.4035,
+      "mean_tmax_c": 26.214,
+      "mean_tmin_c": 18.3829,
+      "mean_temp_range_c": 7.8311,
+      "mean_cell_p95_rainfall_mm_day": 18.0923
+    }
+  ],
+  "grid_cell_linear_trend_slopes": {
+    "mean_rainfall_mm_day": {
+      "grid_cells_with_estimated_slope": 2520,
+      "mean_slope_per_year": 0.023827254363103692,
+      "median_slope_per_year": 0.02238770855613228,
+      "p05_slope_per_year": -0.11414678007074497,
+      "p95_slope_per_year": 0.17245897743434996,
+      "negative_slope_cells": 854,
+      "positive_slope_cells": 1666,
+      "near_zero_slope_cells": 0
+    },
+    "wet_day_percentage": {
+      "grid_cells_with_estimated_slope": 2520,
+      "mean_slope_per_year": 0.451605262350807,
+      "median_slope_per_year": 0.4281077108384465,
+      "p05_slope_per_year": -0.09626469047086605,
+      "p95_slope_per_year": 1.0934452926367844,
+      "negative_slope_cells": 249,
+      "positive_slope_cells": 2271,
+      "near_zero_slope_cells": 0
+    },
+    "mean_tmax_c": {
+      "grid_cells_with_estimated_slope": 2520,
+      "mean_slope_per_year": 0.0005872214835336569,
+      "median_slope_per_year": 0.021821172259136386,
+      "p05_slope_per_year": -0.0900644810444386,
+      "p95_slope_per_year": 0.05174367410043396,
+      "negative_slope_cells": 987,
+      "positive_slope_cells": 1533,
+      "near_zero_slope_cells": 0
+    },
+    "mean_tmin_c": {
+      "grid_cells_with_estimated_slope": 2520,
+      "mean_slope_per_year": 0.02567934726816566,
+      "median_slope_per_year": 0.029457004968234776,
+      "p05_slope_per_year": -0.030339038125206927,
+      "p95_slope_per_year": 0.07100872448160148,
+      "negative_slope_cells": 344,
+      "positive_slope_cells": 2176,
+      "near_zero_slope_cells": 0
+    },
+    "mean_temp_range_c": {
+      "grid_cells_with_estimated_slope": 2520,
+      "mean_slope_per_year": -0.025092125784631998,
+      "median_slope_per_year": -0.010210595041607711,
+      "p05_slope_per_year": -0.10315091137060706,
+      "p95_slope_per_year": 0.03446991453602069,
+      "negative_slope_cells": 1403,
+      "positive_slope_cells": 1117,
+      "near_zero_slope_cells": 0
+    }
+  },
+  "interpretation_limitations": [
+    "Trend slopes are descriptive linear estimates.",
+    "Twelve annual observations are insufficient for strong long-term climate-trend conclusions.",
+    "No statistical significance testing is performed.",
+    "Spatial dependence between neighbouring grid cells is not accounted for.",
+    "Extreme rainfall observations are retained.",
+    "These estimates are not forecasting model features."
+  ]
+}

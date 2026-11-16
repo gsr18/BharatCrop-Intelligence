@@ -1,0 +1,86 @@
+{
+  "Crop": {
+    "unique_values": 13,
+    "top_values": {
+      "Rice": 406,
+      "Maize": 374,
+      "Urad": 328,
+      "Moong": 305,
+      "Tur": 252,
+      "Gram": 228,
+      "Wheat": 207,
+      "Bajra": 205,
+      "Jowar": 200,
+      "Lentil": 137,
+      "Small Millets": 128,
+      "Ragi": 119,
+      "Barley": 111
+    }
+  },
+  "Season": {
+    "unique_values": 4,
+    "top_values": {
+      "Total": 1240,
+      "Kharif": 851,
+      "Rabi": 675,
+      "Summer": 234
+    }
+  },
+  "Crop_Category": {
+    "unique_values": 1,
+    "top_values": {
+      "Individual Crop Candidate": 3000
+    }
+  },
+  "State": {
+    "unique_values": 34,
+    "top_values": {
+      "Uttar Pradesh": 414,
+      "Madhya Pradesh": 245,
+      "Telangana": 202,
+      "Karnataka": 196,
+      "Tamil Nadu": 182,
+      "Maharashtra": 158,
+      "Bihar": 152,
+      "Chhattisgarh": 135,
+      "Assam": 128,
+      "Gujarat": 122,
+      "Rajasthan": 122,
+      "Jharkhand": 109,
+      "Odisha": 103,
+      "West Bengal": 102,
+      "Andhra Pradesh": 101,
+      "Nagaland": 81,
+      "Uttarakhand": 74,
+      "Haryana": 73,
+      "Arunachal Pradesh": 70,
+      "Punjab": 61
+    }
+  },
+  "District": {
+    "unique_values": 691,
+    "top_values": {
+      "Gadag": 14,
+      "Rewa": 13,
+      "Koppal": 13,
+      "Ariyalur": 12,
+      "Mysuru": 12,
+      "Meerut": 12,
+      "Deoghar": 11,
+      "Rajgarh": 11,
+      "Raisen": 11,
+      "Amethi": 10,
+      "Balrampur-Ramanujganj": 10,
+      "Gondia": 10,
+      "Ayodhya": 10,
+      "Jogulamba Gadwal": 10,
+      "Ananthapuramu": 10,
+      "Prayagraj": 10,
+      "Firozabad": 10,
+      "Lakhisarai": 10,
+      "Pratapgarh": 10,
+      "Hooghly": 10
+    }
+  },
+  "evaluation_rows_with_total_season": 1240
+}

@@ -1,0 +1,20 @@
+[
+  {
+    "model": "Random Forest",
+    "MAE": 2.6736780301168235,
+    "RMSE": 8.013692881910245,
+    "negative_predictions": 0
+  },
+  {
+    "model": "HistGradientBoosting",
+    "MAE": 2.704353718900669,
+    "RMSE": 7.958803050542154,
+    "negative_predictions": 0
+  },
+  {
+    "model": "Ridge Regression",
+    "MAE": 2.7722429620026516,
+    "RMSE": 7.946185728456718,
+    "negative_predictions": 2170
+  }
+]

@@ -1,0 +1,198 @@
+{
+  "pearson_correlation": {
+    "PRECTOTCORR": {
+      "PRECTOTCORR": 1.0,
+      "T2M_MAX": 0.0715,
+      "T2M_MIN": 0.1753,
+      "TEMP_RANGE": -0.248
+    },
+    "T2M_MAX": {
+      "PRECTOTCORR": 0.0715,
+      "T2M_MAX": 1.0,
+      "T2M_MIN": 0.8838,
+      "TEMP_RANGE": -0.1586
+    },
+    "T2M_MIN": {
+      "PRECTOTCORR": 0.1753,
+      "T2M_MAX": 0.8838,
+      "T2M_MIN": 1.0,
+      "TEMP_RANGE": -0.6021
+    },
+    "TEMP_RANGE": {
+      "PRECTOTCORR": -0.248,
+      "T2M_MAX": -0.1586,
+      "T2M_MIN": -0.6021,
+      "TEMP_RANGE": 1.0
+    }
+  },
+  "spearman_correlation": {
+    "PRECTOTCORR": {
+      "PRECTOTCORR": 1.0,
+      "T2M_MAX": 0.096,
+      "T2M_MIN": 0.4097,
+      "TEMP_RANGE": -0.4927
+    },
+    "T2M_MAX": {
+      "PRECTOTCORR": 0.096,
+      "T2M_MAX": 1.0,
+      "T2M_MIN": 0.5396,
+      "TEMP_RANGE": 0.0302
+    },
+    "T2M_MIN": {
+      "PRECTOTCORR": 0.4097,
+      "T2M_MAX": 0.5396,
+      "T2M_MIN": 1.0,
+      "TEMP_RANGE": -0.7358
+    },
+    "TEMP_RANGE": {
+      "PRECTOTCORR": -0.4927,
+      "T2M_MAX": 0.0302,
+      "T2M_MIN": -0.7358,
+      "TEMP_RANGE": 1.0
+    }
+  },
+  "wet_dry_temperature_summary": {
+    "Dry": {
+      "observation_count": 3831188,
+      "mean_tmax_c": 24.1192,
+      "median_tmax_c": 27.49,
+      "mean_tmin_c": 11.8636,
+      "median_tmin_c": 15.71,
+      "mean_temp_range_c": 12.2556,
+      "median_temp_range_c": 13.94
+    },
+    "Wet": {
+      "observation_count": 7213972,
+      "mean_tmax_c": 26.8893,
+      "median_tmax_c": 28.76,
+      "mean_tmin_c": 21.1604,
+      "median_tmin_c": 26.37,
+      "mean_temp_range_c": 5.729,
+      "median_temp_range_c": 4.44
+    }
+  },
+  "seasonal_wet_dry_summary": [
+    {
+      "calendar_season": "Monsoon (Jun-Sep)",
+      "rainfall_category": "Dry",
+      "observation_count": 287157,
+      "mean_tmax_c": 30.5877,
+      "mean_tmin_c": 17.3337,
+      "mean_temp_range_c": 13.254,
+      "mean_rainfall_mm_day": 0.0
+    },
+    {
+      "calendar_season": "Monsoon (Jun-Sep)",
+      "rainfall_category": "Wet",
+      "observation_count": 3402123,
+      "mean_tmax_c": 27.9917,
+      "mean_tmin_c": 22.2374,
+      "mean_temp_range_c": 5.7543,
+      "mean_rainfall_mm_day": 7.9545
+    },
+    {
+      "calendar_season": "Post-monsoon (Oct-Nov)",
+      "rainfall_category": "Dry",
+      "observation_count": 798195,
+      "mean_tmax_c": 22.2416,
+      "mean_tmin_c": 10.1014,
+      "mean_temp_range_c": 12.1402,
+      "mean_rainfall_mm_day": 0.0
+    },
+    {
+      "calendar_season": "Post-monsoon (Oct-Nov)",
+      "rainfall_category": "Wet",
+      "observation_count": 1046445,
+      "mean_tmax_c": 26.3991,
+      "mean_tmin_c": 22.1657,
+      "mean_temp_range_c": 4.2334,
+      "mean_rainfall_mm_day": 5.2989
+    },
+    {
+      "calendar_season": "Pre-monsoon (Mar-May)",
+      "rainfall_category": "Dry",
+      "observation_count": 1027535,
+      "mean_tmax_c": 29.5399,
+      "mean_tmin_c": 16.7587,
+      "mean_temp_range_c": 12.7812,
+      "mean_rainfall_mm_day": 0.0
+    },
+    {
+      "calendar_season": "Pre-monsoon (Mar-May)",
+      "rainfall_category": "Wet",
+      "observation_count": 1754545,
+      "mean_tmax_c": 27.335,
+      "mean_tmin_c": 20.3846,
+      "mean_temp_range_c": 6.9504,
+      "mean_rainfall_mm_day": 3.1725
+    },
+    {
+      "calendar_season": "Winter (Dec-Feb)",
+      "rainfall_category": "Dry",
+      "observation_count": 1718301,
+      "mean_tmax_c": 20.6688,
+      "mean_tmin_c": 8.8408,
+      "mean_temp_range_c": 11.828,
+      "mean_rainfall_mm_day": 0.0
+    },
+    {
+      "calendar_season": "Winter (Dec-Feb)",
+      "rainfall_category": "Wet",
+      "observation_count": 1010859,
+      "mean_tmax_c": 22.9131,
+      "mean_tmin_c": 17.8414,
+      "mean_temp_range_c": 5.0717,
+      "mean_rainfall_mm_day": 2.5531
+    }
+  ],
+  "rainfall_intensity_summary": {
+    "Dry (0 mm)": {
+      "observation_count": 3831188,
+      "mean_tmax_c": 24.1192,
+      "mean_tmin_c": 11.8636,
+      "mean_temp_range_c": 12.2556,
+      "mean_rainfall_mm_day": 0.0,
+      "percentage_of_observations": 34.6866
+    },
+    "Light (>0–2.5 mm)": {
+      "observation_count": 4004556,
+      "mean_tmax_c": 26.2105,
+      "mean_tmin_c": 19.4075,
+      "mean_temp_range_c": 6.803,
+      "mean_rainfall_mm_day": 0.6835,
+      "percentage_of_observations": 36.2562
+    },
+    "Moderate (>2.5–7.5 mm)": {
+      "observation_count": 1629754,
+      "mean_tmax_c": 27.4024,
+      "mean_tmin_c": 22.4532,
+      "mean_temp_range_c": 4.9493,
+      "mean_rainfall_mm_day": 4.5636,
+      "percentage_of_observations": 14.7554
+    },
+    "Heavy (>7.5–35 mm)": {
+      "observation_count": 1422187,
+      "mean_tmax_c": 28.056,
+      "mean_tmin_c": 24.1384,
+      "mean_temp_range_c": 3.9176,
+      "mean_rainfall_mm_day": 14.9978,
+      "percentage_of_observations": 12.8761
+    },
+    "Very heavy (>35 mm)": {
+      "observation_count": 157475,
+      "mean_tmax_c": 28.3051,
+      "mean_tmin_c": 25.462,
+      "mean_temp_range_c": 2.8431,
+      "mean_rainfall_mm_day": 58.7388,
+      "percentage_of_observations": 1.4257
+    }
+  },
+  "rainfall_intensity_thresholds_mm_day": {
+    "dry": "0",
+    "light": ">0 to 2.5",
+    "moderate": ">2.5 to 7.5",
+    "heavy": ">7.5 to 35",
+    "very_heavy": ">35"
+  },
+  "interpretation_note": "Descriptive associations only. Pooled correlations may be confounded by season, geography and temporal structure. Rainfall categories are analytical bins, not agricultural hazard classifications."
+}

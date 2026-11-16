@@ -1,0 +1,8 @@
+{
+  "project": "BharatCrop Intelligence",
+  "dataset_id": "SRC004",
+  "notebook": "03_weather_dataset_acquisition_and_audit.ipynb",
+  "created_at_utc": "2026-10-30T22:06:01.432292+00:00",
+  "status": "SOURCE_DISCOVERED",
+  "raw_data_modified": false
+}

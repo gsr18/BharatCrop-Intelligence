@@ -1,0 +1,17 @@
+{
+  "horizon": "T+2",
+  "target": "PRECTOTCORR",
+  "validation_period": "2020-2022",
+  "validation_observations": 2761920,
+  "candidate": {
+    "model": "Two-stage HistGradientBoosting",
+    "mae_mm": 3.4180116856321,
+    "rmse_mm": 8.31310724526423
+  },
+  "persistence": {
+    "mae_mm": 4.084409805497624,
+    "rmse_mm": 10.842962825466168
+  },
+  "holdout_accessed": false,
+  "model_status": "Provisional T+2 candidate"
+}

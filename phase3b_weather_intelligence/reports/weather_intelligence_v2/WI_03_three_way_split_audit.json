@@ -1,0 +1,261 @@
+{
+  "dataset_version": "weather-features-v1",
+  "split_method": "chronological_by_target_date",
+  "split_ranges": {
+    "training": {
+      "start": "2013-01-01",
+      "end": "2019-12-31"
+    },
+    "validation": {
+      "start": "2020-01-01",
+      "end": "2022-12-31"
+    },
+    "final_holdout": {
+      "start": "2023-01-01",
+      "end": "2024-12-31"
+    }
+  },
+  "batch_files_audited": 252,
+  "target_horizons_audited": 14,
+  "results": {
+    "PRECTOTCORR_T_plus_1": {
+      "training": {
+        "rows": 6438600,
+        "valid_targets": 6438600,
+        "missing_targets": 0
+      },
+      "validation": {
+        "rows": 2761920,
+        "valid_targets": 2761920,
+        "missing_targets": 0
+      },
+      "final_holdout": {
+        "rows": 1842120,
+        "valid_targets": 1842120,
+        "missing_targets": 0
+      }
+    },
+    "PRECTOTCORR_T_plus_2": {
+      "training": {
+        "rows": 6436080,
+        "valid_targets": 6436080,
+        "missing_targets": 0
+      },
+      "validation": {
+        "rows": 2761920,
+        "valid_targets": 2761920,
+        "missing_targets": 0
+      },
+      "final_holdout": {
+        "rows": 1842120,
+        "valid_targets": 1842120,
+        "missing_targets": 0
+      }
+    },
+    "PRECTOTCORR_T_plus_3": {
+      "training": {
+        "rows": 6433560,
+        "valid_targets": 6433560,
+        "missing_targets": 0
+      },
+      "validation": {
+        "rows": 2761920,
+        "valid_targets": 2761920,
+        "missing_targets": 0
+      },
+      "final_holdout": {
+        "rows": 1842120,
+        "valid_targets": 1842120,
+        "missing_targets": 0
+      }
+    },
+    "PRECTOTCORR_T_plus_4": {
+      "training": {
+        "rows": 6431040,
+        "valid_targets": 6431040,
+        "missing_targets": 0
+      },
+      "validation": {
+        "rows": 2761920,
+        "valid_targets": 2761920,
+        "missing_targets": 0
+      },
+      "final_holdout": {
+        "rows": 1842120,
+        "valid_targets": 1842120,
+        "missing_targets": 0
+      }
+    },
+    "PRECTOTCORR_T_plus_5": {
+      "training": {
+        "rows": 6428520,
+        "valid_targets": 6428520,
+        "missing_targets": 0
+      },
+      "validation": {
+        "rows": 2761920,
+        "valid_targets": 2761920,
+        "missing_targets": 0
+      },
+      "final_holdout": {
+        "rows": 1842120,
+        "valid_targets": 1842120,
+        "missing_targets": 0
+      }
+    },
+    "PRECTOTCORR_T_plus_6": {
+      "training": {
+        "rows": 6426000,
+        "valid_targets": 6426000,
+        "missing_targets": 0
+      },
+      "validation": {
+        "rows": 2761920,
+        "valid_targets": 2761920,
+        "missing_targets": 0
+      },
+      "final_holdout": {
+        "rows": 1842120,
+        "valid_targets": 1842120,
+        "missing_targets": 0
+      }
+    },
+    "PRECTOTCORR_T_plus_7": {
+      "training": {
+        "rows": 6423480,
+        "valid_targets": 6423480,
+        "missing_targets": 0
+      },
+      "validation": {
+        "rows": 2761920,
+        "valid_targets": 2761920,
+        "missing_targets": 0
+      },
+      "final_holdout": {
+        "rows": 1842120,
+        "valid_targets": 1842120,
+        "missing_targets": 0
+      }
+    },
+    "T2M_MAX_T_plus_1": {
+      "training": {
+        "rows": 6438600,
+        "valid_targets": 6438600,
+        "missing_targets": 0
+      },
+      "validation": {
+        "rows": 2761920,
+        "valid_targets": 2761920,
+        "missing_targets": 0
+      },
+      "final_holdout": {
+        "rows": 1842120,
+        "valid_targets": 1842120,
+        "missing_targets": 0
+      }
+    },
+    "T2M_MAX_T_plus_2": {
+      "training": {
+        "rows": 6436080,
+        "valid_targets": 6436080,
+        "missing_targets": 0
+      },
+      "validation": {
+        "rows": 2761920,
+        "valid_targets": 2761920,
+        "missing_targets": 0
+      },
+      "final_holdout": {
+        "rows": 1842120,
+        "valid_targets": 1842120,
+        "missing_targets": 0
+      }
+    },
+    "T2M_MAX_T_plus_3": {
+      "training": {
+        "rows": 6433560,
+        "valid_targets": 6433560,
+        "missing_targets": 0
+      },
+      "validation": {
+        "rows": 2761920,
+        "valid_targets": 2761920,
+        "missing_targets": 0
+      },
+      "final_holdout": {
+        "rows": 1842120,
+        "valid_targets": 1842120,
+        "missing_targets": 0
+      }
+    },
+    "T2M_MAX_T_plus_4": {
+      "training": {
+        "rows": 6431040,
+        "valid_targets": 6431040,
+        "missing_targets": 0
+      },
+      "validation": {
+        "rows": 2761920,
+        "valid_targets": 2761920,
+        "missing_targets": 0
+      },
+      "final_holdout": {
+        "rows": 1842120,
+        "valid_targets": 1842120,
+        "missing_targets": 0
+      }
+    },
+    "T2M_MAX_T_plus_5": {
+      "training": {
+        "rows": 6428520,
+        "valid_targets": 6428520,
+        "missing_targets": 0
+      },
+      "validation": {
+        "rows": 2761920,
+        "valid_targets": 2761920,
+        "missing_targets": 0
+      },
+      "final_holdout": {
+        "rows": 1842120,
+        "valid_targets": 1842120,
+        "missing_targets": 0
+      }
+    },
+    "T2M_MAX_T_plus_6": {
+      "training": {
+        "rows": 6426000,
+        "valid_targets": 6426000,
+        "missing_targets": 0
+      },
+      "validation": {
+        "rows": 2761920,
+        "valid_targets": 2761920,
+        "missing_targets": 0
+      },
+      "final_holdout": {
+        "rows": 1842120,
+        "valid_targets": 1842120,
+        "missing_targets": 0
+      }
+    },
+    "T2M_MAX_T_plus_7": {
+      "training": {
+        "rows": 6423480,
+        "valid_targets": 6423480,
+        "missing_targets": 0
+      },
+      "validation": {
+        "rows": 2761920,
+        "valid_targets": 2761920,
+        "missing_targets": 0
+      },
+      "final_holdout": {
+        "rows": 1842120,
+        "valid_targets": 1842120,
+        "missing_targets": 0
+      }
+    }
+  },
+  "all_split_targets_complete": true
+}

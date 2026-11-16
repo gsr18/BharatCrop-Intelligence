@@ -1,0 +1,78 @@
+{
+  "runs": [
+    {
+      "command": "audit",
+      "elapsed_seconds": 29.822,
+      "outputs": {
+        "audit": {
+          "canonical_rows": 11045160,
+          "cells": 2520,
+          "feature_schema_path": "C:\\Users\\gsr58\\Desktop\\Projects\\BharatCrop-Intelligence\\phase3b_weather_intelligence\\schemas\\weather_feature_schema_v1.json",
+          "manifest_path": "C:\\Users\\gsr58\\Desktop\\Projects\\BharatCrop-Intelligence\\phase3b_weather_intelligence\\manifests\\source_manifest_v1.json",
+          "manifest_sha256": "52613b6b2f8a9c9ff8bdfb2e41bfa72ef5678eb751d186a9a17a370231d6d177",
+          "measurements_total": 33135480,
+          "quality_checks": {
+            "all_source_headers_match": true,
+            "complete_date_keys": true,
+            "duplicate_cell_dates": 0,
+            "duplicate_coordinates": 0,
+            "duplicate_json_keys": 0,
+            "expected_files": 2016,
+            "matching_grid_cells_across_variables_and_years": true,
+            "missing_expected_cell_dates": 0,
+            "negative_precipitation_values": 0,
+            "non_finite_values": 0,
+            "non_numeric_values": 0,
+            "sentinel_values": 0,
+            "tmin_greater_than_tmax": 0,
+            "unexpected_dates": 0,
+            "variable_source_tags_preserved": true
+          },
+          "quality_report_path": "C:\\Users\\gsr58\\Desktop\\Projects\\BharatCrop-Intelligence\\phase3b_weather_intelligence\\reports\\source_quality_v1.json",
+          "source_files": 2016
+        },
+        "dataset": null
+      },
+      "peak_working_set_bytes": 122802176,
+      "peak_working_set_mib": 117.11,
+      "software_versions": {
+        "numpy": "2.5.4",
+        "pandas": "2.3.3",
+        "platform": "Windows-11-10.0.26200-SP0",
+        "pyarrow": "19.0.1",
+        "python": "3.13.5"
+      },
+      "started_at_utc": "2026-11-09T10:55:51.940538+00:00"
+    },
+    {
+      "command": "build",
+      "elapsed_seconds": 54.82,
+      "outputs": {
+        "audit": null,
+        "dataset": {
+          "canonical_rows": 11045160,
+          "cell_count": 2520,
+          "dataset_path": "C:\\Users\\gsr58\\Desktop\\Projects\\BharatCrop-Intelligence\\phase3b_weather_intelligence\\data\\processed\\weather_daily_v1",
+          "dataset_version": "weather-daily-v1",
+          "feature_schema_sha256": "c4d19165f8dcfe710ce1ed8434a71e354467a01c283c210e94854eb393219a1f",
+          "manifest_sha256": "52613b6b2f8a9c9ff8bdfb2e41bfa72ef5678eb751d186a9a17a370231d6d177",
+          "parquet_bytes": 65958269,
+          "parquet_mib": 62.9,
+          "partition_count": 12,
+          "reused_existing": false
+        }
+      },
+      "peak_working_set_bytes": 303230976,
+      "peak_working_set_mib": 289.18,
+      "software_versions": {
+        "numpy": "2.5.4",
+        "pandas": "2.3.3",
+        "platform": "Windows-11-10.0.26200-SP0",
+        "pyarrow": "19.0.1",
+        "python": "3.13.5"
+      },
+      "started_at_utc": "2026-11-09T10:59:53.137024+00:00"
+    }
+  ],
+  "schema_version": "1.0.0"
+}

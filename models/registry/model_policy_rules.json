@@ -1,0 +1,66 @@
+[
+  {
+    "policy_id": "POL-001",
+    "scope": "all_components",
+    "rule": "Verify artifact and metadata paths before use.",
+    "severity": "BLOCKING",
+    "condition": "Required artifact or metadata is missing.",
+    "action": "Block model invocation and record the missing dependency."
+  },
+  {
+    "policy_id": "POL-002",
+    "scope": "yield_prediction_individual_crop_hgb",
+    "rule": "Require valid mandatory input fields.",
+    "severity": "BLOCKING",
+    "condition": "Required crop, year, or other contract field is missing or malformed.",
+    "action": "Reject the request before prediction."
+  },
+  {
+    "policy_id": "POL-003",
+    "scope": "yield_prediction_individual_crop_hgb",
+    "rule": "Treat unseen categories as unverified.",
+    "severity": "HIGH",
+    "condition": "Crop, season, state, or district was not represented in validated evaluation evidence.",
+    "action": "Flag the prediction for caution or block it according to application risk policy."
+  },
+  {
+    "policy_id": "POL-004",
+    "scope": "weather_low_yield_classifier",
+    "rule": "Do not deploy a model marked NOT READY.",
+    "severity": "BLOCKING",
+    "condition": "Recorded deployment status is NOT READY or model artifact is unavailable.",
+    "action": "Prevent operational use until evidence and artifact checks pass."
+  },
+  {
+    "policy_id": "POL-005",
+    "scope": "agricultural_risk_indicators",
+    "rule": "Do not present exploratory indicators as calibrated future risk.",
+    "severity": "BLOCKING",
+    "condition": "Risk output lacks validated calibration and documented predictive performance.",
+    "action": "Restrict output to exploratory analysis and clearly label its limitations."
+  },
+  {
+    "policy_id": "POL-006",
+    "scope": "crop_recommendation",
+    "rule": "Verify recommendation model identity and evaluation evidence.",
+    "severity": "BLOCKING",
+    "condition": "Model artifact identity, target contract, or evaluation status is unresolved.",
+    "action": "Keep recommendation component unverified until the metadata and evaluation are reconciled."
+  },
+  {
+    "policy_id": "POL-007",
+    "scope": "all_predictive_components",
+    "rule": "Preserve evaluation context.",
+    "severity": "HIGH",
+    "condition": "Metrics are displayed without their evaluation period, sample size, or known limitations.",
+    "action": "Attach evaluation context and limitations to reports and downstream interfaces."
+  },
+  {
+    "policy_id": "POL-008",
+    "scope": "all_components",
+    "rule": "Do not equate registry presence with production approval.",
+    "severity": "BLOCKING",
+    "condition": "A component is registered but production-readiness evidence is incomplete.",
+    "action": "Keep deployment approval separate from registry registration."
+  }
+]

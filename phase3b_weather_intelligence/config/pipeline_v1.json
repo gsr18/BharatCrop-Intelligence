@@ -1,0 +1,70 @@
+{
+  "dataset_version": "weather-daily-v1",
+  "schema_version": "1.0.0",
+  "source_root": "data/raw/weather_regional",
+  "source_api": {
+    "name": "POWER Daily API",
+    "version": "v2.10.1",
+    "time_standard": "UTC",
+    "fill_value": -999.0
+  },
+  "years": [2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+  "region_ids": [
+    "R001", "R002", "R003", "R004", "R005", "R006", "R007", "R008",
+    "R009", "R010", "R011", "R012", "R013", "R014", "R015", "R016",
+    "R017", "R018", "R019", "R020", "R021", "R022", "R023", "R024",
+    "R025", "R026", "R027", "R028", "R029", "R030", "R031", "R032",
+    "R033", "R034", "R035", "R036", "R037", "R038", "R039", "R040",
+    "R041", "R042", "R043", "R044", "R045", "R046", "R047", "R048",
+    "R049", "R050", "R051", "R052", "R053", "R054", "R055", "R056"
+  ],
+  "expected_grid": {
+    "cell_count": 2520,
+    "latitude_count": 56,
+    "longitude_count": 45,
+    "latitude_min": 7.0,
+    "latitude_max": 34.5,
+    "latitude_step": 0.5,
+    "longitude_min": 69.375,
+    "longitude_max": 96.875,
+    "longitude_step": 0.625
+  },
+  "variables": {
+    "T2M_MAX": {
+      "unit": "C",
+      "source_tags": ["MERRA2", "POWER"]
+    },
+    "T2M_MIN": {
+      "unit": "C",
+      "source_tags": ["MERRA2", "POWER"]
+    },
+    "PRECTOTCORR": {
+      "unit": "mm/day",
+      "source_tags": ["MERRA2"]
+    }
+  },
+  "canonical": {
+    "row_key": ["cell_id", "date"],
+    "cell_id_rule": "Coordinates sorted ascending by latitude then longitude; IDs are cell_0000 through cell_2519.",
+    "date_type": "date32; UTC calendar date, not a local timestamp",
+    "value_type": "float64",
+    "partition_by": ["year derived from date"],
+    "sort_by": ["cell_id", "date"],
+    "compression": "zstd",
+    "compression_level": 9,
+    "row_group_size": 250000,
+    "parquet_version": "2.6"
+  },
+  "features": {
+    "prediction_lags_days_before_target": [1, 2, 3, 7, 14, 30],
+    "rolling_windows_days": [3, 7, 14, 30],
+    "wet_day_threshold_mm_day": 1.0,
+    "season_bins": {
+      "winter": [1, 2],
+      "pre_monsoon": [3, 4, 5],
+      "monsoon": [6, 7, 8, 9],
+      "post_monsoon": [10, 11, 12]
+    },
+    "day_of_year_period_days": 365.2425
+  }
+}

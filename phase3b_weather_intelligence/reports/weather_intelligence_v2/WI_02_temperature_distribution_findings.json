@@ -1,0 +1,111 @@
+{
+  "summary_statistics": {
+    "T2M_MAX": {
+      "count": 11045160.0,
+      "mean": 25.9285,
+      "std": 10.9511,
+      "min": -24.19,
+      "1%": -9.39,
+      "5%": -0.36,
+      "25%": 25.59,
+      "50%": 28.57,
+      "75%": 30.76,
+      "95%": 39.75,
+      "99%": 43.87,
+      "99.9%": 46.85,
+      "max": 51.51
+    },
+    "T2M_MIN": {
+      "count": 11045160.0,
+      "mean": 17.9356,
+      "std": 13.5425,
+      "min": -42.81,
+      "1%": -23.51,
+      "5%": -13.77,
+      "25%": 12.93,
+      "50%": 23.97,
+      "75%": 27.51,
+      "95%": 29.06,
+      "99%": 30.12,
+      "99.9%": 32.66,
+      "max": 37.98
+    },
+    "TEMP_RANGE": {
+      "count": 11045160.0,
+      "mean": 7.9928,
+      "std": 6.4173,
+      "min": 0.04,
+      "1%": 0.23,
+      "5%": 0.36,
+      "25%": 0.82,
+      "50%": 8.24,
+      "75%": 13.74,
+      "95%": 17.85,
+      "99%": 19.8,
+      "99.9%": 21.74,
+      "max": 30.2
+    }
+  },
+  "quantiles": {
+    "T2M_MAX": {
+      "0.1_percentile": -15.27,
+      "1_percentile": -9.39,
+      "5_percentile": -0.36,
+      "median": 28.57,
+      "95_percentile": 39.75,
+      "99_percentile": 43.87,
+      "99.9_percentile": 46.85
+    },
+    "T2M_MIN": {
+      "0.1_percentile": -30.15,
+      "1_percentile": -23.51,
+      "5_percentile": -13.77,
+      "median": 23.97,
+      "95_percentile": 29.06,
+      "99_percentile": 30.12,
+      "99.9_percentile": 32.66
+    },
+    "TEMP_RANGE": {
+      "0.1_percentile": 0.15,
+      "1_percentile": 0.23,
+      "5_percentile": 0.36,
+      "median": 8.24,
+      "95_percentile": 17.85,
+      "99_percentile": 19.8,
+      "99.9_percentile": 21.74
+    }
+  },
+  "threshold_counts": {
+    "T2M_MAX_above_35C": 1352170,
+    "T2M_MAX_above_40C": 517548,
+    "T2M_MAX_above_45C": 53554,
+    "T2M_MAX_above_50C": 66,
+    "T2M_MIN_below_0C": 1441321,
+    "T2M_MIN_below_minus_5C": 1034443,
+    "T2M_MIN_below_minus_10C": 704558,
+    "T2M_MIN_below_minus_20C": 254599
+  },
+  "correlation_matrix": {
+    "T2M_MAX": {
+      "T2M_MAX": 1.0,
+      "T2M_MIN": 0.8838,
+      "TEMP_RANGE": -0.1586
+    },
+    "T2M_MIN": {
+      "T2M_MAX": 0.8838,
+      "T2M_MIN": 1.0,
+      "TEMP_RANGE": -0.6021
+    },
+    "TEMP_RANGE": {
+      "T2M_MAX": -0.1586,
+      "T2M_MIN": -0.6021,
+      "TEMP_RANGE": 1.0
+    }
+  },
+  "extreme_values": {
+    "maximum_T2M_MAX_C": 51.51,
+    "minimum_T2M_MIN_C": -42.81,
+    "maximum_temperature_range_C": 30.200000000000003
+  },
+  "interpretation_note": "Descriptive gridded weather statistics. Threshold counts do not independently establish heatwave, frost, or agricultural-risk events."
+}

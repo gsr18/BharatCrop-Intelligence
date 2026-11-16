@@ -1,0 +1,29 @@
+[
+  {
+    "model": "Logistic Regression",
+    "precision": 0.8357198142414861,
+    "recall": 0.7194735965350658,
+    "f1_score": 0.7732521707993912,
+    "pr_auc": 0.8793785784260985,
+    "false_positives": 849,
+    "false_negatives": 1684
+  },
+  {
+    "model": "Random Forest",
+    "precision": 0.8281491665234576,
+    "recall": 0.8027652840246543,
+    "f1_score": 0.8152596853324311,
+    "pr_auc": 0.8897742298368249,
+    "false_positives": 1000,
+    "false_negatives": 1184
+  },
+  {
+    "model": "HistGradientBoosting",
+    "precision": 0.8305026591182021,
+    "recall": 0.8064301182741962,
+    "f1_score": 0.818289384719405,
+    "pr_auc": 0.8952347314381516,
+    "false_positives": 988,
+    "false_negatives": 1162
+  }
+]

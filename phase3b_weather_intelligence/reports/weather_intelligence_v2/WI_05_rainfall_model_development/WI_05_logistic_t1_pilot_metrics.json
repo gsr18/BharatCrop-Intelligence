@@ -1,0 +1,25 @@
+{
+  "model": "Logistic Regression",
+  "target": "Wet-day classification",
+  "wet_day_threshold_mm": 1.0,
+  "horizon": "T+1",
+  "training_samples": 34930,
+  "validation_samples": 15070,
+  "classification_threshold": 0.5,
+  "precision": 0.8357198142414861,
+  "recall": 0.7194735965350658,
+  "f1_score": 0.7732521707993912,
+  "pr_auc": 0.8793785784260985,
+  "confusion_matrix": [
+    [
+      8218,
+      849
+    ],
+    [
+      1684,
+      4319
+    ]
+  ],
+  "training_scope": "10-batch pilot",
+  "final_holdout_accessed": false
+}

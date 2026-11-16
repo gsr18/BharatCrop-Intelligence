@@ -1,0 +1,83 @@
+{
+  "model_name": "HistGradientBoostingRegressor",
+  "project": "BharatCrop Intelligence",
+  "candidate_scope": "Individual Crop Candidate cohort",
+  "model_version": "individual_crop_hgb_location/2013-2022/sha256:dc057a8cbe39adef",
+  "model_version_scheme": "content_addressed_from_served_artifact_sha256",
+  "model_version_note": "The training pipeline did not emit a semantic version. This identifier is derived from the SHA-256 of the served artifact (individual_crop_hgb_location.joblib), so it always names the exact bytes that are served.",
+  "features": [
+    "Crop",
+    "Season",
+    "Crop_Category",
+    "State",
+    "District",
+    "FE_YearStart"
+  ],
+  "categorical_features": [
+    "Crop",
+    "Season",
+    "Crop_Category",
+    "State",
+    "District"
+  ],
+  "numeric_features": [
+    "FE_YearStart"
+  ],
+  "target": "Yield",
+  "target_unit": "kg/ha",
+  "target_unit_status": "verification_pending",
+  "target_unit_status_note": "MoSPI documents APY Area in hectares, Production in tonnes/bales, and Yield in kilograms per hectare (kg/ha). A static consistency check of the primary training cohort supported kg/ha as the likely unit, but unit consistency is not proven for every source row, so the unit is treated as pending verification. No numerical conversion is applied to predictions.",
+  "training_rows": 35784,
+  "training_year_start": 2013,
+  "training_year_end": 2022,
+  "holdout_rows": 7369,
+  "holdout_evaluated_during_final_fit": false,
+  "holdout_usage_note": "The 2023-24 holdout was repeatedly inspected during model selection and diagnostics. It is therefore a contaminated development holdout, not an untouched final holdout, and no clean generalization estimate can be claimed from it.",
+  "validation_windows": [
+    {
+      "train_through": 2018,
+      "validation_years": [
+        2019,
+        2020
+      ]
+    },
+    {
+      "train_through": 2020,
+      "validation_years": [
+        2021,
+        2022
+      ]
+    }
+  ],
+  "served_artifact_validation_metrics": {},
+  "served_artifact_metrics_note": "No independent validation metric (MAE, RMSE, or R-squared) is available for this served artifact. The served model uses Crop, Season, Crop_Category, State, District, and FE_YearStart with no weather features and was not evaluated on a clean holdout.",
+  "reference_metrics_other_candidate": {
+    "attribution_warning": "These figures were NOT produced by the served individual_crop_hgb_location artifact. They belong to a different candidate model ('Core + Weather + State + District' HistGradientBoostingRegressor, notebook 16 Cell 57) that includes weather features the served model excludes. They must not be presented as the accuracy of the served model.",
+    "source_model": "Core + Weather + State + District candidate",
+    "evaluation_type": "rolling_origin_temporal_validation",
+    "windows": {
+      "2019-2020": {
+        "MAE": 448.306,
+        "RMSE": 672.961,
+        "R2": 0.798
+      },
+      "2021-2022": {
+        "MAE": 422.856,
+        "RMSE": 898.177,
+        "R2": 0.693
+      }
+    }
+  },
+  "limitations": [
+    "No validation metric is available for this served artifact; the recorded R-squared values describe a different weather-inclusive candidate and are only reference context, not this model's accuracy.",
+    "Training in-sample performance, rolling-origin validation windows, and the final holdout are distinct measurements and must not be conflated.",
+    "The 2023-24 holdout was repeatedly inspected during diagnostics and is not an untouched final holdout.",
+    "Unseen-location validation samples were small.",
+    "Weather features were excluded from the selected served candidate.",
+    "The kg/ha target unit is documented by MoSPI and supported by a static consistency check, but row-level unit consistency is unverified; the unit is reported as pending verification and no conversion is applied.",
+    "Model performance does not establish causal effects or production readiness.",
+    "Predictions are experimental, feature-based estimates and are not validated forecasts of future yield."
+  ],
+  "saved_at_utc": "2026-11-01T10:24:57.537474+00:00",
+  "served_metadata_corrected_utc": "2026-11-05T00:00:00+00:00"
+}

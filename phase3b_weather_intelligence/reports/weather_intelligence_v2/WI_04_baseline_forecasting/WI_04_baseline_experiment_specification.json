@@ -1,0 +1,60 @@
+{
+  "experiment_id": "WI-04",
+  "experiment_name": "Baseline Weather Forecasting",
+  "dataset_version": "weather-features-v1",
+  "spatial_unit": "weather_grid_cell",
+  "forecast_origin": "End of day t, after day t weather observations are available",
+  "targets": {
+    "PRECTOTCORR": {
+      "description": "Daily precipitation",
+      "unit": "mm/day",
+      "predictor": "PRECTOTCORR_current"
+    },
+    "T2M_MAX": {
+      "description": "Daily maximum temperature",
+      "unit": "degrees_Celsius",
+      "predictor": "T2M_MAX_current"
+    }
+  },
+  "horizons": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "splits": {
+    "training": {
+      "start": "2013-01-01",
+      "end": "2019-12-31"
+    },
+    "validation": {
+      "start": "2020-01-01",
+      "end": "2022-12-31"
+    },
+    "final_holdout": {
+      "start": "2023-01-01",
+      "end": "2024-12-31"
+    }
+  },
+  "baselines": [
+    "persistence",
+    "seasonal_naive",
+    "training_period_climatology"
+  ],
+  "evaluation_metrics": [
+    "MAE",
+    "RMSE"
+  ],
+  "precipitation_metrics": [
+    "wet_day_detection",
+    "wet_day_only_MAE",
+    "rainfall_quantile_error"
+  ],
+  "climatology_policy": "Calculate reference statistics using training-period observations only",
+  "holdout_policy": "Final holdout must not be used for baseline development, selection, or tuning",
+  "random_split": false,
+  "model_training_performed": false
+}

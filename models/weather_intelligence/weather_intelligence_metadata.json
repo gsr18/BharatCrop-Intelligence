@@ -1,0 +1,19 @@
+{
+  "module": "Weather Intelligence",
+  "notebook": "19_weather_intelligence.ipynb",
+  "source_dataset": "data\\processed\\weather_regional\\apy_weather_integrated_exploratory.csv",
+  "period": {
+    "start_year": 2013,
+    "end_year": 2024
+  },
+  "districts": 751,
+  "districts_with_good_coverage": 640,
+  "districts_without_weather_data": 111,
+  "district_year_records_with_weather": 7680,
+  "limitations": [
+    "Weather uses starting-calendar-year proxy alignment.",
+    "Full crop-season alignment is not verified.",
+    "Historical percentile flags are not forecasts or proven crop-risk indicators.",
+    "Missing weather data must be shown as unavailable."
+  ]
+}

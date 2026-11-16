@@ -1,0 +1,36 @@
+{
+  "dataset_name": "Historical district-level APY \u2014 Food Grains",
+  "source": "UPAg / Department of Agriculture & Farmers Welfare",
+  "years": [
+    "2013-14",
+    "2014-15",
+    "2015-16",
+    "2016-17",
+    "2017-18",
+    "2018-19",
+    "2019-20",
+    "2020-21",
+    "2021-22",
+    "2022-23",
+    "2023-24",
+    "2024-25"
+  ],
+  "source_files": [
+    "DES-District-Data-For-2013-14-to-2015-16.csv",
+    "DES-District-Data-For-2016-17-to-2018-19.csv",
+    "DES-District-Data-For-2019-20-to-2021-22.csv",
+    "DES-District-Data-For-2022-23-to-2024-25.csv"
+  ],
+  "merge_keys": [
+    "State",
+    "District",
+    "Crop",
+    "Season"
+  ],
+  "merged_rows": 31356,
+  "merged_columns": 40,
+  "exact_duplicate_rows": 0,
+  "repeated_key_rows": 0,
+  "missing_cells": 284246,
+  "raw_files_modified": false
+}

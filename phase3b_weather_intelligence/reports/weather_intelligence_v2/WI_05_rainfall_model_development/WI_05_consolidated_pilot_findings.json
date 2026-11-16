@@ -1,0 +1,97 @@
+{
+  "work_item": "WI-05",
+  "title": "Rainfall Model Development",
+  "experiment_scope": {
+    "training_scope": "10-batch pilot",
+    "horizon": "T+1",
+    "training_samples": 34930,
+    "validation_samples": 15070,
+    "final_holdout_accessed": false
+  },
+  "direct_regression": {
+    "Ridge": {
+      "mae_mm": 2.7722429620026516,
+      "rmse_mm": 7.946185728456718
+    },
+    "Random Forest": {
+      "mae_mm": 2.6736780301168235,
+      "rmse_mm": 8.013692881910245
+    },
+    "HistGradientBoosting": {
+      "mae_mm": 2.704353718900669,
+      "rmse_mm": 7.958803050542154
+    }
+  },
+  "wet_day_classification": {
+    "wet_day_threshold_mm": 1.0,
+    "models": [
+      {
+        "model": "Logistic Regression",
+        "precision": 0.8357198142414861,
+        "recall": 0.7194735965350658,
+        "f1_score": 0.7732521707993912,
+        "pr_auc": 0.8793785784260985,
+        "false_positives": 849,
+        "false_negatives": 1684
+      },
+      {
+        "model": "Random Forest",
+        "precision": 0.8281491665234576,
+        "recall": 0.8027652840246543,
+        "f1_score": 0.8152596853324311,
+        "pr_auc": 0.8897742298368249,
+        "false_positives": 1000,
+        "false_negatives": 1184
+      },
+      {
+        "model": "HistGradientBoosting",
+        "precision": 0.8305026591182021,
+        "recall": 0.8064301182741962,
+        "f1_score": 0.818289384719405,
+        "pr_auc": 0.8952347314381516,
+        "false_positives": 988,
+        "false_negatives": 1162
+      }
+    ],
+    "leading_model": "HistGradientBoosting"
+  },
+  "classification_threshold_analysis": {
+    "candidate_model": "HistGradientBoosting",
+    "pilot_candidate_threshold": 0.4,
+    "precision": 0.7930821494749846,
+    "recall": 0.8555722138930535,
+    "f1_score": 0.8231428800384646,
+    "false_positives": 1340,
+    "false_negatives": 867
+  },
+  "conditional_regression": {
+    "model": "HistGradientBoosting Regressor",
+    "training_wet_samples": 13334,
+    "validation_wet_samples": 6003,
+    "mae_mm": 5.601596673081039,
+    "rmse_mm": 12.376814738526976
+  },
+  "two_stage_evaluation": {
+    "expected_amount": {
+      "mae_mm": 2.5949678044554165,
+      "rmse_mm": 7.974327184681835
+    },
+    "hard_threshold": {
+      "mae_mm": 2.77738709474947,
+      "rmse_mm": 8.050275273388747
+    }
+  },
+  "pilot_conclusion": {
+    "leading_approach": "Two-stage HistGradientBoosting expected rainfall amount",
+    "mae_mm": 2.5949678044554165,
+    "rmse_mm": 7.974327184681835,
+    "status": "Promising pilot candidate; not production selected",
+    "limitations": [
+      "Only 10 of 252 feature batches were used",
+      "Only T+1 was evaluated",
+      "Pilot results are not representative full-dataset validation results",
+      "Classification threshold has not been operationally calibrated",
+      "Final holdout has not been accessed"
+    ]
+  }
+}

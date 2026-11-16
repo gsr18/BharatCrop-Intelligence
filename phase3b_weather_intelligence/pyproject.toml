@@ -1,0 +1,21 @@
+[project]
+name = "bharatcrop-weather-only-pipeline"
+version = "1.0.0"
+description = "Weather-only NASA POWER/MERRA-2 daily panel and feature preparation"
+requires-python = ">=3.13,<3.14"
+dependencies = [
+    "numpy==2.5.4",
+    "pandas==2.3.3",
+    "pyarrow==19.0.1",
+]
+
+[project.optional-dependencies]
+test = ["pytest==9.2.0"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
+
+[tool.ruff]
+line-length = 100
+target-version = "py313"

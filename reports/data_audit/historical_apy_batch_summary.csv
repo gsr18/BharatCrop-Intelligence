@@ -1,0 +1,5 @@
+filename,rows,columns,exact_duplicate_rows,missing_cells
+DES-District-Data-For-2013-14-to-2015-16.csv,23007,13,0,15977
+DES-District-Data-For-2016-17-to-2018-19.csv,24914,13,0,16260
+DES-District-Data-For-2019-20-to-2021-22.csv,26413,13,0,19845
+DES-District-Data-For-2022-23-to-2024-25.csv,28661,13,0,30303

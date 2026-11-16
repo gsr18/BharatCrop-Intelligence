@@ -1,0 +1,11 @@
+geography_id,rows,unique_dates,duplicate_date_rows,invalid_dates,missing_expected_dates,unexpected_dates,missing_precipitation,missing_tmax,missing_tmin,negative_precipitation,tmin_above_tmax
+APY-GEO-0005,4383,4383,0,0,0,0,0,0,0,0,0
+APY-GEO-0006,4383,4383,0,0,0,0,0,0,0,0,0
+APY-GEO-0055,4383,4383,0,0,0,0,0,0,0,0,0
+APY-GEO-0056,4383,4383,0,0,0,0,0,0,0,0,0
+APY-GEO-0320,4383,4383,0,0,0,0,0,0,0,0,0
+APY-GEO-0321,4383,4383,0,0,0,0,0,0,0,0,0
+APY-GEO-0491,4383,4383,0,0,0,0,0,0,0,0,0
+APY-GEO-0492,4383,4383,0,0,0,0,0,0,0,0,0
+APY-GEO-0561,4383,4383,0,0,0,0,0,0,0,0,0
+APY-GEO-0562,4383,4383,0,0,0,0,0,0,0,0,0
